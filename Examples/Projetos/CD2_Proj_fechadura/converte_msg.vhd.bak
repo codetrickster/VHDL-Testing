@@ -1,0 +1,191 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.all;
+USE IEEE.std_logic_arith.all;
+USE IEEE.std_logic_unsigned.all;
+
+entity converte_msg is
+port(	
+  char1, char2, char3, char4, char5, char6, char7, char8, char9, char10, char11, char12, char13, 
+  char14, char15, char16: out std_logic_vector(7 downto 0)
+);
+end converte_msg; 
+
+architecture arq_converte_msg of converte_msg is
+
+signal escrever1: std_logic_vector(3 downto 0);
+signal reset, clk: std_logic;
+
+component Controle is
+port(	
+  clk, reset: in std_logic;
+  escrever: out std_logic_vector(3 downto 0)
+);
+end component; 
+
+begin
+  
+  controle1: controle
+  port map(reset => reset, clk => clk, escrever => escrever1);
+  
+  
+  with escrever1 select
+     c1 <= X"55" when "0000",
+           X"53" when "0001",
+           X"55" when "0010",
+           X"53" when "0011",
+           X"4E" when "0100",
+           X"4E" when "0101",
+           X"42" when "0110",
+           X"7E" when others;
+  
+  with escrever1 select
+     c2 <= X"53" when "0000",
+           X"45" when "0001",
+           X"53" when "0010",
+           X"45" when "0011",
+           X"4F" when "0100",
+           X"4F" when "0101",
+           X"45" when "0110",
+           X"7E" when others;
+  
+  with escrever1 select
+     c3 <= X"55" when "0000",
+           X"4E" when "0001",
+           X"55" when "0010",
+           X"4E" when "0011",
+           X"56" when "0100",
+           X"56" when "0101",
+           X"4D" when "0110",
+           X"7E" when others;
+           
+  with escrever1 select
+     c4 <= X"41" when "0000",
+           X"48" when "0001",
+           X"41" when "0010",
+           X"48" when "0011",
+           X"4F" when "0100",
+           X"41" when "0101",
+           X"20" when "0110",
+           X"7E" when others;
+      
+  with escrever1 select
+     c5 <= X"52" when "0000",
+           X"41" when "0001",
+           X"52" when "0010",
+           X"41" when "0011",
+           X"20" when "0100",
+           X"20" when "0101",
+           X"56" when "0110",
+           X"7E" when others; 
+           
+  with escrever1 select
+  c6 <= X"49" when "0000",
+           X"3A" when "0001",
+           X"49" when "0010",
+           X"20" when "0011",
+           X"55" when "0100",
+           X"53" when "0101",
+           X"49" when "0110",
+           X"7E" when others;    
+
+  with escrever1 select
+     c7 <= X"4F" when "0000",
+           X"20" when "0001",
+           X"4F" when "0010",
+           X"45" when "0011",
+           X"53" when "0100",
+           X"45" when "0101",
+           X"4E" when "0110",
+           X"7E" when others;
+
+  with escrever1 select
+     c8 <= X"3A" when "0000",
+           X"20" when "0001",
+           X"20" when "0010",
+           X"52" when "0011",
+           X"55" when "0100",
+           X"4E" when "0101",
+           X"44" when "0110",
+           X"7E" when others;
+
+  with escrever1 select
+     c9 <= X"20" when "0000",
+           X"20" when "0001",
+           X"49" when "0010",
+           X"52" when "0011",
+           X"41" when "0100",
+           X"48" when "0101",
+           X"4F" when "0110",
+           X"7E" when others;
+
+  with escrever1 select
+     c10 <= X"20" when "0000",
+            X"20" when "0001",
+            X"4E" when "0010",
+            X"41" when "0011",
+            X"52" when "0100",
+            X"41" when "0101",
+            X"20" when "0110",
+            X"7E" when others;
+           
+  with escrever1 select
+     c11 <= X"20" when "0000",
+            X"20" when "0001",
+            X"56" when "0010",
+            X"44" when "0011",
+            X"49" when "0100",
+            X"3A" when "0101",
+            X"20" when "0110",
+            X"7E" when others;
+
+  with escrever1 select
+     c12 <= X"20" when "0000",
+            X"20" when "0001",
+            X"41" when "0010",
+            X"41" when "0011",
+            X"4F" when "0100",
+            X"20" when "0101",
+            X"20" when "0110",
+            X"7E" when others;
+
+  with escrever1 select
+     c13 <= X"20" when "0000",
+            X"20" when "0001",
+            X"4C" when "0010",
+            X"20" when "0011",
+            X"3A" when "0100",
+            X"20" when "0101",
+            X"20" when "0110",
+            X"7E" when others;
+
+  with escrever1 select
+     c14 <= X"20" when "0000",
+            X"20" when "0001",
+            X"49" when "0010",
+            X"20" when "0011",
+            X"20" when "0100",
+            X"20" when "0101",
+            X"20" when "0110",
+            X"7E" when others;
+
+  with escrever1 select
+     c15 <= X"20" when "0000",
+            X"20" when "0001",
+            X"44" when "0010",
+            X"20" when "0011",
+            X"20" when "0100",
+            X"20" when "0101",
+            X"20" when "0110",
+            X"7E" when others;
+
+  with escrever1 select
+     c16 <= X"20" when "0000",
+            X"20" when "0001",
+            X"4F" when "0010",
+            X"20" when "0011",
+            X"20" when "0100",
+            X"20" when "0101",
+            X"20" when "0110",
+            X"7E" when others;
+            
+end arq_converte_msg;

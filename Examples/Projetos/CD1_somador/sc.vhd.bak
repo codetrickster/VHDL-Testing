@@ -1,0 +1,17 @@
+LIBRARY	IEEE;
+USE IEEE.std_logic_1164.all;
+
+ENTITY sc IS
+  PORT(
+  a: in std_logic;
+  b: in std_logic;
+  cin: in std_logic;
+  s: out std_logic;
+  cout: out std_logic
+  );
+end sc;
+architecture arq_sc of sc is
+begin 
+  s <= (cin) xor (a) xor (b);
+  cout <= (a and b) or (a and cin) or ( b and cin);
+end arq_sc;

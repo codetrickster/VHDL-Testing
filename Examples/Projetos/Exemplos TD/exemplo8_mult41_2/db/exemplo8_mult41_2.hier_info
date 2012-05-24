@@ -1,0 +1,16 @@
+|exemplo8_mult41_2
+a[0] => n[0].IN1
+a[1] => n[1].IN1
+a[2] => n[2].IN1
+a[3] => n[3].IN1
+sel[0] => n.IN0
+sel[0] => n.IN0
+sel[0] => n.IN0
+sel[0] => n.IN0
+sel[1] => n.IN1
+sel[1] => n.IN1
+sel[1] => n.IN1
+sel[1] => n.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+

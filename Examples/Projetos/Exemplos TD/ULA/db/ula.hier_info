@@ -1,0 +1,420 @@
+|ula
+a[0] => comb.IN0
+a[0] => comb.IN0
+a[0] => soma_sub:Soma.a[0]
+a[0] => soma_sub:Sub.a[0]
+a[0] => mult81:Multiplexador.op5[0]
+a[0] => mult81:Multiplexador.op4[0]
+a[1] => comb.IN0
+a[1] => comb.IN0
+a[1] => soma_sub:Soma.a[1]
+a[1] => soma_sub:Sub.a[1]
+a[1] => mult81:Multiplexador.op5[1]
+a[1] => mult81:Multiplexador.op4[1]
+a[2] => comb.IN0
+a[2] => comb.IN0
+a[2] => soma_sub:Soma.a[2]
+a[2] => soma_sub:Sub.a[2]
+a[2] => mult81:Multiplexador.op5[2]
+a[2] => mult81:Multiplexador.op4[2]
+a[3] => comb.IN0
+a[3] => comb.IN0
+a[3] => soma_sub:Soma.a[3]
+a[3] => soma_sub:Sub.a[3]
+a[3] => mult81:Multiplexador.op5[3]
+a[3] => mult81:Multiplexador.op4[3]
+b[0] => comb.IN1
+b[0] => comb.IN1
+b[0] => soma_sub:Soma.b[0]
+b[0] => soma_sub:Sub.b[0]
+b[0] => shifter_left:SLeft.b[0]
+b[0] => shifter_right:SRight.b[0]
+b[1] => comb.IN1
+b[1] => comb.IN1
+b[1] => soma_sub:Soma.b[1]
+b[1] => soma_sub:Sub.b[1]
+b[1] => shifter_left:SLeft.b[1]
+b[1] => shifter_right:SRight.b[1]
+b[2] => comb.IN1
+b[2] => comb.IN1
+b[2] => soma_sub:Soma.b[2]
+b[2] => soma_sub:Sub.b[2]
+b[2] => shifter_left:SLeft.b[2]
+b[2] => shifter_right:SRight.b[2]
+b[3] => comb.IN1
+b[3] => comb.IN1
+b[3] => soma_sub:Soma.b[3]
+b[3] => soma_sub:Sub.b[3]
+b[3] => shifter_left:SLeft.b[3]
+b[3] => shifter_right:SRight.b[3]
+f[0] => V.IN0
+f[0] => soma_sub:Soma.controle
+f[0] => soma_sub:Sub.controle
+f[0] => mult81:Multiplexador.sel[0]
+f[0] => V.IN0
+f[1] => mult81:Multiplexador.sel[1]
+f[1] => V.IN1
+f[1] => V.IN1
+f[2] => V.IN1
+f[2] => mult81:Multiplexador.sel[2]
+f[2] => V.IN1
+s[0] <= seg7:Display.s[0]
+s[1] <= seg7:Display.s[1]
+s[2] <= seg7:Display.s[2]
+s[3] <= seg7:Display.s[3]
+s[4] <= seg7:Display.s[4]
+s[5] <= seg7:Display.s[5]
+s[6] <= seg7:Display.s[6]
+s[7] <= seg7:Display.s[7]
+s[8] <= seg7:Display.s[8]
+s[9] <= seg7:Display.s[9]
+s[10] <= seg7:Display.s[10]
+s[11] <= seg7:Display.s[11]
+s[12] <= seg7:Display.s[12]
+s[13] <= seg7:Display.s[13]
+V <= V.DB_MAX_OUTPUT_PORT_TYPE
+Z <= verifica:Verificazero.s
+N <= mult81:Multiplexador.i[3]
+
+
+|ula|soma_sub:Soma
+a[0] => full_adder:Full1.a
+a[1] => full_adder:Full2.a
+a[2] => full_adder:Full3.a
+a[3] => full_adder:Full4.a
+b[0] => comb.IN0
+b[1] => comb.IN0
+b[2] => comb.IN0
+b[3] => comb.IN0
+controle => comb.IN1
+controle => comb.IN1
+controle => comb.IN1
+controle => comb.IN1
+controle => full_adder:Full1.c_in
+s[0] <= full_adder:Full1.s
+s[1] <= full_adder:Full2.s
+s[2] <= full_adder:Full3.s
+s[3] <= full_adder:Full4.s
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|soma_sub:Soma|full_adder:Full1
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|soma_sub:Soma|full_adder:Full2
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|soma_sub:Soma|full_adder:Full3
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|soma_sub:Soma|full_adder:Full4
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|soma_sub:Sub
+a[0] => full_adder:Full1.a
+a[1] => full_adder:Full2.a
+a[2] => full_adder:Full3.a
+a[3] => full_adder:Full4.a
+b[0] => comb.IN0
+b[1] => comb.IN0
+b[2] => comb.IN0
+b[3] => comb.IN0
+controle => comb.IN1
+controle => comb.IN1
+controle => comb.IN1
+controle => comb.IN1
+controle => full_adder:Full1.c_in
+s[0] <= full_adder:Full1.s
+s[1] <= full_adder:Full2.s
+s[2] <= full_adder:Full3.s
+s[3] <= full_adder:Full4.s
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|soma_sub:Sub|full_adder:Full1
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|soma_sub:Sub|full_adder:Full2
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|soma_sub:Sub|full_adder:Full3
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|soma_sub:Sub|full_adder:Full4
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|shifter_left:SLeft
+b[0] => mult21:Multiplexador3.b
+b[0] => mult21:Multiplexador4.a
+b[1] => mult21:Multiplexador2.b
+b[1] => mult21:Multiplexador3.a
+b[2] => mult21:Multiplexador1.b
+b[2] => mult21:Multiplexador2.a
+b[3] => mult21:Multiplexador1.a
+s[0] <= mult21:Multiplexador4.s
+s[1] <= mult21:Multiplexador3.s
+s[2] <= mult21:Multiplexador2.s
+s[3] <= mult21:Multiplexador1.s
+
+
+|ula|shifter_left:SLeft|mult21:Multiplexador1
+a => s.DATAB
+b => s.DATAA
+sel => s.OUTPUTSELECT
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|shifter_left:SLeft|mult21:Multiplexador2
+a => s.DATAB
+b => s.DATAA
+sel => s.OUTPUTSELECT
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|shifter_left:SLeft|mult21:Multiplexador3
+a => s.DATAB
+b => s.DATAA
+sel => s.OUTPUTSELECT
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|shifter_left:SLeft|mult21:Multiplexador4
+a => s.DATAB
+b => s.DATAA
+sel => s.OUTPUTSELECT
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|shifter_right:SRight
+b[0] => mult21:Multiplexador4.b
+b[1] => mult21:Multiplexador3.b
+b[1] => mult21:Multiplexador4.a
+b[2] => mult21:Multiplexador2.b
+b[2] => mult21:Multiplexador3.a
+b[3] => mult21:Multiplexador1.b
+b[3] => mult21:Multiplexador2.a
+s[0] <= mult21:Multiplexador4.s
+s[1] <= mult21:Multiplexador3.s
+s[2] <= mult21:Multiplexador2.s
+s[3] <= mult21:Multiplexador1.s
+
+
+|ula|shifter_right:SRight|mult21:Multiplexador1
+a => s.DATAB
+b => s.DATAA
+sel => s.OUTPUTSELECT
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|shifter_right:SRight|mult21:Multiplexador2
+a => s.DATAB
+b => s.DATAA
+sel => s.OUTPUTSELECT
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|shifter_right:SRight|mult21:Multiplexador3
+a => s.DATAB
+b => s.DATAA
+sel => s.OUTPUTSELECT
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|shifter_right:SRight|mult21:Multiplexador4
+a => s.DATAB
+b => s.DATAA
+sel => s.OUTPUTSELECT
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|mult81:Multiplexador
+op1[0] => Mux3.IN0
+op1[1] => Mux2.IN0
+op1[2] => Mux1.IN0
+op1[3] => Mux0.IN0
+op2[0] => Mux3.IN1
+op2[1] => Mux2.IN1
+op2[2] => Mux1.IN1
+op2[3] => Mux0.IN1
+op3[0] => Mux3.IN2
+op3[1] => Mux2.IN2
+op3[2] => Mux1.IN2
+op3[3] => Mux0.IN2
+op4[0] => Mux3.IN3
+op4[1] => Mux2.IN3
+op4[2] => Mux1.IN3
+op4[3] => Mux0.IN3
+op5[0] => Mux3.IN4
+op5[1] => Mux2.IN4
+op5[2] => Mux1.IN4
+op5[3] => Mux0.IN4
+op6[0] => Mux3.IN5
+op6[1] => Mux2.IN5
+op6[2] => Mux1.IN5
+op6[3] => Mux0.IN5
+op7[0] => Mux3.IN6
+op7[1] => Mux2.IN6
+op7[2] => Mux1.IN6
+op7[3] => Mux0.IN6
+op8[0] => Mux3.IN7
+op8[1] => Mux2.IN7
+op8[2] => Mux1.IN7
+op8[3] => Mux0.IN7
+sel[0] => Mux0.IN10
+sel[0] => Mux1.IN10
+sel[0] => Mux2.IN10
+sel[0] => Mux3.IN10
+sel[1] => Mux0.IN9
+sel[1] => Mux1.IN9
+sel[1] => Mux2.IN9
+sel[1] => Mux3.IN9
+sel[2] => Mux0.IN8
+sel[2] => Mux1.IN8
+sel[2] => Mux2.IN8
+sel[2] => Mux3.IN8
+i[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+i[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+i[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+i[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|verifica:Verificazero
+a[0] => Mux0.IN19
+a[1] => Mux0.IN18
+a[2] => Mux0.IN17
+a[3] => Mux0.IN16
+s <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|seg7:Display
+a[0] => Mux0.IN19
+a[0] => Mux1.IN19
+a[0] => Mux2.IN10
+a[0] => Mux3.IN10
+a[0] => Mux4.IN19
+a[0] => Mux5.IN19
+a[0] => Mux6.IN19
+a[1] => Mux0.IN18
+a[1] => Mux1.IN18
+a[1] => Mux2.IN9
+a[1] => Mux3.IN9
+a[1] => Mux4.IN18
+a[1] => Mux5.IN18
+a[1] => Mux6.IN18
+a[2] => Mux0.IN17
+a[2] => Mux1.IN17
+a[2] => Mux2.IN8
+a[2] => Mux3.IN8
+a[2] => Mux4.IN17
+a[2] => Mux5.IN17
+a[2] => Mux6.IN17
+a[3] => Mux0.IN16
+a[3] => Mux1.IN16
+a[3] => Mux4.IN16
+a[3] => Mux5.IN16
+a[3] => Mux6.IN16
+a[3] => s[13].DATAIN
+s[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+s[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+s[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+s[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+s[7] <= <VCC>
+s[8] <= <VCC>
+s[9] <= <VCC>
+s[10] <= <VCC>
+s[11] <= <VCC>
+s[12] <= <VCC>
+s[13] <= a[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

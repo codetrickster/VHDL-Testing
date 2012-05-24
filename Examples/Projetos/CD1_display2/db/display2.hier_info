@@ -1,0 +1,137 @@
+|somador8bits
+a[0] => ms:soma1.a
+a[1] => sc:soma2.a
+a[2] => sc:soma3.a
+a[3] => sc:soma4.a
+a[4] => sc:soma5.a
+a[5] => sc:soma6.a
+a[6] => sc:soma7.a
+a[7] => sc:soma8.a
+b[0] => ms:soma1.b
+b[1] => sc:soma2.b
+b[2] => sc:soma3.b
+b[3] => sc:soma4.b
+b[4] => sc:soma5.b
+b[5] => sc:soma6.b
+b[6] => sc:soma7.b
+b[7] => sc:soma8.b
+s[0] <= ms:soma1.s
+s[1] <= sc:soma2.s
+s[2] <= sc:soma3.s
+s[3] <= sc:soma4.s
+s[4] <= sc:soma5.s
+s[5] <= sc:soma6.s
+s[6] <= sc:soma7.s
+s[7] <= sc:soma8.s
+c8 <= sc:soma8.c_out
+
+
+|somador8bits|ms:soma1
+a => s.IN0
+a => c_out.IN0
+a => s.IN0
+b => s.IN1
+b => c_out.IN1
+b => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador8bits|sc:soma2
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador8bits|sc:soma3
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador8bits|sc:soma4
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador8bits|sc:soma5
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador8bits|sc:soma6
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador8bits|sc:soma7
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador8bits|sc:soma8
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+

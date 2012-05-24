@@ -1,0 +1,433 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+11
+1000
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+ula
+# storage
+db|ula.(0).cnf
+db|ula.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ula.vhd
+7f8639dae781486b242aaa1d211672d
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+somasub
+# storage
+db|ula.(1).cnf
+db|ula.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+somasub.vhd
+acb0554011bebf39b83c93da96c09263
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(a)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(b)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(s)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+somasub:Soma
+somasub:Sub
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+fulladder
+# storage
+db|ula.(2).cnf
+db|ula.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+fulladder.vhd
+ed6cb7a19f897df28b9682edf95208e
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+somasub:Soma|fulladder:Full1
+somasub:Soma|fulladder:Full2
+somasub:Soma|fulladder:Full3
+somasub:Soma|fulladder:Full4
+somasub:Sub|fulladder:Full1
+somasub:Sub|fulladder:Full2
+somasub:Sub|fulladder:Full3
+somasub:Sub|fulladder:Full4
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+deslocae
+# storage
+db|ula.(3).cnf
+db|ula.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+deslocae.vhd
+e38f50239ba12c4a21e637d7eb14a59
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(b)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(s)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+deslocae:Deslocaesquerda
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+multiplexador_21
+# storage
+db|ula.(4).cnf
+db|ula.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+multiplexador_21.vhd
+85c26486bde2d4dc9bb469a86fdce2b
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(a)
+1 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+deslocae:Deslocaesquerda|multiplexador_21:Multiplexador1
+deslocae:Deslocaesquerda|multiplexador_21:Multiplexador2
+deslocae:Deslocaesquerda|multiplexador_21:Multiplexador3
+deslocae:Deslocaesquerda|multiplexador_21:Multiplexador4
+deslocad:Deslocadireita|multiplexador_21:Multiplexador1
+deslocad:Deslocadireita|multiplexador_21:Multiplexador2
+deslocad:Deslocadireita|multiplexador_21:Multiplexador3
+deslocad:Deslocadireita|multiplexador_21:Multiplexador4
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+deslocad
+# storage
+db|ula.(5).cnf
+db|ula.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+deslocad.vhd
+c55b8123a244a7b0c798273df51a57d3
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(b)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(s)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+deslocad:Deslocadireita
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+multiplexador_81
+# storage
+db|ula.(6).cnf
+db|ula.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+multiplexador_81.vhd
+fffa17ff456324c2462bfee325c8d85
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(u)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(d)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(t)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(q)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(c)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(s)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(o)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(n)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(sel)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(i)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+multiplexador_81:Multiplexador
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+verifica
+# storage
+db|ula.(7).cnf
+db|ula.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+verifica.vhd
+2020e2b88d2fb20eca2bb1a7ba24937
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(a)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+verifica:Verificazero
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+seg7
+# storage
+db|ula.(8).cnf
+db|ula.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+seg7.vhd
+ad78bbb88a87364cecf12a1778646b5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(a)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(s)
+13 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+seg7:Display
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+

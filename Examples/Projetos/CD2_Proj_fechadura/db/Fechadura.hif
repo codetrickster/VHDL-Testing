@@ -1,0 +1,262 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+11
+1000
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+divisor
+# storage
+db|Fechadura.(1).cnf
+db|Fechadura.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+divisor.vhd
+fc879138849f42222e5743d88439b9
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+divisor:div
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+DBase
+# storage
+db|Fechadura.(2).cnf
+db|Fechadura.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+dbase.vhd
+a3f28ee22a7619d21e65fa82d624178d
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(destino)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(reg_data_sel)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(reg_data_in)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(reg_data_out)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(word_data_select)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(word_data_out)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(posicao2)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(posicao1)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(posicao0)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+DBase:dados
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+Controle
+# storage
+db|Fechadura.(3).cnf
+db|Fechadura.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+controle.vhd
+93a4e862ffd31139eb35d03e3a54ef6
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(word_data_select)
+2 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+Controle:ct1
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+Fechadura
+# storage
+db|Fechadura.(0).cnf
+db|Fechadura.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+fechadura.vhd
+81fe46341fe8dec6952661ea3fe125c
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+Operativa
+# storage
+db|Fechadura.(4).cnf
+db|Fechadura.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+operativa.vhd
+148d41a01d8fb7e5a0be10cac65211a
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(data_bus)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(word_data_in)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(posicao0)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(posicao1)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(reg_data_in)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(user_senha)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(user_login)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+Operativa:op1
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+

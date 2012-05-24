@@ -1,0 +1,6 @@
+
+State Machine - |Controle|estado
+Name estado.login_usuario estado.senha estado.usuario 
+estado.usuario 0 0 0 
+estado.senha 0 1 1 
+estado.login_usuario 1 0 1 

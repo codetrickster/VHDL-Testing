@@ -1,0 +1,13 @@
+LIBRARY	IEEE;
+USE IEEE.std_logic_1164.all;
+
+ENTITY exemplo2 IS
+  PORT(
+  a, b, c: in std_logic;
+  s: out std_logic
+  );
+end exemplo2;
+architecture arq_exemplo2 of exemplo2 is
+begin 
+  s <= not(a and b) or not(c);
+end arq_exemplo2;

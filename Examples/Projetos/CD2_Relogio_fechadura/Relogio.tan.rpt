@@ -1,0 +1,548 @@
+Classic Timing Analyzer report for Relogio
+Fri Jul 01 15:58:00 2011
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk'
+  7. tco
+  8. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                    ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------+-----------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                        ; To                          ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------+-----------------------------+------------+----------+--------------+
+; Worst-case tco               ; N/A   ; None          ; 14.601 ns                        ; contador:contador1|hora1[1] ; s5[4]                       ; clk        ; --       ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; 242.42 MHz ( period = 4.125 ns ) ; contador:contador1|segu1[1] ; contador:contador1|hora0[2] ; clk        ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                             ;                             ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------+-----------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C35F672C6       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                                                                                       ;
++-----------------------------------------+-----------------------------------------------------+-----------------------------+--------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                        ; To                             ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+-----------------------------+--------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 242.42 MHz ( period = 4.125 ns )                    ; contador:contador1|segu1[1] ; contador:contador1|hora0[3]    ; clk        ; clk      ; None                        ; None                      ; 3.912 ns                ;
+; N/A                                     ; 242.42 MHz ( period = 4.125 ns )                    ; contador:contador1|segu1[1] ; contador:contador1|aux_hora[0] ; clk        ; clk      ; None                        ; None                      ; 3.912 ns                ;
+; N/A                                     ; 242.42 MHz ( period = 4.125 ns )                    ; contador:contador1|segu1[1] ; contador:contador1|aux_hora[2] ; clk        ; clk      ; None                        ; None                      ; 3.912 ns                ;
+; N/A                                     ; 242.42 MHz ( period = 4.125 ns )                    ; contador:contador1|segu1[1] ; contador:contador1|aux_hora[3] ; clk        ; clk      ; None                        ; None                      ; 3.912 ns                ;
+; N/A                                     ; 242.42 MHz ( period = 4.125 ns )                    ; contador:contador1|segu1[1] ; contador:contador1|aux_hora[4] ; clk        ; clk      ; None                        ; None                      ; 3.912 ns                ;
+; N/A                                     ; 242.42 MHz ( period = 4.125 ns )                    ; contador:contador1|segu1[1] ; contador:contador1|aux_hora[1] ; clk        ; clk      ; None                        ; None                      ; 3.912 ns                ;
+; N/A                                     ; 242.42 MHz ( period = 4.125 ns )                    ; contador:contador1|segu1[1] ; contador:contador1|hora0[0]    ; clk        ; clk      ; None                        ; None                      ; 3.912 ns                ;
+; N/A                                     ; 242.42 MHz ( period = 4.125 ns )                    ; contador:contador1|segu1[1] ; contador:contador1|hora0[1]    ; clk        ; clk      ; None                        ; None                      ; 3.912 ns                ;
+; N/A                                     ; 242.42 MHz ( period = 4.125 ns )                    ; contador:contador1|segu1[1] ; contador:contador1|hora0[2]    ; clk        ; clk      ; None                        ; None                      ; 3.912 ns                ;
+; N/A                                     ; 258.33 MHz ( period = 3.871 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count3[2]      ; clk        ; clk      ; None                        ; None                      ; 3.650 ns                ;
+; N/A                                     ; 258.33 MHz ( period = 3.871 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count3[1]      ; clk        ; clk      ; None                        ; None                      ; 3.650 ns                ;
+; N/A                                     ; 258.33 MHz ( period = 3.871 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count3[8]      ; clk        ; clk      ; None                        ; None                      ; 3.650 ns                ;
+; N/A                                     ; 258.33 MHz ( period = 3.871 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count3[9]      ; clk        ; clk      ; None                        ; None                      ; 3.650 ns                ;
+; N/A                                     ; 258.33 MHz ( period = 3.871 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count3[0]      ; clk        ; clk      ; None                        ; None                      ; 3.650 ns                ;
+; N/A                                     ; 258.33 MHz ( period = 3.871 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count3[5]      ; clk        ; clk      ; None                        ; None                      ; 3.650 ns                ;
+; N/A                                     ; 258.33 MHz ( period = 3.871 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count3[7]      ; clk        ; clk      ; None                        ; None                      ; 3.650 ns                ;
+; N/A                                     ; 258.33 MHz ( period = 3.871 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count3[6]      ; clk        ; clk      ; None                        ; None                      ; 3.650 ns                ;
+; N/A                                     ; 258.33 MHz ( period = 3.871 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count3[4]      ; clk        ; clk      ; None                        ; None                      ; 3.650 ns                ;
+; N/A                                     ; 258.33 MHz ( period = 3.871 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count3[3]      ; clk        ; clk      ; None                        ; None                      ; 3.650 ns                ;
+; N/A                                     ; 258.60 MHz ( period = 3.867 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count3[2]      ; clk        ; clk      ; None                        ; None                      ; 3.646 ns                ;
+; N/A                                     ; 258.60 MHz ( period = 3.867 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count3[1]      ; clk        ; clk      ; None                        ; None                      ; 3.646 ns                ;
+; N/A                                     ; 258.60 MHz ( period = 3.867 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count3[8]      ; clk        ; clk      ; None                        ; None                      ; 3.646 ns                ;
+; N/A                                     ; 258.60 MHz ( period = 3.867 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count3[9]      ; clk        ; clk      ; None                        ; None                      ; 3.646 ns                ;
+; N/A                                     ; 258.60 MHz ( period = 3.867 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count3[0]      ; clk        ; clk      ; None                        ; None                      ; 3.646 ns                ;
+; N/A                                     ; 258.60 MHz ( period = 3.867 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count3[5]      ; clk        ; clk      ; None                        ; None                      ; 3.646 ns                ;
+; N/A                                     ; 258.60 MHz ( period = 3.867 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count3[7]      ; clk        ; clk      ; None                        ; None                      ; 3.646 ns                ;
+; N/A                                     ; 258.60 MHz ( period = 3.867 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count3[6]      ; clk        ; clk      ; None                        ; None                      ; 3.646 ns                ;
+; N/A                                     ; 258.60 MHz ( period = 3.867 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count3[4]      ; clk        ; clk      ; None                        ; None                      ; 3.646 ns                ;
+; N/A                                     ; 258.60 MHz ( period = 3.867 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count3[3]      ; clk        ; clk      ; None                        ; None                      ; 3.646 ns                ;
+; N/A                                     ; 263.50 MHz ( period = 3.795 ns )                    ; contador:contador1|segu1[3] ; contador:contador1|hora0[3]    ; clk        ; clk      ; None                        ; None                      ; 3.582 ns                ;
+; N/A                                     ; 263.50 MHz ( period = 3.795 ns )                    ; contador:contador1|segu1[3] ; contador:contador1|aux_hora[0] ; clk        ; clk      ; None                        ; None                      ; 3.582 ns                ;
+; N/A                                     ; 263.50 MHz ( period = 3.795 ns )                    ; contador:contador1|segu1[3] ; contador:contador1|aux_hora[2] ; clk        ; clk      ; None                        ; None                      ; 3.582 ns                ;
+; N/A                                     ; 263.50 MHz ( period = 3.795 ns )                    ; contador:contador1|segu1[3] ; contador:contador1|aux_hora[3] ; clk        ; clk      ; None                        ; None                      ; 3.582 ns                ;
+; N/A                                     ; 263.50 MHz ( period = 3.795 ns )                    ; contador:contador1|segu1[3] ; contador:contador1|aux_hora[4] ; clk        ; clk      ; None                        ; None                      ; 3.582 ns                ;
+; N/A                                     ; 263.50 MHz ( period = 3.795 ns )                    ; contador:contador1|segu1[3] ; contador:contador1|aux_hora[1] ; clk        ; clk      ; None                        ; None                      ; 3.582 ns                ;
+; N/A                                     ; 263.50 MHz ( period = 3.795 ns )                    ; contador:contador1|segu1[3] ; contador:contador1|hora0[0]    ; clk        ; clk      ; None                        ; None                      ; 3.582 ns                ;
+; N/A                                     ; 263.50 MHz ( period = 3.795 ns )                    ; contador:contador1|segu1[3] ; contador:contador1|hora0[1]    ; clk        ; clk      ; None                        ; None                      ; 3.582 ns                ;
+; N/A                                     ; 263.50 MHz ( period = 3.795 ns )                    ; contador:contador1|segu1[3] ; contador:contador1|hora0[2]    ; clk        ; clk      ; None                        ; None                      ; 3.582 ns                ;
+; N/A                                     ; 264.62 MHz ( period = 3.779 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count1[8]      ; clk        ; clk      ; None                        ; None                      ; 3.560 ns                ;
+; N/A                                     ; 264.62 MHz ( period = 3.779 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count1[9]      ; clk        ; clk      ; None                        ; None                      ; 3.560 ns                ;
+; N/A                                     ; 264.62 MHz ( period = 3.779 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count1[7]      ; clk        ; clk      ; None                        ; None                      ; 3.560 ns                ;
+; N/A                                     ; 264.62 MHz ( period = 3.779 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count1[6]      ; clk        ; clk      ; None                        ; None                      ; 3.560 ns                ;
+; N/A                                     ; 264.62 MHz ( period = 3.779 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count1[4]      ; clk        ; clk      ; None                        ; None                      ; 3.560 ns                ;
+; N/A                                     ; 264.62 MHz ( period = 3.779 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count1[5]      ; clk        ; clk      ; None                        ; None                      ; 3.560 ns                ;
+; N/A                                     ; 264.62 MHz ( period = 3.779 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count1[0]      ; clk        ; clk      ; None                        ; None                      ; 3.560 ns                ;
+; N/A                                     ; 264.62 MHz ( period = 3.779 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count1[3]      ; clk        ; clk      ; None                        ; None                      ; 3.560 ns                ;
+; N/A                                     ; 264.62 MHz ( period = 3.779 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count1[1]      ; clk        ; clk      ; None                        ; None                      ; 3.560 ns                ;
+; N/A                                     ; 264.62 MHz ( period = 3.779 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count1[2]      ; clk        ; clk      ; None                        ; None                      ; 3.560 ns                ;
+; N/A                                     ; 264.90 MHz ( period = 3.775 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count1[8]      ; clk        ; clk      ; None                        ; None                      ; 3.556 ns                ;
+; N/A                                     ; 264.90 MHz ( period = 3.775 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count1[9]      ; clk        ; clk      ; None                        ; None                      ; 3.556 ns                ;
+; N/A                                     ; 264.90 MHz ( period = 3.775 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count1[7]      ; clk        ; clk      ; None                        ; None                      ; 3.556 ns                ;
+; N/A                                     ; 264.90 MHz ( period = 3.775 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count1[6]      ; clk        ; clk      ; None                        ; None                      ; 3.556 ns                ;
+; N/A                                     ; 264.90 MHz ( period = 3.775 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count1[4]      ; clk        ; clk      ; None                        ; None                      ; 3.556 ns                ;
+; N/A                                     ; 264.90 MHz ( period = 3.775 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count1[5]      ; clk        ; clk      ; None                        ; None                      ; 3.556 ns                ;
+; N/A                                     ; 264.90 MHz ( period = 3.775 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count1[0]      ; clk        ; clk      ; None                        ; None                      ; 3.556 ns                ;
+; N/A                                     ; 264.90 MHz ( period = 3.775 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count1[3]      ; clk        ; clk      ; None                        ; None                      ; 3.556 ns                ;
+; N/A                                     ; 264.90 MHz ( period = 3.775 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count1[1]      ; clk        ; clk      ; None                        ; None                      ; 3.556 ns                ;
+; N/A                                     ; 264.90 MHz ( period = 3.775 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count1[2]      ; clk        ; clk      ; None                        ; None                      ; 3.556 ns                ;
+; N/A                                     ; 267.74 MHz ( period = 3.735 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count3[2]      ; clk        ; clk      ; None                        ; None                      ; 3.514 ns                ;
+; N/A                                     ; 267.74 MHz ( period = 3.735 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count3[1]      ; clk        ; clk      ; None                        ; None                      ; 3.514 ns                ;
+; N/A                                     ; 267.74 MHz ( period = 3.735 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count3[8]      ; clk        ; clk      ; None                        ; None                      ; 3.514 ns                ;
+; N/A                                     ; 267.74 MHz ( period = 3.735 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count3[9]      ; clk        ; clk      ; None                        ; None                      ; 3.514 ns                ;
+; N/A                                     ; 267.74 MHz ( period = 3.735 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count3[0]      ; clk        ; clk      ; None                        ; None                      ; 3.514 ns                ;
+; N/A                                     ; 267.74 MHz ( period = 3.735 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count3[5]      ; clk        ; clk      ; None                        ; None                      ; 3.514 ns                ;
+; N/A                                     ; 267.74 MHz ( period = 3.735 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count3[7]      ; clk        ; clk      ; None                        ; None                      ; 3.514 ns                ;
+; N/A                                     ; 267.74 MHz ( period = 3.735 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count3[6]      ; clk        ; clk      ; None                        ; None                      ; 3.514 ns                ;
+; N/A                                     ; 267.74 MHz ( period = 3.735 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count3[4]      ; clk        ; clk      ; None                        ; None                      ; 3.514 ns                ;
+; N/A                                     ; 267.74 MHz ( period = 3.735 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count3[3]      ; clk        ; clk      ; None                        ; None                      ; 3.514 ns                ;
+; N/A                                     ; 268.53 MHz ( period = 3.724 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|D              ; clk        ; clk      ; None                        ; None                      ; 3.449 ns                ;
+; N/A                                     ; 268.82 MHz ( period = 3.720 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|D              ; clk        ; clk      ; None                        ; None                      ; 3.445 ns                ;
+; N/A                                     ; 270.27 MHz ( period = 3.700 ns )                    ; contador:contador1|segu1[1] ; contador:contador1|minu1[3]    ; clk        ; clk      ; None                        ; None                      ; 3.487 ns                ;
+; N/A                                     ; 270.27 MHz ( period = 3.700 ns )                    ; contador:contador1|segu1[1] ; contador:contador1|minu1[2]    ; clk        ; clk      ; None                        ; None                      ; 3.487 ns                ;
+; N/A                                     ; 270.27 MHz ( period = 3.700 ns )                    ; contador:contador1|segu1[1] ; contador:contador1|minu1[0]    ; clk        ; clk      ; None                        ; None                      ; 3.487 ns                ;
+; N/A                                     ; 270.27 MHz ( period = 3.700 ns )                    ; contador:contador1|segu1[1] ; contador:contador1|minu1[1]    ; clk        ; clk      ; None                        ; None                      ; 3.487 ns                ;
+; N/A                                     ; 270.27 MHz ( period = 3.700 ns )                    ; contador:contador1|segu0[0] ; contador:contador1|hora0[3]    ; clk        ; clk      ; None                        ; None                      ; 3.490 ns                ;
+; N/A                                     ; 270.27 MHz ( period = 3.700 ns )                    ; contador:contador1|segu0[0] ; contador:contador1|aux_hora[0] ; clk        ; clk      ; None                        ; None                      ; 3.490 ns                ;
+; N/A                                     ; 270.27 MHz ( period = 3.700 ns )                    ; contador:contador1|segu0[0] ; contador:contador1|aux_hora[2] ; clk        ; clk      ; None                        ; None                      ; 3.490 ns                ;
+; N/A                                     ; 270.27 MHz ( period = 3.700 ns )                    ; contador:contador1|segu0[0] ; contador:contador1|aux_hora[3] ; clk        ; clk      ; None                        ; None                      ; 3.490 ns                ;
+; N/A                                     ; 270.27 MHz ( period = 3.700 ns )                    ; contador:contador1|segu0[0] ; contador:contador1|aux_hora[4] ; clk        ; clk      ; None                        ; None                      ; 3.490 ns                ;
+; N/A                                     ; 270.27 MHz ( period = 3.700 ns )                    ; contador:contador1|segu0[0] ; contador:contador1|aux_hora[1] ; clk        ; clk      ; None                        ; None                      ; 3.490 ns                ;
+; N/A                                     ; 270.27 MHz ( period = 3.700 ns )                    ; contador:contador1|segu0[0] ; contador:contador1|hora0[0]    ; clk        ; clk      ; None                        ; None                      ; 3.490 ns                ;
+; N/A                                     ; 270.27 MHz ( period = 3.700 ns )                    ; contador:contador1|segu0[0] ; contador:contador1|hora0[1]    ; clk        ; clk      ; None                        ; None                      ; 3.490 ns                ;
+; N/A                                     ; 270.27 MHz ( period = 3.700 ns )                    ; contador:contador1|segu0[0] ; contador:contador1|hora0[2]    ; clk        ; clk      ; None                        ; None                      ; 3.490 ns                ;
+; N/A                                     ; 271.08 MHz ( period = 3.689 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count2[9]      ; clk        ; clk      ; None                        ; None                      ; 3.471 ns                ;
+; N/A                                     ; 271.08 MHz ( period = 3.689 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count2[8]      ; clk        ; clk      ; None                        ; None                      ; 3.471 ns                ;
+; N/A                                     ; 271.08 MHz ( period = 3.689 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count2[2]      ; clk        ; clk      ; None                        ; None                      ; 3.471 ns                ;
+; N/A                                     ; 271.08 MHz ( period = 3.689 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count2[1]      ; clk        ; clk      ; None                        ; None                      ; 3.471 ns                ;
+; N/A                                     ; 271.08 MHz ( period = 3.689 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count2[3]      ; clk        ; clk      ; None                        ; None                      ; 3.471 ns                ;
+; N/A                                     ; 271.08 MHz ( period = 3.689 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count2[0]      ; clk        ; clk      ; None                        ; None                      ; 3.471 ns                ;
+; N/A                                     ; 271.08 MHz ( period = 3.689 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count2[7]      ; clk        ; clk      ; None                        ; None                      ; 3.471 ns                ;
+; N/A                                     ; 271.08 MHz ( period = 3.689 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count2[5]      ; clk        ; clk      ; None                        ; None                      ; 3.471 ns                ;
+; N/A                                     ; 271.08 MHz ( period = 3.689 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count2[6]      ; clk        ; clk      ; None                        ; None                      ; 3.471 ns                ;
+; N/A                                     ; 271.08 MHz ( period = 3.689 ns )                    ; Divider:div_clk|count0[6]   ; Divider:div_clk|count2[4]      ; clk        ; clk      ; None                        ; None                      ; 3.471 ns                ;
+; N/A                                     ; 271.37 MHz ( period = 3.685 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count2[9]      ; clk        ; clk      ; None                        ; None                      ; 3.467 ns                ;
+; N/A                                     ; 271.37 MHz ( period = 3.685 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count2[8]      ; clk        ; clk      ; None                        ; None                      ; 3.467 ns                ;
+; N/A                                     ; 271.37 MHz ( period = 3.685 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count2[2]      ; clk        ; clk      ; None                        ; None                      ; 3.467 ns                ;
+; N/A                                     ; 271.37 MHz ( period = 3.685 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count2[1]      ; clk        ; clk      ; None                        ; None                      ; 3.467 ns                ;
+; N/A                                     ; 271.37 MHz ( period = 3.685 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count2[3]      ; clk        ; clk      ; None                        ; None                      ; 3.467 ns                ;
+; N/A                                     ; 271.37 MHz ( period = 3.685 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count2[0]      ; clk        ; clk      ; None                        ; None                      ; 3.467 ns                ;
+; N/A                                     ; 271.37 MHz ( period = 3.685 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count2[7]      ; clk        ; clk      ; None                        ; None                      ; 3.467 ns                ;
+; N/A                                     ; 271.37 MHz ( period = 3.685 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count2[5]      ; clk        ; clk      ; None                        ; None                      ; 3.467 ns                ;
+; N/A                                     ; 271.37 MHz ( period = 3.685 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count2[6]      ; clk        ; clk      ; None                        ; None                      ; 3.467 ns                ;
+; N/A                                     ; 271.37 MHz ( period = 3.685 ns )                    ; Divider:div_clk|count0[4]   ; Divider:div_clk|count2[4]      ; clk        ; clk      ; None                        ; None                      ; 3.467 ns                ;
+; N/A                                     ; 272.18 MHz ( period = 3.674 ns )                    ; contador:contador1|segu0[0] ; contador:contador1|hora1[2]    ; clk        ; clk      ; None                        ; None                      ; 3.462 ns                ;
+; N/A                                     ; 272.63 MHz ( period = 3.668 ns )                    ; contador:contador1|segu1[2] ; contador:contador1|hora0[3]    ; clk        ; clk      ; None                        ; None                      ; 3.455 ns                ;
+; N/A                                     ; 272.63 MHz ( period = 3.668 ns )                    ; contador:contador1|segu1[2] ; contador:contador1|aux_hora[0] ; clk        ; clk      ; None                        ; None                      ; 3.455 ns                ;
+; N/A                                     ; 272.63 MHz ( period = 3.668 ns )                    ; contador:contador1|segu1[2] ; contador:contador1|aux_hora[2] ; clk        ; clk      ; None                        ; None                      ; 3.455 ns                ;
+; N/A                                     ; 272.63 MHz ( period = 3.668 ns )                    ; contador:contador1|segu1[2] ; contador:contador1|aux_hora[3] ; clk        ; clk      ; None                        ; None                      ; 3.455 ns                ;
+; N/A                                     ; 272.63 MHz ( period = 3.668 ns )                    ; contador:contador1|segu1[2] ; contador:contador1|aux_hora[4] ; clk        ; clk      ; None                        ; None                      ; 3.455 ns                ;
+; N/A                                     ; 272.63 MHz ( period = 3.668 ns )                    ; contador:contador1|segu1[2] ; contador:contador1|aux_hora[1] ; clk        ; clk      ; None                        ; None                      ; 3.455 ns                ;
+; N/A                                     ; 272.63 MHz ( period = 3.668 ns )                    ; contador:contador1|segu1[2] ; contador:contador1|hora0[0]    ; clk        ; clk      ; None                        ; None                      ; 3.455 ns                ;
+; N/A                                     ; 272.63 MHz ( period = 3.668 ns )                    ; contador:contador1|segu1[2] ; contador:contador1|hora0[1]    ; clk        ; clk      ; None                        ; None                      ; 3.455 ns                ;
+; N/A                                     ; 272.63 MHz ( period = 3.668 ns )                    ; contador:contador1|segu1[2] ; contador:contador1|hora0[2]    ; clk        ; clk      ; None                        ; None                      ; 3.455 ns                ;
+; N/A                                     ; 274.12 MHz ( period = 3.648 ns )                    ; contador:contador1|segu1[1] ; contador:contador1|hora1[2]    ; clk        ; clk      ; None                        ; None                      ; 3.433 ns                ;
+; N/A                                     ; 274.27 MHz ( period = 3.646 ns )                    ; contador:contador1|segu0[1] ; contador:contador1|hora0[3]    ; clk        ; clk      ; None                        ; None                      ; 3.436 ns                ;
+; N/A                                     ; 274.27 MHz ( period = 3.646 ns )                    ; contador:contador1|segu0[1] ; contador:contador1|aux_hora[0] ; clk        ; clk      ; None                        ; None                      ; 3.436 ns                ;
+; N/A                                     ; 274.27 MHz ( period = 3.646 ns )                    ; contador:contador1|segu0[1] ; contador:contador1|aux_hora[2] ; clk        ; clk      ; None                        ; None                      ; 3.436 ns                ;
+; N/A                                     ; 274.27 MHz ( period = 3.646 ns )                    ; contador:contador1|segu0[1] ; contador:contador1|aux_hora[3] ; clk        ; clk      ; None                        ; None                      ; 3.436 ns                ;
+; N/A                                     ; 274.27 MHz ( period = 3.646 ns )                    ; contador:contador1|segu0[1] ; contador:contador1|aux_hora[4] ; clk        ; clk      ; None                        ; None                      ; 3.436 ns                ;
+; N/A                                     ; 274.27 MHz ( period = 3.646 ns )                    ; contador:contador1|segu0[1] ; contador:contador1|aux_hora[1] ; clk        ; clk      ; None                        ; None                      ; 3.436 ns                ;
+; N/A                                     ; 274.27 MHz ( period = 3.646 ns )                    ; contador:contador1|segu0[1] ; contador:contador1|hora0[0]    ; clk        ; clk      ; None                        ; None                      ; 3.436 ns                ;
+; N/A                                     ; 274.27 MHz ( period = 3.646 ns )                    ; contador:contador1|segu0[1] ; contador:contador1|hora0[1]    ; clk        ; clk      ; None                        ; None                      ; 3.436 ns                ;
+; N/A                                     ; 274.27 MHz ( period = 3.646 ns )                    ; contador:contador1|segu0[1] ; contador:contador1|hora0[2]    ; clk        ; clk      ; None                        ; None                      ; 3.436 ns                ;
+; N/A                                     ; 274.50 MHz ( period = 3.643 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count1[8]      ; clk        ; clk      ; None                        ; None                      ; 3.424 ns                ;
+; N/A                                     ; 274.50 MHz ( period = 3.643 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count1[9]      ; clk        ; clk      ; None                        ; None                      ; 3.424 ns                ;
+; N/A                                     ; 274.50 MHz ( period = 3.643 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count1[7]      ; clk        ; clk      ; None                        ; None                      ; 3.424 ns                ;
+; N/A                                     ; 274.50 MHz ( period = 3.643 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count1[6]      ; clk        ; clk      ; None                        ; None                      ; 3.424 ns                ;
+; N/A                                     ; 274.50 MHz ( period = 3.643 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count1[4]      ; clk        ; clk      ; None                        ; None                      ; 3.424 ns                ;
+; N/A                                     ; 274.50 MHz ( period = 3.643 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count1[5]      ; clk        ; clk      ; None                        ; None                      ; 3.424 ns                ;
+; N/A                                     ; 274.50 MHz ( period = 3.643 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count1[0]      ; clk        ; clk      ; None                        ; None                      ; 3.424 ns                ;
+; N/A                                     ; 274.50 MHz ( period = 3.643 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count1[3]      ; clk        ; clk      ; None                        ; None                      ; 3.424 ns                ;
+; N/A                                     ; 274.50 MHz ( period = 3.643 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count1[1]      ; clk        ; clk      ; None                        ; None                      ; 3.424 ns                ;
+; N/A                                     ; 274.50 MHz ( period = 3.643 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count1[2]      ; clk        ; clk      ; None                        ; None                      ; 3.424 ns                ;
+; N/A                                     ; 276.24 MHz ( period = 3.620 ns )                    ; contador:contador1|segu0[1] ; contador:contador1|hora1[2]    ; clk        ; clk      ; None                        ; None                      ; 3.408 ns                ;
+; N/A                                     ; 276.47 MHz ( period = 3.617 ns )                    ; Divider:div_clk|count0[7]   ; Divider:div_clk|count3[2]      ; clk        ; clk      ; None                        ; None                      ; 3.396 ns                ;
+; N/A                                     ; 276.47 MHz ( period = 3.617 ns )                    ; Divider:div_clk|count0[7]   ; Divider:div_clk|count3[1]      ; clk        ; clk      ; None                        ; None                      ; 3.396 ns                ;
+; N/A                                     ; 276.47 MHz ( period = 3.617 ns )                    ; Divider:div_clk|count0[7]   ; Divider:div_clk|count3[8]      ; clk        ; clk      ; None                        ; None                      ; 3.396 ns                ;
+; N/A                                     ; 276.47 MHz ( period = 3.617 ns )                    ; Divider:div_clk|count0[7]   ; Divider:div_clk|count3[9]      ; clk        ; clk      ; None                        ; None                      ; 3.396 ns                ;
+; N/A                                     ; 276.47 MHz ( period = 3.617 ns )                    ; Divider:div_clk|count0[7]   ; Divider:div_clk|count3[0]      ; clk        ; clk      ; None                        ; None                      ; 3.396 ns                ;
+; N/A                                     ; 276.47 MHz ( period = 3.617 ns )                    ; Divider:div_clk|count0[7]   ; Divider:div_clk|count3[5]      ; clk        ; clk      ; None                        ; None                      ; 3.396 ns                ;
+; N/A                                     ; 276.47 MHz ( period = 3.617 ns )                    ; Divider:div_clk|count0[7]   ; Divider:div_clk|count3[7]      ; clk        ; clk      ; None                        ; None                      ; 3.396 ns                ;
+; N/A                                     ; 276.47 MHz ( period = 3.617 ns )                    ; Divider:div_clk|count0[7]   ; Divider:div_clk|count3[6]      ; clk        ; clk      ; None                        ; None                      ; 3.396 ns                ;
+; N/A                                     ; 276.47 MHz ( period = 3.617 ns )                    ; Divider:div_clk|count0[7]   ; Divider:div_clk|count3[4]      ; clk        ; clk      ; None                        ; None                      ; 3.396 ns                ;
+; N/A                                     ; 276.47 MHz ( period = 3.617 ns )                    ; Divider:div_clk|count0[7]   ; Divider:div_clk|count3[3]      ; clk        ; clk      ; None                        ; None                      ; 3.396 ns                ;
+; N/A                                     ; 278.40 MHz ( period = 3.592 ns )                    ; contador:contador1|dec[0]   ; contador:contador1|hora0[3]    ; clk        ; clk      ; None                        ; None                      ; 3.380 ns                ;
+; N/A                                     ; 278.40 MHz ( period = 3.592 ns )                    ; contador:contador1|dec[0]   ; contador:contador1|aux_hora[0] ; clk        ; clk      ; None                        ; None                      ; 3.380 ns                ;
+; N/A                                     ; 278.40 MHz ( period = 3.592 ns )                    ; contador:contador1|dec[0]   ; contador:contador1|aux_hora[2] ; clk        ; clk      ; None                        ; None                      ; 3.380 ns                ;
+; N/A                                     ; 278.40 MHz ( period = 3.592 ns )                    ; contador:contador1|dec[0]   ; contador:contador1|aux_hora[3] ; clk        ; clk      ; None                        ; None                      ; 3.380 ns                ;
+; N/A                                     ; 278.40 MHz ( period = 3.592 ns )                    ; contador:contador1|dec[0]   ; contador:contador1|aux_hora[4] ; clk        ; clk      ; None                        ; None                      ; 3.380 ns                ;
+; N/A                                     ; 278.40 MHz ( period = 3.592 ns )                    ; contador:contador1|dec[0]   ; contador:contador1|aux_hora[1] ; clk        ; clk      ; None                        ; None                      ; 3.380 ns                ;
+; N/A                                     ; 278.40 MHz ( period = 3.592 ns )                    ; contador:contador1|dec[0]   ; contador:contador1|hora0[0]    ; clk        ; clk      ; None                        ; None                      ; 3.380 ns                ;
+; N/A                                     ; 278.40 MHz ( period = 3.592 ns )                    ; contador:contador1|dec[0]   ; contador:contador1|hora0[1]    ; clk        ; clk      ; None                        ; None                      ; 3.380 ns                ;
+; N/A                                     ; 278.40 MHz ( period = 3.592 ns )                    ; contador:contador1|dec[0]   ; contador:contador1|hora0[2]    ; clk        ; clk      ; None                        ; None                      ; 3.380 ns                ;
+; N/A                                     ; 278.71 MHz ( period = 3.588 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|D              ; clk        ; clk      ; None                        ; None                      ; 3.313 ns                ;
+; N/A                                     ; 279.25 MHz ( period = 3.581 ns )                    ; Divider:div_clk|count0[1]   ; Divider:div_clk|count3[2]      ; clk        ; clk      ; None                        ; None                      ; 3.360 ns                ;
+; N/A                                     ; 279.25 MHz ( period = 3.581 ns )                    ; Divider:div_clk|count0[1]   ; Divider:div_clk|count3[1]      ; clk        ; clk      ; None                        ; None                      ; 3.360 ns                ;
+; N/A                                     ; 279.25 MHz ( period = 3.581 ns )                    ; Divider:div_clk|count0[1]   ; Divider:div_clk|count3[8]      ; clk        ; clk      ; None                        ; None                      ; 3.360 ns                ;
+; N/A                                     ; 279.25 MHz ( period = 3.581 ns )                    ; Divider:div_clk|count0[1]   ; Divider:div_clk|count3[9]      ; clk        ; clk      ; None                        ; None                      ; 3.360 ns                ;
+; N/A                                     ; 279.25 MHz ( period = 3.581 ns )                    ; Divider:div_clk|count0[1]   ; Divider:div_clk|count3[0]      ; clk        ; clk      ; None                        ; None                      ; 3.360 ns                ;
+; N/A                                     ; 279.25 MHz ( period = 3.581 ns )                    ; Divider:div_clk|count0[1]   ; Divider:div_clk|count3[5]      ; clk        ; clk      ; None                        ; None                      ; 3.360 ns                ;
+; N/A                                     ; 279.25 MHz ( period = 3.581 ns )                    ; Divider:div_clk|count0[1]   ; Divider:div_clk|count3[7]      ; clk        ; clk      ; None                        ; None                      ; 3.360 ns                ;
+; N/A                                     ; 279.25 MHz ( period = 3.581 ns )                    ; Divider:div_clk|count0[1]   ; Divider:div_clk|count3[6]      ; clk        ; clk      ; None                        ; None                      ; 3.360 ns                ;
+; N/A                                     ; 279.25 MHz ( period = 3.581 ns )                    ; Divider:div_clk|count0[1]   ; Divider:div_clk|count3[4]      ; clk        ; clk      ; None                        ; None                      ; 3.360 ns                ;
+; N/A                                     ; 279.25 MHz ( period = 3.581 ns )                    ; Divider:div_clk|count0[1]   ; Divider:div_clk|count3[3]      ; clk        ; clk      ; None                        ; None                      ; 3.360 ns                ;
+; N/A                                     ; 281.14 MHz ( period = 3.557 ns )                    ; contador:contador1|dec[2]   ; contador:contador1|hora0[3]    ; clk        ; clk      ; None                        ; None                      ; 3.345 ns                ;
+; N/A                                     ; 281.14 MHz ( period = 3.557 ns )                    ; contador:contador1|dec[2]   ; contador:contador1|aux_hora[0] ; clk        ; clk      ; None                        ; None                      ; 3.345 ns                ;
+; N/A                                     ; 281.14 MHz ( period = 3.557 ns )                    ; contador:contador1|dec[2]   ; contador:contador1|aux_hora[2] ; clk        ; clk      ; None                        ; None                      ; 3.345 ns                ;
+; N/A                                     ; 281.14 MHz ( period = 3.557 ns )                    ; contador:contador1|dec[2]   ; contador:contador1|aux_hora[3] ; clk        ; clk      ; None                        ; None                      ; 3.345 ns                ;
+; N/A                                     ; 281.14 MHz ( period = 3.557 ns )                    ; contador:contador1|dec[2]   ; contador:contador1|aux_hora[4] ; clk        ; clk      ; None                        ; None                      ; 3.345 ns                ;
+; N/A                                     ; 281.14 MHz ( period = 3.557 ns )                    ; contador:contador1|dec[2]   ; contador:contador1|aux_hora[1] ; clk        ; clk      ; None                        ; None                      ; 3.345 ns                ;
+; N/A                                     ; 281.14 MHz ( period = 3.557 ns )                    ; contador:contador1|dec[2]   ; contador:contador1|hora0[0]    ; clk        ; clk      ; None                        ; None                      ; 3.345 ns                ;
+; N/A                                     ; 281.14 MHz ( period = 3.557 ns )                    ; contador:contador1|dec[2]   ; contador:contador1|hora0[1]    ; clk        ; clk      ; None                        ; None                      ; 3.345 ns                ;
+; N/A                                     ; 281.14 MHz ( period = 3.557 ns )                    ; contador:contador1|dec[2]   ; contador:contador1|hora0[2]    ; clk        ; clk      ; None                        ; None                      ; 3.345 ns                ;
+; N/A                                     ; 281.29 MHz ( period = 3.555 ns )                    ; Divider:div_clk|count0[0]   ; Divider:div_clk|count3[2]      ; clk        ; clk      ; None                        ; None                      ; 3.334 ns                ;
+; N/A                                     ; 281.29 MHz ( period = 3.555 ns )                    ; Divider:div_clk|count0[0]   ; Divider:div_clk|count3[1]      ; clk        ; clk      ; None                        ; None                      ; 3.334 ns                ;
+; N/A                                     ; 281.29 MHz ( period = 3.555 ns )                    ; Divider:div_clk|count0[0]   ; Divider:div_clk|count3[8]      ; clk        ; clk      ; None                        ; None                      ; 3.334 ns                ;
+; N/A                                     ; 281.29 MHz ( period = 3.555 ns )                    ; Divider:div_clk|count0[0]   ; Divider:div_clk|count3[9]      ; clk        ; clk      ; None                        ; None                      ; 3.334 ns                ;
+; N/A                                     ; 281.29 MHz ( period = 3.555 ns )                    ; Divider:div_clk|count0[0]   ; Divider:div_clk|count3[0]      ; clk        ; clk      ; None                        ; None                      ; 3.334 ns                ;
+; N/A                                     ; 281.29 MHz ( period = 3.555 ns )                    ; Divider:div_clk|count0[0]   ; Divider:div_clk|count3[5]      ; clk        ; clk      ; None                        ; None                      ; 3.334 ns                ;
+; N/A                                     ; 281.29 MHz ( period = 3.555 ns )                    ; Divider:div_clk|count0[0]   ; Divider:div_clk|count3[7]      ; clk        ; clk      ; None                        ; None                      ; 3.334 ns                ;
+; N/A                                     ; 281.29 MHz ( period = 3.555 ns )                    ; Divider:div_clk|count0[0]   ; Divider:div_clk|count3[6]      ; clk        ; clk      ; None                        ; None                      ; 3.334 ns                ;
+; N/A                                     ; 281.29 MHz ( period = 3.555 ns )                    ; Divider:div_clk|count0[0]   ; Divider:div_clk|count3[4]      ; clk        ; clk      ; None                        ; None                      ; 3.334 ns                ;
+; N/A                                     ; 281.29 MHz ( period = 3.555 ns )                    ; Divider:div_clk|count0[0]   ; Divider:div_clk|count3[3]      ; clk        ; clk      ; None                        ; None                      ; 3.334 ns                ;
+; N/A                                     ; 281.45 MHz ( period = 3.553 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count2[9]      ; clk        ; clk      ; None                        ; None                      ; 3.335 ns                ;
+; N/A                                     ; 281.45 MHz ( period = 3.553 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count2[8]      ; clk        ; clk      ; None                        ; None                      ; 3.335 ns                ;
+; N/A                                     ; 281.45 MHz ( period = 3.553 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count2[2]      ; clk        ; clk      ; None                        ; None                      ; 3.335 ns                ;
+; N/A                                     ; 281.45 MHz ( period = 3.553 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count2[1]      ; clk        ; clk      ; None                        ; None                      ; 3.335 ns                ;
+; N/A                                     ; 281.45 MHz ( period = 3.553 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count2[3]      ; clk        ; clk      ; None                        ; None                      ; 3.335 ns                ;
+; N/A                                     ; 281.45 MHz ( period = 3.553 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count2[0]      ; clk        ; clk      ; None                        ; None                      ; 3.335 ns                ;
+; N/A                                     ; 281.45 MHz ( period = 3.553 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count2[7]      ; clk        ; clk      ; None                        ; None                      ; 3.335 ns                ;
+; N/A                                     ; 281.45 MHz ( period = 3.553 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count2[5]      ; clk        ; clk      ; None                        ; None                      ; 3.335 ns                ;
+; N/A                                     ; 281.45 MHz ( period = 3.553 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count2[6]      ; clk        ; clk      ; None                        ; None                      ; 3.335 ns                ;
+; N/A                                     ; 281.45 MHz ( period = 3.553 ns )                    ; Divider:div_clk|count0[5]   ; Divider:div_clk|count2[4]      ; clk        ; clk      ; None                        ; None                      ; 3.335 ns                ;
+; N/A                                     ; 282.01 MHz ( period = 3.546 ns )                    ; contador:contador1|segu0[2] ; contador:contador1|aux_hora[0] ; clk        ; clk      ; None                        ; None                      ; 3.336 ns                ;
+; N/A                                     ; 282.01 MHz ( period = 3.546 ns )                    ; contador:contador1|segu0[2] ; contador:contador1|aux_hora[2] ; clk        ; clk      ; None                        ; None                      ; 3.336 ns                ;
+; N/A                                     ; 282.01 MHz ( period = 3.546 ns )                    ; contador:contador1|segu0[2] ; contador:contador1|aux_hora[3] ; clk        ; clk      ; None                        ; None                      ; 3.336 ns                ;
+; N/A                                     ; 282.01 MHz ( period = 3.546 ns )                    ; contador:contador1|segu0[2] ; contador:contador1|aux_hora[4] ; clk        ; clk      ; None                        ; None                      ; 3.336 ns                ;
+; N/A                                     ; 282.01 MHz ( period = 3.546 ns )                    ; contador:contador1|segu0[2] ; contador:contador1|aux_hora[1] ; clk        ; clk      ; None                        ; None                      ; 3.336 ns                ;
+; N/A                                     ; 282.01 MHz ( period = 3.546 ns )                    ; contador:contador1|segu0[2] ; contador:contador1|hora0[0]    ; clk        ; clk      ; None                        ; None                      ; 3.336 ns                ;
+; N/A                                     ; 282.01 MHz ( period = 3.546 ns )                    ; contador:contador1|segu0[2] ; contador:contador1|hora0[1]    ; clk        ; clk      ; None                        ; None                      ; 3.336 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                             ;                                ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+-----------------------------+--------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; tco                                                                                  ;
++-------+--------------+------------+-----------------------------+-------+------------+
+; Slack ; Required tco ; Actual tco ; From                        ; To    ; From Clock ;
++-------+--------------+------------+-----------------------------+-------+------------+
+; N/A   ; None         ; 14.601 ns  ; contador:contador1|hora1[1] ; s5[4] ; clk        ;
+; N/A   ; None         ; 14.537 ns  ; contador:contador1|hora1[1] ; s5[2] ; clk        ;
+; N/A   ; None         ; 14.524 ns  ; contador:contador1|hora1[2] ; s5[4] ; clk        ;
+; N/A   ; None         ; 14.504 ns  ; contador:contador1|hora1[0] ; s5[4] ; clk        ;
+; N/A   ; None         ; 14.461 ns  ; contador:contador1|hora1[2] ; s5[2] ; clk        ;
+; N/A   ; None         ; 14.442 ns  ; contador:contador1|hora1[0] ; s5[2] ; clk        ;
+; N/A   ; None         ; 14.388 ns  ; contador:contador1|hora1[1] ; s5[0] ; clk        ;
+; N/A   ; None         ; 14.312 ns  ; contador:contador1|hora1[2] ; s5[0] ; clk        ;
+; N/A   ; None         ; 14.292 ns  ; contador:contador1|hora1[0] ; s5[0] ; clk        ;
+; N/A   ; None         ; 14.114 ns  ; contador:contador1|hora0[2] ; s4[1] ; clk        ;
+; N/A   ; None         ; 14.105 ns  ; contador:contador1|hora0[2] ; s4[0] ; clk        ;
+; N/A   ; None         ; 14.092 ns  ; contador:contador1|hora0[2] ; s4[2] ; clk        ;
+; N/A   ; None         ; 14.069 ns  ; contador:contador1|hora0[2] ; s4[3] ; clk        ;
+; N/A   ; None         ; 14.062 ns  ; contador:contador1|hora1[1] ; s5[6] ; clk        ;
+; N/A   ; None         ; 14.011 ns  ; contador:contador1|hora1[1] ; s5[1] ; clk        ;
+; N/A   ; None         ; 13.985 ns  ; contador:contador1|hora1[2] ; s5[6] ; clk        ;
+; N/A   ; None         ; 13.967 ns  ; contador:contador1|hora1[0] ; s5[6] ; clk        ;
+; N/A   ; None         ; 13.932 ns  ; contador:contador1|hora1[2] ; s5[1] ; clk        ;
+; N/A   ; None         ; 13.919 ns  ; contador:contador1|segu0[1] ; s0[3] ; clk        ;
+; N/A   ; None         ; 13.917 ns  ; contador:contador1|hora1[3] ; s5[4] ; clk        ;
+; N/A   ; None         ; 13.912 ns  ; contador:contador1|hora1[0] ; s5[1] ; clk        ;
+; N/A   ; None         ; 13.888 ns  ; contador:contador1|hora1[3] ; s5[2] ; clk        ;
+; N/A   ; None         ; 13.869 ns  ; contador:contador1|segu0[2] ; s0[3] ; clk        ;
+; N/A   ; None         ; 13.744 ns  ; contador:contador1|hora1[3] ; s5[0] ; clk        ;
+; N/A   ; None         ; 13.735 ns  ; contador:contador1|segu0[3] ; s0[3] ; clk        ;
+; N/A   ; None         ; 13.630 ns  ; contador:contador1|hora1[1] ; s5[5] ; clk        ;
+; N/A   ; None         ; 13.613 ns  ; contador:contador1|segu0[0] ; s0[3] ; clk        ;
+; N/A   ; None         ; 13.605 ns  ; contador:contador1|segu0[1] ; s0[4] ; clk        ;
+; N/A   ; None         ; 13.554 ns  ; contador:contador1|hora1[2] ; s5[5] ; clk        ;
+; N/A   ; None         ; 13.549 ns  ; contador:contador1|segu0[2] ; s0[4] ; clk        ;
+; N/A   ; None         ; 13.544 ns  ; contador:contador1|hora1[1] ; s5[3] ; clk        ;
+; N/A   ; None         ; 13.534 ns  ; contador:contador1|hora1[0] ; s5[5] ; clk        ;
+; N/A   ; None         ; 13.463 ns  ; contador:contador1|hora1[2] ; s5[3] ; clk        ;
+; N/A   ; None         ; 13.445 ns  ; contador:contador1|hora1[0] ; s5[3] ; clk        ;
+; N/A   ; None         ; 13.422 ns  ; contador:contador1|hora1[3] ; s5[6] ; clk        ;
+; N/A   ; None         ; 13.402 ns  ; contador:contador1|segu0[0] ; s0[2] ; clk        ;
+; N/A   ; None         ; 13.388 ns  ; contador:contador1|segu0[3] ; s0[4] ; clk        ;
+; N/A   ; None         ; 13.359 ns  ; contador:contador1|hora1[3] ; s5[1] ; clk        ;
+; N/A   ; None         ; 13.351 ns  ; contador:contador1|segu0[3] ; s0[2] ; clk        ;
+; N/A   ; None         ; 13.310 ns  ; contador:contador1|hora0[1] ; s4[1] ; clk        ;
+; N/A   ; None         ; 13.304 ns  ; contador:contador1|hora0[1] ; s4[0] ; clk        ;
+; N/A   ; None         ; 13.292 ns  ; contador:contador1|segu0[0] ; s0[4] ; clk        ;
+; N/A   ; None         ; 13.288 ns  ; contador:contador1|hora0[1] ; s4[2] ; clk        ;
+; N/A   ; None         ; 13.268 ns  ; contador:contador1|hora0[1] ; s4[3] ; clk        ;
+; N/A   ; None         ; 13.236 ns  ; contador:contador1|segu0[1] ; s0[5] ; clk        ;
+; N/A   ; None         ; 13.207 ns  ; contador:contador1|segu0[1] ; s0[2] ; clk        ;
+; N/A   ; None         ; 13.186 ns  ; contador:contador1|segu0[2] ; s0[5] ; clk        ;
+; N/A   ; None         ; 13.096 ns  ; contador:contador1|segu0[2] ; s0[2] ; clk        ;
+; N/A   ; None         ; 13.050 ns  ; contador:contador1|segu0[3] ; s0[5] ; clk        ;
+; N/A   ; None         ; 13.040 ns  ; contador:contador1|segu0[0] ; s0[1] ; clk        ;
+; N/A   ; None         ; 12.989 ns  ; contador:contador1|segu0[3] ; s0[1] ; clk        ;
+; N/A   ; None         ; 12.972 ns  ; contador:contador1|hora1[3] ; s5[5] ; clk        ;
+; N/A   ; None         ; 12.929 ns  ; contador:contador1|segu0[0] ; s0[5] ; clk        ;
+; N/A   ; None         ; 12.907 ns  ; contador:contador1|hora1[3] ; s5[3] ; clk        ;
+; N/A   ; None         ; 12.845 ns  ; contador:contador1|segu0[1] ; s0[1] ; clk        ;
+; N/A   ; None         ; 12.734 ns  ; contador:contador1|segu0[2] ; s0[1] ; clk        ;
+; N/A   ; None         ; 12.591 ns  ; contador:contador1|hora0[0] ; s4[6] ; clk        ;
+; N/A   ; None         ; 12.416 ns  ; contador:contador1|hora0[2] ; s4[6] ; clk        ;
+; N/A   ; None         ; 12.408 ns  ; contador:contador1|segu0[0] ; s0[0] ; clk        ;
+; N/A   ; None         ; 12.358 ns  ; contador:contador1|segu0[3] ; s0[0] ; clk        ;
+; N/A   ; None         ; 12.279 ns  ; contador:contador1|hora0[3] ; s4[6] ; clk        ;
+; N/A   ; None         ; 12.271 ns  ; contador:contador1|segu1[1] ; s1[0] ; clk        ;
+; N/A   ; None         ; 12.265 ns  ; contador:contador1|hora0[0] ; s4[1] ; clk        ;
+; N/A   ; None         ; 12.259 ns  ; contador:contador1|hora0[0] ; s4[0] ; clk        ;
+; N/A   ; None         ; 12.253 ns  ; contador:contador1|segu1[1] ; s1[1] ; clk        ;
+; N/A   ; None         ; 12.244 ns  ; contador:contador1|hora0[0] ; s4[2] ; clk        ;
+; N/A   ; None         ; 12.224 ns  ; contador:contador1|hora0[0] ; s4[3] ; clk        ;
+; N/A   ; None         ; 12.214 ns  ; contador:contador1|segu0[1] ; s0[0] ; clk        ;
+; N/A   ; None         ; 12.202 ns  ; contador:contador1|hora0[0] ; s4[5] ; clk        ;
+; N/A   ; None         ; 12.146 ns  ; contador:contador1|hora0[3] ; s4[1] ; clk        ;
+; N/A   ; None         ; 12.142 ns  ; contador:contador1|hora0[0] ; s4[4] ; clk        ;
+; N/A   ; None         ; 12.142 ns  ; contador:contador1|hora0[1] ; s4[6] ; clk        ;
+; N/A   ; None         ; 12.140 ns  ; contador:contador1|hora0[3] ; s4[0] ; clk        ;
+; N/A   ; None         ; 12.124 ns  ; contador:contador1|hora0[3] ; s4[2] ; clk        ;
+; N/A   ; None         ; 12.112 ns  ; contador:contador1|segu1[1] ; s1[4] ; clk        ;
+; N/A   ; None         ; 12.111 ns  ; contador:contador1|segu1[2] ; s1[0] ; clk        ;
+; N/A   ; None         ; 12.109 ns  ; contador:contador1|segu1[2] ; s1[1] ; clk        ;
+; N/A   ; None         ; 12.104 ns  ; contador:contador1|hora0[3] ; s4[3] ; clk        ;
+; N/A   ; None         ; 12.102 ns  ; contador:contador1|segu0[2] ; s0[0] ; clk        ;
+; N/A   ; None         ; 12.088 ns  ; contador:contador1|segu1[1] ; s1[3] ; clk        ;
+; N/A   ; None         ; 12.078 ns  ; contador:contador1|segu0[1] ; s0[6] ; clk        ;
+; N/A   ; None         ; 12.033 ns  ; contador:contador1|hora0[2] ; s4[5] ; clk        ;
+; N/A   ; None         ; 12.027 ns  ; contador:contador1|segu0[2] ; s0[6] ; clk        ;
+; N/A   ; None         ; 11.975 ns  ; contador:contador1|segu1[2] ; s1[4] ; clk        ;
+; N/A   ; None         ; 11.972 ns  ; contador:contador1|hora0[2] ; s4[4] ; clk        ;
+; N/A   ; None         ; 11.948 ns  ; contador:contador1|segu1[2] ; s1[3] ; clk        ;
+; N/A   ; None         ; 11.931 ns  ; contador:contador1|segu1[3] ; s1[0] ; clk        ;
+; N/A   ; None         ; 11.919 ns  ; contador:contador1|segu1[3] ; s1[1] ; clk        ;
+; N/A   ; None         ; 11.890 ns  ; contador:contador1|segu0[3] ; s0[6] ; clk        ;
+; N/A   ; None         ; 11.881 ns  ; contador:contador1|hora0[3] ; s4[5] ; clk        ;
+; N/A   ; None         ; 11.871 ns  ; contador:contador1|minu0[0] ; s2[6] ; clk        ;
+; N/A   ; None         ; 11.869 ns  ; contador:contador1|minu0[2] ; s2[6] ; clk        ;
+; N/A   ; None         ; 11.858 ns  ; contador:contador1|segu1[1] ; s1[6] ; clk        ;
+; N/A   ; None         ; 11.849 ns  ; contador:contador1|minu0[2] ; s2[0] ; clk        ;
+; N/A   ; None         ; 11.840 ns  ; contador:contador1|minu0[0] ; s2[0] ; clk        ;
+; N/A   ; None         ; 11.832 ns  ; contador:contador1|minu0[0] ; s2[3] ; clk        ;
+; N/A   ; None         ; 11.827 ns  ; contador:contador1|minu0[2] ; s2[3] ; clk        ;
+; N/A   ; None         ; 11.823 ns  ; contador:contador1|segu1[0] ; s1[0] ; clk        ;
+; N/A   ; None         ; 11.821 ns  ; contador:contador1|segu1[1] ; s1[2] ; clk        ;
+; N/A   ; None         ; 11.809 ns  ; contador:contador1|minu0[2] ; s2[2] ; clk        ;
+; N/A   ; None         ; 11.801 ns  ; contador:contador1|minu0[0] ; s2[4] ; clk        ;
+; N/A   ; None         ; 11.799 ns  ; contador:contador1|minu0[0] ; s2[2] ; clk        ;
+; N/A   ; None         ; 11.799 ns  ; contador:contador1|minu0[2] ; s2[4] ; clk        ;
+; N/A   ; None         ; 11.794 ns  ; contador:contador1|segu1[0] ; s1[1] ; clk        ;
+; N/A   ; None         ; 11.790 ns  ; contador:contador1|hora0[3] ; s4[4] ; clk        ;
+; N/A   ; None         ; 11.788 ns  ; contador:contador1|segu1[1] ; s1[5] ; clk        ;
+; N/A   ; None         ; 11.787 ns  ; contador:contador1|minu0[2] ; s2[1] ; clk        ;
+; N/A   ; None         ; 11.783 ns  ; contador:contador1|minu0[2] ; s2[5] ; clk        ;
+; N/A   ; None         ; 11.783 ns  ; contador:contador1|minu0[0] ; s2[5] ; clk        ;
+; N/A   ; None         ; 11.778 ns  ; contador:contador1|minu0[0] ; s2[1] ; clk        ;
+; N/A   ; None         ; 11.769 ns  ; contador:contador1|segu0[0] ; s0[6] ; clk        ;
+; N/A   ; None         ; 11.749 ns  ; contador:contador1|hora0[1] ; s4[5] ; clk        ;
+; N/A   ; None         ; 11.739 ns  ; contador:contador1|segu1[3] ; s1[3] ; clk        ;
+; N/A   ; None         ; 11.736 ns  ; contador:contador1|segu1[3] ; s1[4] ; clk        ;
+; N/A   ; None         ; 11.715 ns  ; contador:contador1|segu1[2] ; s1[6] ; clk        ;
+; N/A   ; None         ; 11.709 ns  ; contador:contador1|segu1[2] ; s1[2] ; clk        ;
+; N/A   ; None         ; 11.688 ns  ; contador:contador1|hora0[1] ; s4[4] ; clk        ;
+; N/A   ; None         ; 11.663 ns  ; contador:contador1|segu1[0] ; s1[4] ; clk        ;
+; N/A   ; None         ; 11.660 ns  ; contador:contador1|minu1[2] ; s3[0] ; clk        ;
+; N/A   ; None         ; 11.658 ns  ; contador:contador1|minu0[3] ; s2[6] ; clk        ;
+; N/A   ; None         ; 11.656 ns  ; contador:contador1|minu1[0] ; s3[0] ; clk        ;
+; N/A   ; None         ; 11.650 ns  ; contador:contador1|segu1[2] ; s1[5] ; clk        ;
+; N/A   ; None         ; 11.637 ns  ; contador:contador1|segu1[0] ; s1[3] ; clk        ;
+; N/A   ; None         ; 11.633 ns  ; contador:contador1|minu0[3] ; s2[0] ; clk        ;
+; N/A   ; None         ; 11.627 ns  ; contador:contador1|minu1[1] ; s3[0] ; clk        ;
+; N/A   ; None         ; 11.618 ns  ; contador:contador1|minu0[3] ; s2[3] ; clk        ;
+; N/A   ; None         ; 11.603 ns  ; contador:contador1|minu0[1] ; s2[6] ; clk        ;
+; N/A   ; None         ; 11.592 ns  ; contador:contador1|minu0[3] ; s2[2] ; clk        ;
+; N/A   ; None         ; 11.572 ns  ; contador:contador1|minu0[3] ; s2[1] ; clk        ;
+; N/A   ; None         ; 11.570 ns  ; contador:contador1|minu0[1] ; s2[0] ; clk        ;
+; N/A   ; None         ; 11.569 ns  ; contador:contador1|minu0[3] ; s2[5] ; clk        ;
+; N/A   ; None         ; 11.564 ns  ; contador:contador1|minu0[1] ; s2[3] ; clk        ;
+; N/A   ; None         ; 11.558 ns  ; contador:contador1|minu0[3] ; s2[4] ; clk        ;
+; N/A   ; None         ; 11.533 ns  ; contador:contador1|minu0[1] ; s2[4] ; clk        ;
+; N/A   ; None         ; 11.529 ns  ; contador:contador1|minu0[1] ; s2[2] ; clk        ;
+; N/A   ; None         ; 11.523 ns  ; contador:contador1|segu1[3] ; s1[6] ; clk        ;
+; N/A   ; None         ; 11.515 ns  ; contador:contador1|minu0[1] ; s2[5] ; clk        ;
+; N/A   ; None         ; 11.508 ns  ; contador:contador1|minu0[1] ; s2[1] ; clk        ;
+; N/A   ; None         ; 11.500 ns  ; contador:contador1|segu1[3] ; s1[2] ; clk        ;
+; N/A   ; None         ; 11.441 ns  ; contador:contador1|segu1[3] ; s1[5] ; clk        ;
+; N/A   ; None         ; 11.416 ns  ; contador:contador1|minu1[2] ; s3[3] ; clk        ;
+; N/A   ; None         ; 11.413 ns  ; contador:contador1|minu1[0] ; s3[3] ; clk        ;
+; N/A   ; None         ; 11.398 ns  ; contador:contador1|segu1[0] ; s1[6] ; clk        ;
+; N/A   ; None         ; 11.397 ns  ; contador:contador1|segu1[0] ; s1[2] ; clk        ;
+; N/A   ; None         ; 11.383 ns  ; contador:contador1|minu1[2] ; s3[2] ; clk        ;
+; N/A   ; None         ; 11.379 ns  ; contador:contador1|minu1[0] ; s3[2] ; clk        ;
+; N/A   ; None         ; 11.371 ns  ; contador:contador1|minu1[2] ; s3[1] ; clk        ;
+; N/A   ; None         ; 11.370 ns  ; contador:contador1|minu1[1] ; s3[3] ; clk        ;
+; N/A   ; None         ; 11.367 ns  ; contador:contador1|minu1[0] ; s3[1] ; clk        ;
+; N/A   ; None         ; 11.362 ns  ; contador:contador1|minu1[2] ; s3[5] ; clk        ;
+; N/A   ; None         ; 11.360 ns  ; contador:contador1|minu1[0] ; s3[5] ; clk        ;
+; N/A   ; None         ; 11.357 ns  ; contador:contador1|minu1[2] ; s3[6] ; clk        ;
+; N/A   ; None         ; 11.356 ns  ; contador:contador1|minu1[0] ; s3[6] ; clk        ;
+; N/A   ; None         ; 11.348 ns  ; contador:contador1|minu1[3] ; s3[0] ; clk        ;
+; N/A   ; None         ; 11.345 ns  ; contador:contador1|minu1[2] ; s3[4] ; clk        ;
+; N/A   ; None         ; 11.338 ns  ; contador:contador1|minu1[0] ; s3[4] ; clk        ;
+; N/A   ; None         ; 11.338 ns  ; contador:contador1|segu1[0] ; s1[5] ; clk        ;
+; N/A   ; None         ; 11.337 ns  ; contador:contador1|minu1[1] ; s3[2] ; clk        ;
+; N/A   ; None         ; 11.324 ns  ; contador:contador1|minu1[1] ; s3[1] ; clk        ;
+; N/A   ; None         ; 11.316 ns  ; contador:contador1|minu1[1] ; s3[5] ; clk        ;
+; N/A   ; None         ; 11.312 ns  ; contador:contador1|minu1[1] ; s3[6] ; clk        ;
+; N/A   ; None         ; 11.308 ns  ; contador:contador1|minu1[1] ; s3[4] ; clk        ;
+; N/A   ; None         ; 11.107 ns  ; contador:contador1|minu1[3] ; s3[3] ; clk        ;
+; N/A   ; None         ; 11.074 ns  ; contador:contador1|minu1[3] ; s3[2] ; clk        ;
+; N/A   ; None         ; 11.062 ns  ; contador:contador1|minu1[3] ; s3[1] ; clk        ;
+; N/A   ; None         ; 11.053 ns  ; contador:contador1|minu1[3] ; s3[5] ; clk        ;
+; N/A   ; None         ; 11.048 ns  ; contador:contador1|minu1[3] ; s3[6] ; clk        ;
+; N/A   ; None         ; 11.036 ns  ; contador:contador1|minu1[3] ; s3[4] ; clk        ;
++-------+--------------+------------+-----------------------------+-------+------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Jul 01 15:58:00 2011
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Relogio -c Relogio --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "Divider:div_clk|D" as buffer
+Info: Clock "clk" has Internal fmax of 242.42 MHz between source register "contador:contador1|segu1[1]" and destination register "contador:contador1|hora0[3]" (period= 4.125 ns)
+    Info: + Longest register to register delay is 3.912 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X59_Y21_N13; Fanout = 11; REG Node = 'contador:contador1|segu1[1]'
+        Info: 2: + IC(0.812 ns) + CELL(0.436 ns) = 1.248 ns; Loc. = LCCOMB_X58_Y21_N18; Fanout = 3; COMB Node = 'contador:contador1|Equal2~0'
+        Info: 3: + IC(0.467 ns) + CELL(0.410 ns) = 2.125 ns; Loc. = LCCOMB_X58_Y21_N6; Fanout = 5; COMB Node = 'contador:contador1|minu1[0]~0'
+        Info: 4: + IC(0.261 ns) + CELL(0.150 ns) = 2.536 ns; Loc. = LCCOMB_X58_Y21_N20; Fanout = 9; COMB Node = 'contador:contador1|hora0[0]~1'
+        Info: 5: + IC(0.716 ns) + CELL(0.660 ns) = 3.912 ns; Loc. = LCFF_X57_Y20_N17; Fanout = 12; REG Node = 'contador:contador1|hora0[3]'
+        Info: Total cell delay = 1.656 ns ( 42.33 % )
+        Info: Total interconnect delay = 2.256 ns ( 57.67 % )
+    Info: - Smallest clock skew is 0.001 ns
+        Info: + Shortest clock path from clock "clk" to destination register is 5.838 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clk'
+            Info: 2: + IC(1.074 ns) + CELL(0.787 ns) = 2.860 ns; Loc. = LCFF_X21_Y22_N13; Fanout = 2; REG Node = 'Divider:div_clk|D'
+            Info: 3: + IC(1.409 ns) + CELL(0.000 ns) = 4.269 ns; Loc. = CLKCTRL_G0; Fanout = 33; COMB Node = 'Divider:div_clk|D~clkctrl'
+            Info: 4: + IC(1.032 ns) + CELL(0.537 ns) = 5.838 ns; Loc. = LCFF_X57_Y20_N17; Fanout = 12; REG Node = 'contador:contador1|hora0[3]'
+            Info: Total cell delay = 2.323 ns ( 39.79 % )
+            Info: Total interconnect delay = 3.515 ns ( 60.21 % )
+        Info: - Longest clock path from clock "clk" to source register is 5.837 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clk'
+            Info: 2: + IC(1.074 ns) + CELL(0.787 ns) = 2.860 ns; Loc. = LCFF_X21_Y22_N13; Fanout = 2; REG Node = 'Divider:div_clk|D'
+            Info: 3: + IC(1.409 ns) + CELL(0.000 ns) = 4.269 ns; Loc. = CLKCTRL_G0; Fanout = 33; COMB Node = 'Divider:div_clk|D~clkctrl'
+            Info: 4: + IC(1.031 ns) + CELL(0.537 ns) = 5.837 ns; Loc. = LCFF_X59_Y21_N13; Fanout = 11; REG Node = 'contador:contador1|segu1[1]'
+            Info: Total cell delay = 2.323 ns ( 39.80 % )
+            Info: Total interconnect delay = 3.514 ns ( 60.20 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Info: tco from clock "clk" to destination pin "s5[4]" through register "contador:contador1|hora1[1]" is 14.601 ns
+    Info: + Longest clock path from clock "clk" to source register is 5.836 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clk'
+        Info: 2: + IC(1.074 ns) + CELL(0.787 ns) = 2.860 ns; Loc. = LCFF_X21_Y22_N13; Fanout = 2; REG Node = 'Divider:div_clk|D'
+        Info: 3: + IC(1.409 ns) + CELL(0.000 ns) = 4.269 ns; Loc. = CLKCTRL_G0; Fanout = 33; COMB Node = 'Divider:div_clk|D~clkctrl'
+        Info: 4: + IC(1.030 ns) + CELL(0.537 ns) = 5.836 ns; Loc. = LCFF_X58_Y21_N11; Fanout = 9; REG Node = 'contador:contador1|hora1[1]'
+        Info: Total cell delay = 2.323 ns ( 39.80 % )
+        Info: Total interconnect delay = 3.513 ns ( 60.20 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 8.515 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X58_Y21_N11; Fanout = 9; REG Node = 'contador:contador1|hora1[1]'
+        Info: 2: + IC(0.844 ns) + CELL(0.438 ns) = 1.282 ns; Loc. = LCCOMB_X54_Y21_N22; Fanout = 1; COMB Node = 'seg7:conversor5|Mux4~0'
+        Info: 3: + IC(4.611 ns) + CELL(2.622 ns) = 8.515 ns; Loc. = PIN_R5; Fanout = 0; PIN Node = 's5[4]'
+        Info: Total cell delay = 3.060 ns ( 35.94 % )
+        Info: Total interconnect delay = 5.455 ns ( 64.06 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 169 megabytes
+    Info: Processing ended: Fri Jul 01 15:58:00 2011
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

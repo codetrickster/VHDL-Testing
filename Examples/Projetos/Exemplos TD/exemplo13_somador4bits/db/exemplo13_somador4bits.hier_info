@@ -1,0 +1,69 @@
+|exemplo13_somador4bits
+a[0] => exemplo13_meio_somador:soma1.a
+a[1] => exemplo13_somador_completo:soma2.a
+a[2] => exemplo13_somador_completo:soma3.a
+a[3] => exemplo13_somador_completo:soma4.a
+b[0] => exemplo13_meio_somador:soma1.b
+b[1] => exemplo13_somador_completo:soma2.b
+b[2] => exemplo13_somador_completo:soma3.b
+b[3] => exemplo13_somador_completo:soma4.b
+s[0] <= exemplo13_meio_somador:soma1.s
+s[1] <= exemplo13_somador_completo:soma2.s
+s[2] <= exemplo13_somador_completo:soma3.s
+s[3] <= exemplo13_somador_completo:soma4.s
+c4 <= exemplo13_somador_completo:soma4.c_out
+
+
+|exemplo13_somador4bits|exemplo13_meio_somador:soma1
+a => s.IN0
+a => c_out.IN0
+a => s.IN0
+b => s.IN1
+b => c_out.IN1
+b => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exemplo13_somador4bits|exemplo13_somador_completo:soma2
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exemplo13_somador4bits|exemplo13_somador_completo:soma3
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exemplo13_somador4bits|exemplo13_somador_completo:soma4
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+

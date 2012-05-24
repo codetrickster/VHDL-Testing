@@ -1,0 +1,450 @@
+Simulator report for Contador_display
+Mon Jun 13 11:03:37 2011
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 125 nodes    ;
+; Simulation Coverage         ;      18.01 % ;
+; Total Number of Transitions ; 1502         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C35F672C6 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      18.01 % ;
+; Total nodes checked                                 ; 125          ;
+; Total output ports checked                          ; 161          ;
+; Total output ports with complete 1/0-value coverage ; 29           ;
+; Total output ports with no 1/0-value coverage       ; 128          ;
+; Total output ports with no 1-value coverage         ; 129          ;
+; Total output ports with no 0-value coverage         ; 131          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                  ;
++---------------------------------------------+---------------------------------------------+------------------+
+; Node Name                                   ; Output Port Name                            ; Output Port Type ;
++---------------------------------------------+---------------------------------------------+------------------+
+; |Contador_display|Divider:div_clk|Add0~0    ; |Contador_display|Divider:div_clk|Add0~0    ; combout          ;
+; |Contador_display|Divider:div_clk|Add0~0    ; |Contador_display|Divider:div_clk|Add0~1    ; cout             ;
+; |Contador_display|Divider:div_clk|Add0~2    ; |Contador_display|Divider:div_clk|Add0~2    ; combout          ;
+; |Contador_display|Divider:div_clk|Add0~2    ; |Contador_display|Divider:div_clk|Add0~3    ; cout             ;
+; |Contador_display|Divider:div_clk|Add0~4    ; |Contador_display|Divider:div_clk|Add0~4    ; combout          ;
+; |Contador_display|Divider:div_clk|Add0~4    ; |Contador_display|Divider:div_clk|Add0~5    ; cout             ;
+; |Contador_display|Divider:div_clk|Add0~6    ; |Contador_display|Divider:div_clk|Add0~6    ; combout          ;
+; |Contador_display|Divider:div_clk|Add0~6    ; |Contador_display|Divider:div_clk|Add0~7    ; cout             ;
+; |Contador_display|Divider:div_clk|Add0~8    ; |Contador_display|Divider:div_clk|Add0~8    ; combout          ;
+; |Contador_display|Divider:div_clk|Add0~8    ; |Contador_display|Divider:div_clk|Add0~9    ; cout             ;
+; |Contador_display|Divider:div_clk|Add0~10   ; |Contador_display|Divider:div_clk|Add0~10   ; combout          ;
+; |Contador_display|Divider:div_clk|Add0~10   ; |Contador_display|Divider:div_clk|Add0~11   ; cout             ;
+; |Contador_display|Divider:div_clk|Add0~12   ; |Contador_display|Divider:div_clk|Add0~12   ; combout          ;
+; |Contador_display|Divider:div_clk|count0[0] ; |Contador_display|Divider:div_clk|count0[0] ; regout           ;
+; |Contador_display|Divider:div_clk|count0[1] ; |Contador_display|Divider:div_clk|count0[1] ; regout           ;
+; |Contador_display|Divider:div_clk|count0[3] ; |Contador_display|Divider:div_clk|count0[3] ; regout           ;
+; |Contador_display|Divider:div_clk|count0[2] ; |Contador_display|Divider:div_clk|count0[2] ; regout           ;
+; |Contador_display|Divider:div_clk|Equal0~0  ; |Contador_display|Divider:div_clk|Equal0~0  ; combout          ;
+; |Contador_display|Divider:div_clk|count0[4] ; |Contador_display|Divider:div_clk|count0[4] ; regout           ;
+; |Contador_display|Divider:div_clk|count0[5] ; |Contador_display|Divider:div_clk|count0[5] ; regout           ;
+; |Contador_display|Divider:div_clk|Equal0~1  ; |Contador_display|Divider:div_clk|Equal0~1  ; combout          ;
+; |Contador_display|Divider:div_clk|Equal0~2  ; |Contador_display|Divider:div_clk|Equal0~2  ; combout          ;
+; |Contador_display|Divider:div_clk|D~0       ; |Contador_display|Divider:div_clk|D~0       ; combout          ;
+; |Contador_display|Divider:div_clk|count0~0  ; |Contador_display|Divider:div_clk|count0~0  ; combout          ;
+; |Contador_display|Divider:div_clk|count0~1  ; |Contador_display|Divider:div_clk|count0~1  ; combout          ;
+; |Contador_display|Divider:div_clk|count0~2  ; |Contador_display|Divider:div_clk|count0~2  ; combout          ;
+; |Contador_display|Divider:div_clk|count0~3  ; |Contador_display|Divider:div_clk|count0~3  ; combout          ;
+; |Contador_display|clk                       ; |Contador_display|clk~corein                ; combout          ;
+; |Contador_display|clk~clkctrl               ; |Contador_display|clk~clkctrl               ; outclk           ;
++---------------------------------------------+---------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                             ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+; Node Name                                       ; Output Port Name                                ; Output Port Type ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+; |Contador_display|Divider:div_clk|count3[2]     ; |Contador_display|Divider:div_clk|count3[2]     ; regout           ;
+; |Contador_display|Divider:div_clk|count3[0]     ; |Contador_display|Divider:div_clk|count3[0]     ; regout           ;
+; |Contador_display|Divider:div_clk|count3[1]     ; |Contador_display|Divider:div_clk|count3[1]     ; regout           ;
+; |Contador_display|Divider:div_clk|count3[3]     ; |Contador_display|Divider:div_clk|count3[3]     ; regout           ;
+; |Contador_display|Divider:div_clk|count3[6]     ; |Contador_display|Divider:div_clk|count3[6]     ; regout           ;
+; |Contador_display|Divider:div_clk|count3[7]     ; |Contador_display|Divider:div_clk|count3[7]     ; regout           ;
+; |Contador_display|Divider:div_clk|count3[4]     ; |Contador_display|Divider:div_clk|count3[4]     ; regout           ;
+; |Contador_display|Divider:div_clk|count3[5]     ; |Contador_display|Divider:div_clk|count3[5]     ; regout           ;
+; |Contador_display|Divider:div_clk|count3[8]     ; |Contador_display|Divider:div_clk|count3[8]     ; regout           ;
+; |Contador_display|Divider:div_clk|count3[9]     ; |Contador_display|Divider:div_clk|count3[9]     ; regout           ;
+; |Contador_display|Divider:div_clk|count1[2]     ; |Contador_display|Divider:div_clk|count1[2]     ; regout           ;
+; |Contador_display|Divider:div_clk|count1[1]     ; |Contador_display|Divider:div_clk|count1[1]     ; regout           ;
+; |Contador_display|Divider:div_clk|count1[3]     ; |Contador_display|Divider:div_clk|count1[3]     ; regout           ;
+; |Contador_display|Divider:div_clk|count1[6]     ; |Contador_display|Divider:div_clk|count1[6]     ; regout           ;
+; |Contador_display|Divider:div_clk|count1[7]     ; |Contador_display|Divider:div_clk|count1[7]     ; regout           ;
+; |Contador_display|Divider:div_clk|count1[4]     ; |Contador_display|Divider:div_clk|count1[4]     ; regout           ;
+; |Contador_display|Divider:div_clk|count1[5]     ; |Contador_display|Divider:div_clk|count1[5]     ; regout           ;
+; |Contador_display|Divider:div_clk|count1[8]     ; |Contador_display|Divider:div_clk|count1[8]     ; regout           ;
+; |Contador_display|Divider:div_clk|count1[9]     ; |Contador_display|Divider:div_clk|count1[9]     ; regout           ;
+; |Contador_display|Divider:div_clk|count2[2]     ; |Contador_display|Divider:div_clk|count2[2]     ; regout           ;
+; |Contador_display|Divider:div_clk|count2[0]     ; |Contador_display|Divider:div_clk|count2[0]     ; regout           ;
+; |Contador_display|Divider:div_clk|count2[1]     ; |Contador_display|Divider:div_clk|count2[1]     ; regout           ;
+; |Contador_display|Divider:div_clk|count2[3]     ; |Contador_display|Divider:div_clk|count2[3]     ; regout           ;
+; |Contador_display|Divider:div_clk|count2[6]     ; |Contador_display|Divider:div_clk|count2[6]     ; regout           ;
+; |Contador_display|Divider:div_clk|count2[7]     ; |Contador_display|Divider:div_clk|count2[7]     ; regout           ;
+; |Contador_display|Divider:div_clk|count2[4]     ; |Contador_display|Divider:div_clk|count2[4]     ; regout           ;
+; |Contador_display|Divider:div_clk|count2[5]     ; |Contador_display|Divider:div_clk|count2[5]     ; regout           ;
+; |Contador_display|Divider:div_clk|count2[8]     ; |Contador_display|Divider:div_clk|count2[8]     ; regout           ;
+; |Contador_display|Divider:div_clk|count2[9]     ; |Contador_display|Divider:div_clk|count2[9]     ; regout           ;
+; |Contador_display|Divider:div_clk|count3[0]~10  ; |Contador_display|Divider:div_clk|count3[0]~10  ; combout          ;
+; |Contador_display|Divider:div_clk|count3[0]~10  ; |Contador_display|Divider:div_clk|count3[0]~11  ; cout             ;
+; |Contador_display|Divider:div_clk|count3[1]~12  ; |Contador_display|Divider:div_clk|count3[1]~12  ; combout          ;
+; |Contador_display|Divider:div_clk|count3[1]~12  ; |Contador_display|Divider:div_clk|count3[1]~13  ; cout             ;
+; |Contador_display|Divider:div_clk|count3[2]~14  ; |Contador_display|Divider:div_clk|count3[2]~14  ; combout          ;
+; |Contador_display|Divider:div_clk|count3[2]~14  ; |Contador_display|Divider:div_clk|count3[2]~15  ; cout             ;
+; |Contador_display|Divider:div_clk|count3[3]~17  ; |Contador_display|Divider:div_clk|count3[3]~17  ; combout          ;
+; |Contador_display|Divider:div_clk|count3[3]~17  ; |Contador_display|Divider:div_clk|count3[3]~18  ; cout             ;
+; |Contador_display|Divider:div_clk|count3[4]~19  ; |Contador_display|Divider:div_clk|count3[4]~19  ; combout          ;
+; |Contador_display|Divider:div_clk|count3[4]~19  ; |Contador_display|Divider:div_clk|count3[4]~20  ; cout             ;
+; |Contador_display|Divider:div_clk|count3[5]~21  ; |Contador_display|Divider:div_clk|count3[5]~21  ; combout          ;
+; |Contador_display|Divider:div_clk|count3[5]~21  ; |Contador_display|Divider:div_clk|count3[5]~22  ; cout             ;
+; |Contador_display|Divider:div_clk|count3[6]~23  ; |Contador_display|Divider:div_clk|count3[6]~23  ; combout          ;
+; |Contador_display|Divider:div_clk|count3[6]~23  ; |Contador_display|Divider:div_clk|count3[6]~24  ; cout             ;
+; |Contador_display|Divider:div_clk|count3[7]~25  ; |Contador_display|Divider:div_clk|count3[7]~25  ; combout          ;
+; |Contador_display|Divider:div_clk|count3[7]~25  ; |Contador_display|Divider:div_clk|count3[7]~26  ; cout             ;
+; |Contador_display|Divider:div_clk|count3[8]~27  ; |Contador_display|Divider:div_clk|count3[8]~27  ; combout          ;
+; |Contador_display|Divider:div_clk|count3[8]~27  ; |Contador_display|Divider:div_clk|count3[8]~28  ; cout             ;
+; |Contador_display|Divider:div_clk|count3[9]~29  ; |Contador_display|Divider:div_clk|count3[9]~29  ; combout          ;
+; |Contador_display|Divider:div_clk|count1[0]~10  ; |Contador_display|Divider:div_clk|count1[0]~10  ; combout          ;
+; |Contador_display|Divider:div_clk|count1[1]~12  ; |Contador_display|Divider:div_clk|count1[1]~13  ; cout             ;
+; |Contador_display|Divider:div_clk|count1[2]~14  ; |Contador_display|Divider:div_clk|count1[2]~14  ; combout          ;
+; |Contador_display|Divider:div_clk|count1[2]~14  ; |Contador_display|Divider:div_clk|count1[2]~15  ; cout             ;
+; |Contador_display|Divider:div_clk|count1[3]~16  ; |Contador_display|Divider:div_clk|count1[3]~16  ; combout          ;
+; |Contador_display|Divider:div_clk|count1[3]~16  ; |Contador_display|Divider:div_clk|count1[3]~17  ; cout             ;
+; |Contador_display|Divider:div_clk|count1[4]~18  ; |Contador_display|Divider:div_clk|count1[4]~18  ; combout          ;
+; |Contador_display|Divider:div_clk|count1[4]~18  ; |Contador_display|Divider:div_clk|count1[4]~19  ; cout             ;
+; |Contador_display|Divider:div_clk|count1[5]~20  ; |Contador_display|Divider:div_clk|count1[5]~20  ; combout          ;
+; |Contador_display|Divider:div_clk|count1[5]~20  ; |Contador_display|Divider:div_clk|count1[5]~21  ; cout             ;
+; |Contador_display|Divider:div_clk|count1[6]~22  ; |Contador_display|Divider:div_clk|count1[6]~22  ; combout          ;
+; |Contador_display|Divider:div_clk|count1[6]~22  ; |Contador_display|Divider:div_clk|count1[6]~23  ; cout             ;
+; |Contador_display|Divider:div_clk|count1[7]~24  ; |Contador_display|Divider:div_clk|count1[7]~24  ; combout          ;
+; |Contador_display|Divider:div_clk|count1[7]~24  ; |Contador_display|Divider:div_clk|count1[7]~25  ; cout             ;
+; |Contador_display|Divider:div_clk|count1[8]~26  ; |Contador_display|Divider:div_clk|count1[8]~26  ; combout          ;
+; |Contador_display|Divider:div_clk|count1[8]~26  ; |Contador_display|Divider:div_clk|count1[8]~27  ; cout             ;
+; |Contador_display|Divider:div_clk|count1[9]~28  ; |Contador_display|Divider:div_clk|count1[9]~28  ; combout          ;
+; |Contador_display|Divider:div_clk|Add0~12       ; |Contador_display|Divider:div_clk|Add0~13       ; cout             ;
+; |Contador_display|Divider:div_clk|Add0~14       ; |Contador_display|Divider:div_clk|Add0~14       ; combout          ;
+; |Contador_display|Divider:div_clk|Add0~14       ; |Contador_display|Divider:div_clk|Add0~15       ; cout             ;
+; |Contador_display|Divider:div_clk|Add0~16       ; |Contador_display|Divider:div_clk|Add0~16       ; combout          ;
+; |Contador_display|Divider:div_clk|Add0~16       ; |Contador_display|Divider:div_clk|Add0~17       ; cout             ;
+; |Contador_display|Divider:div_clk|Add0~18       ; |Contador_display|Divider:div_clk|Add0~18       ; combout          ;
+; |Contador_display|Divider:div_clk|count2[0]~10  ; |Contador_display|Divider:div_clk|count2[0]~10  ; combout          ;
+; |Contador_display|Divider:div_clk|count2[0]~10  ; |Contador_display|Divider:div_clk|count2[0]~11  ; cout             ;
+; |Contador_display|Divider:div_clk|count2[1]~12  ; |Contador_display|Divider:div_clk|count2[1]~12  ; combout          ;
+; |Contador_display|Divider:div_clk|count2[1]~12  ; |Contador_display|Divider:div_clk|count2[1]~13  ; cout             ;
+; |Contador_display|Divider:div_clk|count2[2]~14  ; |Contador_display|Divider:div_clk|count2[2]~14  ; combout          ;
+; |Contador_display|Divider:div_clk|count2[2]~14  ; |Contador_display|Divider:div_clk|count2[2]~15  ; cout             ;
+; |Contador_display|Divider:div_clk|count2[3]~17  ; |Contador_display|Divider:div_clk|count2[3]~17  ; combout          ;
+; |Contador_display|Divider:div_clk|count2[3]~17  ; |Contador_display|Divider:div_clk|count2[3]~18  ; cout             ;
+; |Contador_display|Divider:div_clk|count2[4]~19  ; |Contador_display|Divider:div_clk|count2[4]~19  ; combout          ;
+; |Contador_display|Divider:div_clk|count2[4]~19  ; |Contador_display|Divider:div_clk|count2[4]~20  ; cout             ;
+; |Contador_display|Divider:div_clk|count2[5]~21  ; |Contador_display|Divider:div_clk|count2[5]~21  ; combout          ;
+; |Contador_display|Divider:div_clk|count2[5]~21  ; |Contador_display|Divider:div_clk|count2[5]~22  ; cout             ;
+; |Contador_display|Divider:div_clk|count2[6]~23  ; |Contador_display|Divider:div_clk|count2[6]~23  ; combout          ;
+; |Contador_display|Divider:div_clk|count2[6]~23  ; |Contador_display|Divider:div_clk|count2[6]~24  ; cout             ;
+; |Contador_display|Divider:div_clk|count2[7]~25  ; |Contador_display|Divider:div_clk|count2[7]~25  ; combout          ;
+; |Contador_display|Divider:div_clk|count2[7]~25  ; |Contador_display|Divider:div_clk|count2[7]~26  ; cout             ;
+; |Contador_display|Divider:div_clk|count2[8]~27  ; |Contador_display|Divider:div_clk|count2[8]~27  ; combout          ;
+; |Contador_display|Divider:div_clk|count2[8]~27  ; |Contador_display|Divider:div_clk|count2[8]~28  ; cout             ;
+; |Contador_display|Divider:div_clk|count2[9]~29  ; |Contador_display|Divider:div_clk|count2[9]~29  ; combout          ;
+; |Contador_display|contador:contador1|count[0]   ; |Contador_display|contador:contador1|count[0]   ; regout           ;
+; |Contador_display|contador:contador1|count[2]   ; |Contador_display|contador:contador1|count[2]   ; regout           ;
+; |Contador_display|contador:contador1|count[1]   ; |Contador_display|contador:contador1|count[1]   ; regout           ;
+; |Contador_display|seg7:conversor|Mux6~0         ; |Contador_display|seg7:conversor|Mux6~0         ; combout          ;
+; |Contador_display|seg7:conversor|Mux5~0         ; |Contador_display|seg7:conversor|Mux5~0         ; combout          ;
+; |Contador_display|seg7:conversor|Mux4~0         ; |Contador_display|seg7:conversor|Mux4~0         ; combout          ;
+; |Contador_display|seg7:conversor|Mux3~0         ; |Contador_display|seg7:conversor|Mux3~0         ; combout          ;
+; |Contador_display|seg7:conversor|Mux2~0         ; |Contador_display|seg7:conversor|Mux2~0         ; combout          ;
+; |Contador_display|seg7:conversor|Mux1~0         ; |Contador_display|seg7:conversor|Mux1~0         ; combout          ;
+; |Contador_display|seg7:conversor|Mux0~0         ; |Contador_display|seg7:conversor|Mux0~0         ; combout          ;
+; |Contador_display|contador:contador1|count[0]~0 ; |Contador_display|contador:contador1|count[0]~0 ; combout          ;
+; |Contador_display|Divider:div_clk|D             ; |Contador_display|Divider:div_clk|D             ; regout           ;
+; |Contador_display|seg7:conversor|Mux5~1         ; |Contador_display|seg7:conversor|Mux5~1         ; combout          ;
+; |Contador_display|Divider:div_clk|Equal3~0      ; |Contador_display|Divider:div_clk|Equal3~0      ; combout          ;
+; |Contador_display|Divider:div_clk|Equal3~1      ; |Contador_display|Divider:div_clk|Equal3~1      ; combout          ;
+; |Contador_display|Divider:div_clk|Equal3~2      ; |Contador_display|Divider:div_clk|Equal3~2      ; combout          ;
+; |Contador_display|Divider:div_clk|Equal1~0      ; |Contador_display|Divider:div_clk|Equal1~0      ; combout          ;
+; |Contador_display|Divider:div_clk|Equal1~1      ; |Contador_display|Divider:div_clk|Equal1~1      ; combout          ;
+; |Contador_display|Divider:div_clk|Equal1~2      ; |Contador_display|Divider:div_clk|Equal1~2      ; combout          ;
+; |Contador_display|Divider:div_clk|count0[6]     ; |Contador_display|Divider:div_clk|count0[6]     ; regout           ;
+; |Contador_display|Divider:div_clk|count0[7]     ; |Contador_display|Divider:div_clk|count0[7]     ; regout           ;
+; |Contador_display|Divider:div_clk|count0[8]     ; |Contador_display|Divider:div_clk|count0[8]     ; regout           ;
+; |Contador_display|Divider:div_clk|count0[9]     ; |Contador_display|Divider:div_clk|count0[9]     ; regout           ;
+; |Contador_display|Divider:div_clk|Equal2~0      ; |Contador_display|Divider:div_clk|Equal2~0      ; combout          ;
+; |Contador_display|Divider:div_clk|Equal2~1      ; |Contador_display|Divider:div_clk|Equal2~1      ; combout          ;
+; |Contador_display|Divider:div_clk|Equal2~2      ; |Contador_display|Divider:div_clk|Equal2~2      ; combout          ;
+; |Contador_display|Divider:div_clk|D~1           ; |Contador_display|Divider:div_clk|D~1           ; combout          ;
+; |Contador_display|Divider:div_clk|count3[0]~16  ; |Contador_display|Divider:div_clk|count3[0]~16  ; combout          ;
+; |Contador_display|Divider:div_clk|count2[0]~16  ; |Contador_display|Divider:div_clk|count2[0]~16  ; combout          ;
+; |Contador_display|contador:contador1|count[2]~1 ; |Contador_display|contador:contador1|count[2]~1 ; combout          ;
+; |Contador_display|s[0]                          ; |Contador_display|s[0]                          ; padio            ;
+; |Contador_display|s[1]                          ; |Contador_display|s[1]                          ; padio            ;
+; |Contador_display|s[2]                          ; |Contador_display|s[2]                          ; padio            ;
+; |Contador_display|s[3]                          ; |Contador_display|s[3]                          ; padio            ;
+; |Contador_display|s[4]                          ; |Contador_display|s[4]                          ; padio            ;
+; |Contador_display|s[5]                          ; |Contador_display|s[5]                          ; padio            ;
+; |Contador_display|s[6]                          ; |Contador_display|s[6]                          ; padio            ;
+; |Contador_display|clr                           ; |Contador_display|clr~corein                    ; combout          ;
+; |Contador_display|Divider:div_clk|D~clkctrl     ; |Contador_display|Divider:div_clk|D~clkctrl     ; outclk           ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                             ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+; Node Name                                       ; Output Port Name                                ; Output Port Type ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+; |Contador_display|Divider:div_clk|count3[2]     ; |Contador_display|Divider:div_clk|count3[2]     ; regout           ;
+; |Contador_display|Divider:div_clk|count3[0]     ; |Contador_display|Divider:div_clk|count3[0]     ; regout           ;
+; |Contador_display|Divider:div_clk|count3[1]     ; |Contador_display|Divider:div_clk|count3[1]     ; regout           ;
+; |Contador_display|Divider:div_clk|count3[3]     ; |Contador_display|Divider:div_clk|count3[3]     ; regout           ;
+; |Contador_display|Divider:div_clk|count3[6]     ; |Contador_display|Divider:div_clk|count3[6]     ; regout           ;
+; |Contador_display|Divider:div_clk|count3[7]     ; |Contador_display|Divider:div_clk|count3[7]     ; regout           ;
+; |Contador_display|Divider:div_clk|count3[4]     ; |Contador_display|Divider:div_clk|count3[4]     ; regout           ;
+; |Contador_display|Divider:div_clk|count3[5]     ; |Contador_display|Divider:div_clk|count3[5]     ; regout           ;
+; |Contador_display|Divider:div_clk|count3[8]     ; |Contador_display|Divider:div_clk|count3[8]     ; regout           ;
+; |Contador_display|Divider:div_clk|count3[9]     ; |Contador_display|Divider:div_clk|count3[9]     ; regout           ;
+; |Contador_display|Divider:div_clk|count1[2]     ; |Contador_display|Divider:div_clk|count1[2]     ; regout           ;
+; |Contador_display|Divider:div_clk|count1[0]     ; |Contador_display|Divider:div_clk|count1[0]     ; regout           ;
+; |Contador_display|Divider:div_clk|count1[1]     ; |Contador_display|Divider:div_clk|count1[1]     ; regout           ;
+; |Contador_display|Divider:div_clk|count1[3]     ; |Contador_display|Divider:div_clk|count1[3]     ; regout           ;
+; |Contador_display|Divider:div_clk|count1[6]     ; |Contador_display|Divider:div_clk|count1[6]     ; regout           ;
+; |Contador_display|Divider:div_clk|count1[7]     ; |Contador_display|Divider:div_clk|count1[7]     ; regout           ;
+; |Contador_display|Divider:div_clk|count1[4]     ; |Contador_display|Divider:div_clk|count1[4]     ; regout           ;
+; |Contador_display|Divider:div_clk|count1[5]     ; |Contador_display|Divider:div_clk|count1[5]     ; regout           ;
+; |Contador_display|Divider:div_clk|count1[8]     ; |Contador_display|Divider:div_clk|count1[8]     ; regout           ;
+; |Contador_display|Divider:div_clk|count1[9]     ; |Contador_display|Divider:div_clk|count1[9]     ; regout           ;
+; |Contador_display|Divider:div_clk|count2[2]     ; |Contador_display|Divider:div_clk|count2[2]     ; regout           ;
+; |Contador_display|Divider:div_clk|count2[0]     ; |Contador_display|Divider:div_clk|count2[0]     ; regout           ;
+; |Contador_display|Divider:div_clk|count2[1]     ; |Contador_display|Divider:div_clk|count2[1]     ; regout           ;
+; |Contador_display|Divider:div_clk|count2[3]     ; |Contador_display|Divider:div_clk|count2[3]     ; regout           ;
+; |Contador_display|Divider:div_clk|count2[6]     ; |Contador_display|Divider:div_clk|count2[6]     ; regout           ;
+; |Contador_display|Divider:div_clk|count2[7]     ; |Contador_display|Divider:div_clk|count2[7]     ; regout           ;
+; |Contador_display|Divider:div_clk|count2[4]     ; |Contador_display|Divider:div_clk|count2[4]     ; regout           ;
+; |Contador_display|Divider:div_clk|count2[5]     ; |Contador_display|Divider:div_clk|count2[5]     ; regout           ;
+; |Contador_display|Divider:div_clk|count2[8]     ; |Contador_display|Divider:div_clk|count2[8]     ; regout           ;
+; |Contador_display|Divider:div_clk|count2[9]     ; |Contador_display|Divider:div_clk|count2[9]     ; regout           ;
+; |Contador_display|Divider:div_clk|count3[0]~10  ; |Contador_display|Divider:div_clk|count3[0]~10  ; combout          ;
+; |Contador_display|Divider:div_clk|count3[0]~10  ; |Contador_display|Divider:div_clk|count3[0]~11  ; cout             ;
+; |Contador_display|Divider:div_clk|count3[1]~12  ; |Contador_display|Divider:div_clk|count3[1]~12  ; combout          ;
+; |Contador_display|Divider:div_clk|count3[1]~12  ; |Contador_display|Divider:div_clk|count3[1]~13  ; cout             ;
+; |Contador_display|Divider:div_clk|count3[2]~14  ; |Contador_display|Divider:div_clk|count3[2]~14  ; combout          ;
+; |Contador_display|Divider:div_clk|count3[2]~14  ; |Contador_display|Divider:div_clk|count3[2]~15  ; cout             ;
+; |Contador_display|Divider:div_clk|count3[3]~17  ; |Contador_display|Divider:div_clk|count3[3]~17  ; combout          ;
+; |Contador_display|Divider:div_clk|count3[3]~17  ; |Contador_display|Divider:div_clk|count3[3]~18  ; cout             ;
+; |Contador_display|Divider:div_clk|count3[4]~19  ; |Contador_display|Divider:div_clk|count3[4]~19  ; combout          ;
+; |Contador_display|Divider:div_clk|count3[4]~19  ; |Contador_display|Divider:div_clk|count3[4]~20  ; cout             ;
+; |Contador_display|Divider:div_clk|count3[5]~21  ; |Contador_display|Divider:div_clk|count3[5]~21  ; combout          ;
+; |Contador_display|Divider:div_clk|count3[5]~21  ; |Contador_display|Divider:div_clk|count3[5]~22  ; cout             ;
+; |Contador_display|Divider:div_clk|count3[6]~23  ; |Contador_display|Divider:div_clk|count3[6]~23  ; combout          ;
+; |Contador_display|Divider:div_clk|count3[6]~23  ; |Contador_display|Divider:div_clk|count3[6]~24  ; cout             ;
+; |Contador_display|Divider:div_clk|count3[7]~25  ; |Contador_display|Divider:div_clk|count3[7]~25  ; combout          ;
+; |Contador_display|Divider:div_clk|count3[7]~25  ; |Contador_display|Divider:div_clk|count3[7]~26  ; cout             ;
+; |Contador_display|Divider:div_clk|count3[8]~27  ; |Contador_display|Divider:div_clk|count3[8]~27  ; combout          ;
+; |Contador_display|Divider:div_clk|count3[8]~27  ; |Contador_display|Divider:div_clk|count3[8]~28  ; cout             ;
+; |Contador_display|Divider:div_clk|count3[9]~29  ; |Contador_display|Divider:div_clk|count3[9]~29  ; combout          ;
+; |Contador_display|Divider:div_clk|count1[0]~10  ; |Contador_display|Divider:div_clk|count1[0]~11  ; cout             ;
+; |Contador_display|Divider:div_clk|count1[1]~12  ; |Contador_display|Divider:div_clk|count1[1]~12  ; combout          ;
+; |Contador_display|Divider:div_clk|count1[1]~12  ; |Contador_display|Divider:div_clk|count1[1]~13  ; cout             ;
+; |Contador_display|Divider:div_clk|count1[2]~14  ; |Contador_display|Divider:div_clk|count1[2]~14  ; combout          ;
+; |Contador_display|Divider:div_clk|count1[2]~14  ; |Contador_display|Divider:div_clk|count1[2]~15  ; cout             ;
+; |Contador_display|Divider:div_clk|count1[3]~16  ; |Contador_display|Divider:div_clk|count1[3]~16  ; combout          ;
+; |Contador_display|Divider:div_clk|count1[3]~16  ; |Contador_display|Divider:div_clk|count1[3]~17  ; cout             ;
+; |Contador_display|Divider:div_clk|count1[4]~18  ; |Contador_display|Divider:div_clk|count1[4]~18  ; combout          ;
+; |Contador_display|Divider:div_clk|count1[4]~18  ; |Contador_display|Divider:div_clk|count1[4]~19  ; cout             ;
+; |Contador_display|Divider:div_clk|count1[5]~20  ; |Contador_display|Divider:div_clk|count1[5]~20  ; combout          ;
+; |Contador_display|Divider:div_clk|count1[5]~20  ; |Contador_display|Divider:div_clk|count1[5]~21  ; cout             ;
+; |Contador_display|Divider:div_clk|count1[6]~22  ; |Contador_display|Divider:div_clk|count1[6]~22  ; combout          ;
+; |Contador_display|Divider:div_clk|count1[6]~22  ; |Contador_display|Divider:div_clk|count1[6]~23  ; cout             ;
+; |Contador_display|Divider:div_clk|count1[7]~24  ; |Contador_display|Divider:div_clk|count1[7]~24  ; combout          ;
+; |Contador_display|Divider:div_clk|count1[7]~24  ; |Contador_display|Divider:div_clk|count1[7]~25  ; cout             ;
+; |Contador_display|Divider:div_clk|count1[8]~26  ; |Contador_display|Divider:div_clk|count1[8]~26  ; combout          ;
+; |Contador_display|Divider:div_clk|count1[8]~26  ; |Contador_display|Divider:div_clk|count1[8]~27  ; cout             ;
+; |Contador_display|Divider:div_clk|count1[9]~28  ; |Contador_display|Divider:div_clk|count1[9]~28  ; combout          ;
+; |Contador_display|Divider:div_clk|Add0~12       ; |Contador_display|Divider:div_clk|Add0~13       ; cout             ;
+; |Contador_display|Divider:div_clk|Add0~14       ; |Contador_display|Divider:div_clk|Add0~14       ; combout          ;
+; |Contador_display|Divider:div_clk|Add0~14       ; |Contador_display|Divider:div_clk|Add0~15       ; cout             ;
+; |Contador_display|Divider:div_clk|Add0~16       ; |Contador_display|Divider:div_clk|Add0~16       ; combout          ;
+; |Contador_display|Divider:div_clk|Add0~16       ; |Contador_display|Divider:div_clk|Add0~17       ; cout             ;
+; |Contador_display|Divider:div_clk|Add0~18       ; |Contador_display|Divider:div_clk|Add0~18       ; combout          ;
+; |Contador_display|Divider:div_clk|count2[0]~10  ; |Contador_display|Divider:div_clk|count2[0]~10  ; combout          ;
+; |Contador_display|Divider:div_clk|count2[0]~10  ; |Contador_display|Divider:div_clk|count2[0]~11  ; cout             ;
+; |Contador_display|Divider:div_clk|count2[1]~12  ; |Contador_display|Divider:div_clk|count2[1]~12  ; combout          ;
+; |Contador_display|Divider:div_clk|count2[1]~12  ; |Contador_display|Divider:div_clk|count2[1]~13  ; cout             ;
+; |Contador_display|Divider:div_clk|count2[2]~14  ; |Contador_display|Divider:div_clk|count2[2]~14  ; combout          ;
+; |Contador_display|Divider:div_clk|count2[2]~14  ; |Contador_display|Divider:div_clk|count2[2]~15  ; cout             ;
+; |Contador_display|Divider:div_clk|count2[3]~17  ; |Contador_display|Divider:div_clk|count2[3]~17  ; combout          ;
+; |Contador_display|Divider:div_clk|count2[3]~17  ; |Contador_display|Divider:div_clk|count2[3]~18  ; cout             ;
+; |Contador_display|Divider:div_clk|count2[4]~19  ; |Contador_display|Divider:div_clk|count2[4]~19  ; combout          ;
+; |Contador_display|Divider:div_clk|count2[4]~19  ; |Contador_display|Divider:div_clk|count2[4]~20  ; cout             ;
+; |Contador_display|Divider:div_clk|count2[5]~21  ; |Contador_display|Divider:div_clk|count2[5]~21  ; combout          ;
+; |Contador_display|Divider:div_clk|count2[5]~21  ; |Contador_display|Divider:div_clk|count2[5]~22  ; cout             ;
+; |Contador_display|Divider:div_clk|count2[6]~23  ; |Contador_display|Divider:div_clk|count2[6]~23  ; combout          ;
+; |Contador_display|Divider:div_clk|count2[6]~23  ; |Contador_display|Divider:div_clk|count2[6]~24  ; cout             ;
+; |Contador_display|Divider:div_clk|count2[7]~25  ; |Contador_display|Divider:div_clk|count2[7]~25  ; combout          ;
+; |Contador_display|Divider:div_clk|count2[7]~25  ; |Contador_display|Divider:div_clk|count2[7]~26  ; cout             ;
+; |Contador_display|Divider:div_clk|count2[8]~27  ; |Contador_display|Divider:div_clk|count2[8]~27  ; combout          ;
+; |Contador_display|Divider:div_clk|count2[8]~27  ; |Contador_display|Divider:div_clk|count2[8]~28  ; cout             ;
+; |Contador_display|Divider:div_clk|count2[9]~29  ; |Contador_display|Divider:div_clk|count2[9]~29  ; combout          ;
+; |Contador_display|contador:contador1|count[0]   ; |Contador_display|contador:contador1|count[0]   ; regout           ;
+; |Contador_display|contador:contador1|count[2]   ; |Contador_display|contador:contador1|count[2]   ; regout           ;
+; |Contador_display|contador:contador1|count[1]   ; |Contador_display|contador:contador1|count[1]   ; regout           ;
+; |Contador_display|seg7:conversor|Mux6~0         ; |Contador_display|seg7:conversor|Mux6~0         ; combout          ;
+; |Contador_display|seg7:conversor|Mux5~0         ; |Contador_display|seg7:conversor|Mux5~0         ; combout          ;
+; |Contador_display|seg7:conversor|Mux4~0         ; |Contador_display|seg7:conversor|Mux4~0         ; combout          ;
+; |Contador_display|seg7:conversor|Mux3~0         ; |Contador_display|seg7:conversor|Mux3~0         ; combout          ;
+; |Contador_display|seg7:conversor|Mux2~0         ; |Contador_display|seg7:conversor|Mux2~0         ; combout          ;
+; |Contador_display|seg7:conversor|Mux1~0         ; |Contador_display|seg7:conversor|Mux1~0         ; combout          ;
+; |Contador_display|seg7:conversor|Mux0~0         ; |Contador_display|seg7:conversor|Mux0~0         ; combout          ;
+; |Contador_display|contador:contador1|count[0]~0 ; |Contador_display|contador:contador1|count[0]~0 ; combout          ;
+; |Contador_display|Divider:div_clk|D             ; |Contador_display|Divider:div_clk|D             ; regout           ;
+; |Contador_display|seg7:conversor|Mux5~1         ; |Contador_display|seg7:conversor|Mux5~1         ; combout          ;
+; |Contador_display|Divider:div_clk|Equal3~0      ; |Contador_display|Divider:div_clk|Equal3~0      ; combout          ;
+; |Contador_display|Divider:div_clk|Equal3~1      ; |Contador_display|Divider:div_clk|Equal3~1      ; combout          ;
+; |Contador_display|Divider:div_clk|Equal3~2      ; |Contador_display|Divider:div_clk|Equal3~2      ; combout          ;
+; |Contador_display|Divider:div_clk|Equal1~0      ; |Contador_display|Divider:div_clk|Equal1~0      ; combout          ;
+; |Contador_display|Divider:div_clk|Equal1~1      ; |Contador_display|Divider:div_clk|Equal1~1      ; combout          ;
+; |Contador_display|Divider:div_clk|Equal1~2      ; |Contador_display|Divider:div_clk|Equal1~2      ; combout          ;
+; |Contador_display|Divider:div_clk|count0[6]     ; |Contador_display|Divider:div_clk|count0[6]     ; regout           ;
+; |Contador_display|Divider:div_clk|count0[7]     ; |Contador_display|Divider:div_clk|count0[7]     ; regout           ;
+; |Contador_display|Divider:div_clk|count0[8]     ; |Contador_display|Divider:div_clk|count0[8]     ; regout           ;
+; |Contador_display|Divider:div_clk|count0[9]     ; |Contador_display|Divider:div_clk|count0[9]     ; regout           ;
+; |Contador_display|Divider:div_clk|Equal2~0      ; |Contador_display|Divider:div_clk|Equal2~0      ; combout          ;
+; |Contador_display|Divider:div_clk|Equal2~1      ; |Contador_display|Divider:div_clk|Equal2~1      ; combout          ;
+; |Contador_display|Divider:div_clk|Equal2~2      ; |Contador_display|Divider:div_clk|Equal2~2      ; combout          ;
+; |Contador_display|Divider:div_clk|D~1           ; |Contador_display|Divider:div_clk|D~1           ; combout          ;
+; |Contador_display|Divider:div_clk|count3[0]~16  ; |Contador_display|Divider:div_clk|count3[0]~16  ; combout          ;
+; |Contador_display|Divider:div_clk|count2[0]~16  ; |Contador_display|Divider:div_clk|count2[0]~16  ; combout          ;
+; |Contador_display|contador:contador1|count[2]~1 ; |Contador_display|contador:contador1|count[2]~1 ; combout          ;
+; |Contador_display|s[0]                          ; |Contador_display|s[0]                          ; padio            ;
+; |Contador_display|s[1]                          ; |Contador_display|s[1]                          ; padio            ;
+; |Contador_display|s[2]                          ; |Contador_display|s[2]                          ; padio            ;
+; |Contador_display|s[3]                          ; |Contador_display|s[3]                          ; padio            ;
+; |Contador_display|s[4]                          ; |Contador_display|s[4]                          ; padio            ;
+; |Contador_display|s[5]                          ; |Contador_display|s[5]                          ; padio            ;
+; |Contador_display|s[6]                          ; |Contador_display|s[6]                          ; padio            ;
+; |Contador_display|clr                           ; |Contador_display|clr~corein                    ; combout          ;
+; |Contador_display|Divider:div_clk|D~clkctrl     ; |Contador_display|Divider:div_clk|D~clkctrl     ; outclk           ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon Jun 13 11:03:36 2011
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Contador_display -c Contador_display
+Info: Using vector source file "E:/UFPEL/Circuitos Digitais 2/Projetos/CD2_conta_display/Contador_display.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      18.01 %
+Info: Number of transitions in simulation is 1502
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 152 megabytes
+    Info: Processing ended: Mon Jun 13 11:03:37 2011
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

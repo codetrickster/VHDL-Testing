@@ -1,0 +1,55 @@
+|reg4bit
+clear => reg1bit:reg1.clear
+clear => reg1bit:reg2.clear
+clear => reg1bit:reg3.clear
+clear => reg1bit:reg4.clear
+clk => reg1bit:reg1.clk
+clk => reg1bit:reg2.clk
+clk => reg1bit:reg3.clk
+clk => reg1bit:reg4.clk
+load => reg1bit:reg1.carga
+load => reg1bit:reg2.carga
+load => reg1bit:reg3.carga
+load => reg1bit:reg4.carga
+d[0] => reg1bit:reg1.d
+d[1] => reg1bit:reg2.d
+d[2] => reg1bit:reg3.d
+d[3] => reg1bit:reg4.d
+q[0] <= reg1bit:reg1.q
+q[1] <= reg1bit:reg2.q
+q[2] <= reg1bit:reg3.q
+q[3] <= reg1bit:reg4.q
+
+
+|reg4bit|reg1bit:reg1
+clear => q_temp.ACLR
+clk => q_temp.CLK
+carga => q_temp.ENA
+d => q_temp.DATAIN
+q <= q_temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|reg4bit|reg1bit:reg2
+clear => q_temp.ACLR
+clk => q_temp.CLK
+carga => q_temp.ENA
+d => q_temp.DATAIN
+q <= q_temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|reg4bit|reg1bit:reg3
+clear => q_temp.ACLR
+clk => q_temp.CLK
+carga => q_temp.ENA
+d => q_temp.DATAIN
+q <= q_temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|reg4bit|reg1bit:reg4
+clear => q_temp.ACLR
+clk => q_temp.CLK
+carga => q_temp.ENA
+d => q_temp.DATAIN
+q <= q_temp.DB_MAX_OUTPUT_PORT_TYPE
+
+

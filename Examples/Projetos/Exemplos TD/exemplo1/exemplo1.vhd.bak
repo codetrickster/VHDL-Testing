@@ -1,0 +1,13 @@
+LIBRARY	IEEE;
+USE IEEE.std_logic_1164.all;
+
+ENTITY exemplo1 IS
+  PORT(
+  a: in std_logic;
+  s: out std_logic
+  );
+end exemplo1;
+architecture arq_exemplo1 of exemplo1 is
+begin 
+  s <= a;
+end arq_exemplo1;

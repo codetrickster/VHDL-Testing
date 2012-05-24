@@ -1,0 +1,28 @@
+LIBRARY	IEEE;
+USE IEEE.std_logic_1164.all;
+
+ENTITY soma IS
+  PORT(
+  x, y, c_in: in std_logic;
+  s, c_out: out std_logic
+  );
+end soma;
+
+architecture arq_soma of soma is
+SIGNAL tempS, tempC, tempC2: std_logic;
+
+COMPONENT ms;
+  PORT (
+  a: in std_logic;
+  b: in std_logic;
+  s: out std_logic;
+  c_out: out std_logic
+  );
+END COMPONENT;
+begin 
+  soma1: ms
+    port map(a => x, b => y, s => tempS, c_out => tempC);
+  soma2: ms
+    port map(a => tempS, b => c_in, s => s, c_out => tempC2);
+  c_out <= tempC or tempC2;
+end arq_soma;

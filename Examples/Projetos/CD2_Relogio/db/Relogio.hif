@@ -1,0 +1,313 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+11
+1000
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+seg7
+# storage
+db|Relogio.(3).cnf
+db|Relogio.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+seg7.vhd
+ba3a2787297370ca9c98723be13198fc
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(ent)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(s)
+0 to 6
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+seg7:conversor0
+seg7:conversor1
+seg7:conversor2
+seg7:conversor3
+seg7:conversor4
+seg7:conversor5
+seg7:conversor6
+seg7:conversor7
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+tempo_data
+# storage
+db|Relogio.(2).cnf
+db|Relogio.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+tempo_data.vhd
+e7345fed897abcdeec96ffb0dbae5dc7
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(sel)
+1 downto 0
+PARAMETER_STRING
+USR
+ constraint(button)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(td0)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(td1)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(td2)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(td3)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(td4)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(td5)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(td6)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(td7)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+tempo_data:tempo_data0
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+Relogio
+# storage
+db|Relogio.(0).cnf
+db|Relogio.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+relogio.vhd
+85deef1015acb846bfd5dbc62d7078
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+contador
+# storage
+db|Relogio.(4).cnf
+db|Relogio.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+contador.vhd
+1af95388e5469d4159d71cb8fa339287
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(sel)
+1 downto 0
+PARAMETER_STRING
+USR
+ constraint(button)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(q0)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(q1)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(q2)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(q3)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(q4)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(q5)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(q6)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(q7)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(q8)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(q9)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(q10)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(q11)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(q12)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(q13)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+tempo_data:tempo_data0|contador:Selecao
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+Divider
+# storage
+db|Relogio.(1).cnf
+db|Relogio.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+divider.vhd
+d7fd2209722bce9d0c5ebeb8debfef
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+Divider:div_clk
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+

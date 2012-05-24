@@ -1,0 +1,605 @@
+Simulator report for button
+Mon Jun 13 22:42:23 2011
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 241 nodes    ;
+; Simulation Coverage         ;      17.21 % ;
+; Total Number of Transitions ; 2152         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C35F672C6 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      17.21 % ;
+; Total nodes checked                                 ; 241          ;
+; Total output ports checked                          ; 244          ;
+; Total output ports with complete 1/0-value coverage ; 42           ;
+; Total output ports with no 1/0-value coverage       ; 200          ;
+; Total output ports with no 1-value coverage         ; 200          ;
+; Total output ports with no 0-value coverage         ; 202          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                        ;
++------------------------+------------------------+------------------+
+; Node Name              ; Output Port Name       ; Output Port Type ;
++------------------------+------------------------+------------------+
+; |button|mese0[3]       ; |button|mese0[3]       ; regout           ;
+; |button|mese0[2]       ; |button|mese0[2]       ; regout           ;
+; |button|mese0[1]       ; |button|mese0[1]       ; regout           ;
+; |button|mese0[0]       ; |button|mese0[0]       ; regout           ;
+; |button|mese1[3]       ; |button|mese1[3]       ; regout           ;
+; |button|mese1[2]       ; |button|mese1[2]       ; regout           ;
+; |button|mese1[1]       ; |button|mese1[1]       ; regout           ;
+; |button|Equal10~0      ; |button|Equal10~0      ; combout          ;
+; |button|aux_meses[0]   ; |button|aux_meses[0]   ; regout           ;
+; |button|aux_meses[1]   ; |button|aux_meses[1]   ; regout           ;
+; |button|aux_meses[2]   ; |button|aux_meses[2]   ; regout           ;
+; |button|aux_meses[3]   ; |button|aux_meses[3]   ; regout           ;
+; |button|aux_meses[4]   ; |button|aux_meses[4]   ; regout           ;
+; |button|Add11~0        ; |button|Add11~0        ; combout          ;
+; |button|Add11~1        ; |button|Add11~1        ; combout          ;
+; |button|Equal11~0      ; |button|Equal11~0      ; combout          ;
+; |button|mese0~0        ; |button|mese0~0        ; combout          ;
+; |button|mese0~1        ; |button|mese0~1        ; combout          ;
+; |button|Add10~0        ; |button|Add10~0        ; combout          ;
+; |button|mese0~2        ; |button|mese0~2        ; combout          ;
+; |button|mese1~2        ; |button|mese1~2        ; combout          ;
+; |button|mese1~3        ; |button|mese1~3        ; combout          ;
+; |button|Add12~0        ; |button|Add12~0        ; combout          ;
+; |button|mese1~4        ; |button|mese1~4        ; combout          ;
+; |button|Add12~1        ; |button|Add12~1        ; combout          ;
+; |button|mese1~5        ; |button|mese1~5        ; combout          ;
+; |button|Add11~2        ; |button|Add11~2        ; combout          ;
+; |button|aux_meses~0    ; |button|aux_meses~0    ; combout          ;
+; |button|Add11~3        ; |button|Add11~3        ; combout          ;
+; |button|aux_meses~1    ; |button|aux_meses~1    ; combout          ;
+; |button|Add11~4        ; |button|Add11~4        ; combout          ;
+; |button|mese1[3]~6     ; |button|mese1[3]~6     ; combout          ;
+; |button|aux_meses[4]~2 ; |button|aux_meses[4]~2 ; combout          ;
+; |button|q8[0]          ; |button|q8[0]          ; padio            ;
+; |button|q8[1]          ; |button|q8[1]          ; padio            ;
+; |button|q8[2]          ; |button|q8[2]          ; padio            ;
+; |button|q8[3]          ; |button|q8[3]          ; padio            ;
+; |button|q9[0]          ; |button|q9[0]          ; padio            ;
+; |button|q9[1]          ; |button|q9[1]          ; padio            ;
+; |button|q9[2]          ; |button|q9[2]          ; padio            ;
+; |button|b1             ; |button|b1~corein      ; combout          ;
+; |button|b1~clkctrl     ; |button|b1~clkctrl     ; outclk           ;
++------------------------+------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------+
+; Missing 1-Value Coverage                                         ;
++-----------------------+-----------------------+------------------+
+; Node Name             ; Output Port Name      ; Output Port Type ;
++-----------------------+-----------------------+------------------+
+; |button|Add5~0        ; |button|Add5~0        ; combout          ;
+; |button|Add5~0        ; |button|Add5~1        ; cout             ;
+; |button|Add5~2        ; |button|Add5~2        ; combout          ;
+; |button|Add5~2        ; |button|Add5~3        ; cout             ;
+; |button|Add5~4        ; |button|Add5~4        ; combout          ;
+; |button|Add5~4        ; |button|Add5~5        ; cout             ;
+; |button|Add5~6        ; |button|Add5~6        ; combout          ;
+; |button|Add5~6        ; |button|Add5~7        ; cout             ;
+; |button|Add5~8        ; |button|Add5~8        ; combout          ;
+; |button|segu0[3]      ; |button|segu0[3]      ; regout           ;
+; |button|segu0[2]      ; |button|segu0[2]      ; regout           ;
+; |button|segu0[1]      ; |button|segu0[1]      ; regout           ;
+; |button|segu0[0]      ; |button|segu0[0]      ; regout           ;
+; |button|segu1[3]      ; |button|segu1[3]      ; regout           ;
+; |button|segu1[2]      ; |button|segu1[2]      ; regout           ;
+; |button|segu1[1]      ; |button|segu1[1]      ; regout           ;
+; |button|segu1[0]      ; |button|segu1[0]      ; regout           ;
+; |button|minu0[3]      ; |button|minu0[3]      ; regout           ;
+; |button|minu0[2]      ; |button|minu0[2]      ; regout           ;
+; |button|minu0[1]      ; |button|minu0[1]      ; regout           ;
+; |button|minu0[0]      ; |button|minu0[0]      ; regout           ;
+; |button|minu1[3]      ; |button|minu1[3]      ; regout           ;
+; |button|minu1[2]      ; |button|minu1[2]      ; regout           ;
+; |button|minu1[1]      ; |button|minu1[1]      ; regout           ;
+; |button|minu1[0]      ; |button|minu1[0]      ; regout           ;
+; |button|hora0[3]      ; |button|hora0[3]      ; regout           ;
+; |button|hora0[2]      ; |button|hora0[2]      ; regout           ;
+; |button|hora0[1]      ; |button|hora0[1]      ; regout           ;
+; |button|hora0[0]      ; |button|hora0[0]      ; regout           ;
+; |button|hora1[3]      ; |button|hora1[3]      ; regout           ;
+; |button|hora1[2]      ; |button|hora1[2]      ; regout           ;
+; |button|hora1[1]      ; |button|hora1[1]      ; regout           ;
+; |button|hora1[0]      ; |button|hora1[0]      ; regout           ;
+; |button|dias0[3]      ; |button|dias0[3]      ; regout           ;
+; |button|dias0[2]      ; |button|dias0[2]      ; regout           ;
+; |button|dias0[1]      ; |button|dias0[1]      ; regout           ;
+; |button|dias0[0]      ; |button|dias0[0]      ; regout           ;
+; |button|dias1[3]      ; |button|dias1[3]      ; regout           ;
+; |button|dias1[2]      ; |button|dias1[2]      ; regout           ;
+; |button|dias1[1]      ; |button|dias1[1]      ; regout           ;
+; |button|dias1[0]      ; |button|dias1[0]      ; regout           ;
+; |button|anos0[3]      ; |button|anos0[3]      ; regout           ;
+; |button|anos0[2]      ; |button|anos0[2]      ; regout           ;
+; |button|anos0[1]      ; |button|anos0[1]      ; regout           ;
+; |button|anos0[0]      ; |button|anos0[0]      ; regout           ;
+; |button|anos1[3]      ; |button|anos1[3]      ; regout           ;
+; |button|anos1[2]      ; |button|anos1[2]      ; regout           ;
+; |button|anos1[1]      ; |button|anos1[1]      ; regout           ;
+; |button|anos1[0]      ; |button|anos1[0]      ; regout           ;
+; |button|anos2[3]      ; |button|anos2[3]      ; regout           ;
+; |button|anos2[2]      ; |button|anos2[2]      ; regout           ;
+; |button|anos2[1]      ; |button|anos2[1]      ; regout           ;
+; |button|anos2[0]      ; |button|anos2[0]      ; regout           ;
+; |button|anos3[3]      ; |button|anos3[3]      ; regout           ;
+; |button|anos3[2]      ; |button|anos3[2]      ; regout           ;
+; |button|anos3[1]      ; |button|anos3[1]      ; regout           ;
+; |button|anos3[0]      ; |button|anos3[0]      ; regout           ;
+; |button|Equal0~0      ; |button|Equal0~0      ; combout          ;
+; |button|segu0~0       ; |button|segu0~0       ; combout          ;
+; |button|Add0~0        ; |button|Add0~0        ; combout          ;
+; |button|segu0~1       ; |button|segu0~1       ; combout          ;
+; |button|Equal1~0      ; |button|Equal1~0      ; combout          ;
+; |button|segu1~2       ; |button|segu1~2       ; combout          ;
+; |button|segu1~3       ; |button|segu1~3       ; combout          ;
+; |button|Add1~0        ; |button|Add1~0        ; combout          ;
+; |button|minu0~0       ; |button|minu0~0       ; combout          ;
+; |button|Add2~0        ; |button|Add2~0        ; combout          ;
+; |button|minu0~1       ; |button|minu0~1       ; combout          ;
+; |button|Equal3~0      ; |button|Equal3~0      ; combout          ;
+; |button|minu1~2       ; |button|minu1~2       ; combout          ;
+; |button|minu1~3       ; |button|minu1~3       ; combout          ;
+; |button|Add3~0        ; |button|Add3~0        ; combout          ;
+; |button|hora0~0       ; |button|hora0~0       ; combout          ;
+; |button|Add4~0        ; |button|Add4~0        ; combout          ;
+; |button|hora0~1       ; |button|hora0~1       ; combout          ;
+; |button|aux_hora[0]   ; |button|aux_hora[0]   ; regout           ;
+; |button|aux_hora[1]   ; |button|aux_hora[1]   ; regout           ;
+; |button|aux_hora[2]   ; |button|aux_hora[2]   ; regout           ;
+; |button|aux_hora[3]   ; |button|aux_hora[3]   ; regout           ;
+; |button|Equal6~0      ; |button|Equal6~0      ; combout          ;
+; |button|hora1~2       ; |button|hora1~2       ; combout          ;
+; |button|Equal5~0      ; |button|Equal5~0      ; combout          ;
+; |button|hora1~3       ; |button|hora1~3       ; combout          ;
+; |button|Add6~0        ; |button|Add6~0        ; combout          ;
+; |button|hora1~4       ; |button|hora1~4       ; combout          ;
+; |button|Add6~1        ; |button|Add6~1        ; combout          ;
+; |button|hora1~5       ; |button|hora1~5       ; combout          ;
+; |button|aux_dias[4]   ; |button|aux_dias[4]   ; regout           ;
+; |button|aux_dias[1]   ; |button|aux_dias[1]   ; regout           ;
+; |button|aux_dias[2]   ; |button|aux_dias[2]   ; regout           ;
+; |button|aux_dias[3]   ; |button|aux_dias[3]   ; regout           ;
+; |button|Equal9~0      ; |button|Equal9~0      ; combout          ;
+; |button|aux_dias[0]   ; |button|aux_dias[0]   ; regout           ;
+; |button|Add8~0        ; |button|Add8~0        ; combout          ;
+; |button|Equal9~1      ; |button|Equal9~1      ; combout          ;
+; |button|Equal8~0      ; |button|Equal8~0      ; combout          ;
+; |button|dias0~0       ; |button|dias0~0       ; combout          ;
+; |button|anos1[3]~2    ; |button|anos1[3]~2    ; combout          ;
+; |button|dias0~1       ; |button|dias0~1       ; combout          ;
+; |button|Add7~0        ; |button|Add7~0        ; combout          ;
+; |button|dias0~2       ; |button|dias0~2       ; combout          ;
+; |button|dias1~4       ; |button|dias1~4       ; combout          ;
+; |button|dias1~5       ; |button|dias1~5       ; combout          ;
+; |button|Add9~0        ; |button|Add9~0        ; combout          ;
+; |button|dias1~6       ; |button|dias1~6       ; combout          ;
+; |button|anos0~0       ; |button|anos0~0       ; combout          ;
+; |button|Add13~0       ; |button|Add13~0       ; combout          ;
+; |button|anos0~1       ; |button|anos0~1       ; combout          ;
+; |button|Equal12~0     ; |button|Equal12~0     ; combout          ;
+; |button|anos1~3       ; |button|anos1~3       ; combout          ;
+; |button|Add14~0       ; |button|Add14~0       ; combout          ;
+; |button|anos1~4       ; |button|anos1~4       ; combout          ;
+; |button|Equal13~0     ; |button|Equal13~0     ; combout          ;
+; |button|anos2~2       ; |button|anos2~2       ; combout          ;
+; |button|Add15~0       ; |button|Add15~0       ; combout          ;
+; |button|anos2~3       ; |button|anos2~3       ; combout          ;
+; |button|Equal14~0     ; |button|Equal14~0     ; combout          ;
+; |button|anos3[3]~0    ; |button|anos3[3]~0    ; combout          ;
+; |button|anos3~1       ; |button|anos3~1       ; combout          ;
+; |button|Add16~0       ; |button|Add16~0       ; combout          ;
+; |button|anos3~2       ; |button|anos3~2       ; combout          ;
+; |button|aux_hora~0    ; |button|aux_hora~0    ; combout          ;
+; |button|aux_hora~1    ; |button|aux_hora~1    ; combout          ;
+; |button|Add8~1        ; |button|Add8~1        ; combout          ;
+; |button|aux_dias~0    ; |button|aux_dias~0    ; combout          ;
+; |button|Add8~2        ; |button|Add8~2        ; combout          ;
+; |button|aux_dias~1    ; |button|aux_dias~1    ; combout          ;
+; |button|aux_dias~2    ; |button|aux_dias~2    ; combout          ;
+; |button|aux_dias~3    ; |button|aux_dias~3    ; combout          ;
+; |button|segu1[3]~4    ; |button|segu1[3]~4    ; combout          ;
+; |button|minu1[3]~4    ; |button|minu1[3]~4    ; combout          ;
+; |button|hora1[3]~6    ; |button|hora1[3]~6    ; combout          ;
+; |button|dias1[3]~7    ; |button|dias1[3]~7    ; combout          ;
+; |button|dias1~8       ; |button|dias1~8       ; combout          ;
+; |button|anos1[3]~5    ; |button|anos1[3]~5    ; combout          ;
+; |button|anos2[3]~4    ; |button|anos2[3]~4    ; combout          ;
+; |button|segu0[3]~2    ; |button|segu0[3]~2    ; combout          ;
+; |button|segu1[3]~5    ; |button|segu1[3]~5    ; combout          ;
+; |button|minu0[3]~2    ; |button|minu0[3]~2    ; combout          ;
+; |button|minu1[3]~5    ; |button|minu1[3]~5    ; combout          ;
+; |button|hora0[3]~2    ; |button|hora0[3]~2    ; combout          ;
+; |button|anos0[3]~2    ; |button|anos0[3]~2    ; combout          ;
+; |button|anos1[3]~6    ; |button|anos1[3]~6    ; combout          ;
+; |button|anos2[3]~5    ; |button|anos2[3]~5    ; combout          ;
+; |button|anos3[3]~3    ; |button|anos3[3]~3    ; combout          ;
+; |button|aux_dias[4]~4 ; |button|aux_dias[4]~4 ; combout          ;
+; |button|q0[0]         ; |button|q0[0]         ; padio            ;
+; |button|q0[1]         ; |button|q0[1]         ; padio            ;
+; |button|q0[2]         ; |button|q0[2]         ; padio            ;
+; |button|q0[3]         ; |button|q0[3]         ; padio            ;
+; |button|q1[0]         ; |button|q1[0]         ; padio            ;
+; |button|q1[1]         ; |button|q1[1]         ; padio            ;
+; |button|q1[2]         ; |button|q1[2]         ; padio            ;
+; |button|q1[3]         ; |button|q1[3]         ; padio            ;
+; |button|q2[0]         ; |button|q2[0]         ; padio            ;
+; |button|q2[1]         ; |button|q2[1]         ; padio            ;
+; |button|q2[2]         ; |button|q2[2]         ; padio            ;
+; |button|q2[3]         ; |button|q2[3]         ; padio            ;
+; |button|q3[0]         ; |button|q3[0]         ; padio            ;
+; |button|q3[1]         ; |button|q3[1]         ; padio            ;
+; |button|q3[2]         ; |button|q3[2]         ; padio            ;
+; |button|q3[3]         ; |button|q3[3]         ; padio            ;
+; |button|q4[0]         ; |button|q4[0]         ; padio            ;
+; |button|q4[1]         ; |button|q4[1]         ; padio            ;
+; |button|q4[2]         ; |button|q4[2]         ; padio            ;
+; |button|q4[3]         ; |button|q4[3]         ; padio            ;
+; |button|q5[0]         ; |button|q5[0]         ; padio            ;
+; |button|q5[1]         ; |button|q5[1]         ; padio            ;
+; |button|q5[2]         ; |button|q5[2]         ; padio            ;
+; |button|q5[3]         ; |button|q5[3]         ; padio            ;
+; |button|q6[0]         ; |button|q6[0]         ; padio            ;
+; |button|q6[1]         ; |button|q6[1]         ; padio            ;
+; |button|q6[2]         ; |button|q6[2]         ; padio            ;
+; |button|q6[3]         ; |button|q6[3]         ; padio            ;
+; |button|q7[0]         ; |button|q7[0]         ; padio            ;
+; |button|q7[1]         ; |button|q7[1]         ; padio            ;
+; |button|q7[2]         ; |button|q7[2]         ; padio            ;
+; |button|q7[3]         ; |button|q7[3]         ; padio            ;
+; |button|q10[0]        ; |button|q10[0]        ; padio            ;
+; |button|q10[1]        ; |button|q10[1]        ; padio            ;
+; |button|q10[2]        ; |button|q10[2]        ; padio            ;
+; |button|q10[3]        ; |button|q10[3]        ; padio            ;
+; |button|q11[0]        ; |button|q11[0]        ; padio            ;
+; |button|q11[1]        ; |button|q11[1]        ; padio            ;
+; |button|q11[2]        ; |button|q11[2]        ; padio            ;
+; |button|q11[3]        ; |button|q11[3]        ; padio            ;
+; |button|q12[0]        ; |button|q12[0]        ; padio            ;
+; |button|q12[1]        ; |button|q12[1]        ; padio            ;
+; |button|q12[2]        ; |button|q12[2]        ; padio            ;
+; |button|q12[3]        ; |button|q12[3]        ; padio            ;
+; |button|q13[0]        ; |button|q13[0]        ; padio            ;
+; |button|q13[1]        ; |button|q13[1]        ; padio            ;
+; |button|q13[2]        ; |button|q13[2]        ; padio            ;
+; |button|q13[3]        ; |button|q13[3]        ; padio            ;
+; |button|b0            ; |button|b0~corein     ; combout          ;
+; |button|sel[1]        ; |button|sel[1]~corein ; combout          ;
+; |button|sel[0]        ; |button|sel[0]~corein ; combout          ;
+; |button|b2            ; |button|b2~corein     ; combout          ;
+; |button|b2~clkctrl    ; |button|b2~clkctrl    ; outclk           ;
+; |button|b0~clkctrl    ; |button|b0~clkctrl    ; outclk           ;
++-----------------------+-----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------+
+; Missing 0-Value Coverage                                         ;
++-----------------------+-----------------------+------------------+
+; Node Name             ; Output Port Name      ; Output Port Type ;
++-----------------------+-----------------------+------------------+
+; |button|Add5~0        ; |button|Add5~0        ; combout          ;
+; |button|Add5~0        ; |button|Add5~1        ; cout             ;
+; |button|Add5~2        ; |button|Add5~2        ; combout          ;
+; |button|Add5~2        ; |button|Add5~3        ; cout             ;
+; |button|Add5~4        ; |button|Add5~4        ; combout          ;
+; |button|Add5~4        ; |button|Add5~5        ; cout             ;
+; |button|Add5~6        ; |button|Add5~6        ; combout          ;
+; |button|Add5~6        ; |button|Add5~7        ; cout             ;
+; |button|Add5~8        ; |button|Add5~8        ; combout          ;
+; |button|segu0[3]      ; |button|segu0[3]      ; regout           ;
+; |button|segu0[2]      ; |button|segu0[2]      ; regout           ;
+; |button|segu0[1]      ; |button|segu0[1]      ; regout           ;
+; |button|segu0[0]      ; |button|segu0[0]      ; regout           ;
+; |button|segu1[3]      ; |button|segu1[3]      ; regout           ;
+; |button|segu1[2]      ; |button|segu1[2]      ; regout           ;
+; |button|segu1[1]      ; |button|segu1[1]      ; regout           ;
+; |button|segu1[0]      ; |button|segu1[0]      ; regout           ;
+; |button|minu0[3]      ; |button|minu0[3]      ; regout           ;
+; |button|minu0[2]      ; |button|minu0[2]      ; regout           ;
+; |button|minu0[1]      ; |button|minu0[1]      ; regout           ;
+; |button|minu0[0]      ; |button|minu0[0]      ; regout           ;
+; |button|minu1[3]      ; |button|minu1[3]      ; regout           ;
+; |button|minu1[2]      ; |button|minu1[2]      ; regout           ;
+; |button|minu1[1]      ; |button|minu1[1]      ; regout           ;
+; |button|minu1[0]      ; |button|minu1[0]      ; regout           ;
+; |button|hora0[3]      ; |button|hora0[3]      ; regout           ;
+; |button|hora0[2]      ; |button|hora0[2]      ; regout           ;
+; |button|hora0[1]      ; |button|hora0[1]      ; regout           ;
+; |button|hora0[0]      ; |button|hora0[0]      ; regout           ;
+; |button|hora1[3]      ; |button|hora1[3]      ; regout           ;
+; |button|hora1[2]      ; |button|hora1[2]      ; regout           ;
+; |button|hora1[1]      ; |button|hora1[1]      ; regout           ;
+; |button|hora1[0]      ; |button|hora1[0]      ; regout           ;
+; |button|dias0[3]      ; |button|dias0[3]      ; regout           ;
+; |button|dias0[2]      ; |button|dias0[2]      ; regout           ;
+; |button|dias0[1]      ; |button|dias0[1]      ; regout           ;
+; |button|dias0[0]      ; |button|dias0[0]      ; regout           ;
+; |button|dias1[3]      ; |button|dias1[3]      ; regout           ;
+; |button|dias1[2]      ; |button|dias1[2]      ; regout           ;
+; |button|dias1[1]      ; |button|dias1[1]      ; regout           ;
+; |button|dias1[0]      ; |button|dias1[0]      ; regout           ;
+; |button|mese1[0]      ; |button|mese1[0]      ; regout           ;
+; |button|anos0[3]      ; |button|anos0[3]      ; regout           ;
+; |button|anos0[2]      ; |button|anos0[2]      ; regout           ;
+; |button|anos0[1]      ; |button|anos0[1]      ; regout           ;
+; |button|anos0[0]      ; |button|anos0[0]      ; regout           ;
+; |button|anos1[3]      ; |button|anos1[3]      ; regout           ;
+; |button|anos1[2]      ; |button|anos1[2]      ; regout           ;
+; |button|anos1[1]      ; |button|anos1[1]      ; regout           ;
+; |button|anos1[0]      ; |button|anos1[0]      ; regout           ;
+; |button|anos2[3]      ; |button|anos2[3]      ; regout           ;
+; |button|anos2[2]      ; |button|anos2[2]      ; regout           ;
+; |button|anos2[1]      ; |button|anos2[1]      ; regout           ;
+; |button|anos2[0]      ; |button|anos2[0]      ; regout           ;
+; |button|anos3[3]      ; |button|anos3[3]      ; regout           ;
+; |button|anos3[2]      ; |button|anos3[2]      ; regout           ;
+; |button|anos3[1]      ; |button|anos3[1]      ; regout           ;
+; |button|anos3[0]      ; |button|anos3[0]      ; regout           ;
+; |button|Equal0~0      ; |button|Equal0~0      ; combout          ;
+; |button|segu0~0       ; |button|segu0~0       ; combout          ;
+; |button|Add0~0        ; |button|Add0~0        ; combout          ;
+; |button|segu0~1       ; |button|segu0~1       ; combout          ;
+; |button|Equal1~0      ; |button|Equal1~0      ; combout          ;
+; |button|segu1~2       ; |button|segu1~2       ; combout          ;
+; |button|segu1~3       ; |button|segu1~3       ; combout          ;
+; |button|Add1~0        ; |button|Add1~0        ; combout          ;
+; |button|minu0~0       ; |button|minu0~0       ; combout          ;
+; |button|Add2~0        ; |button|Add2~0        ; combout          ;
+; |button|minu0~1       ; |button|minu0~1       ; combout          ;
+; |button|Equal3~0      ; |button|Equal3~0      ; combout          ;
+; |button|minu1~2       ; |button|minu1~2       ; combout          ;
+; |button|minu1~3       ; |button|minu1~3       ; combout          ;
+; |button|Add3~0        ; |button|Add3~0        ; combout          ;
+; |button|hora0~0       ; |button|hora0~0       ; combout          ;
+; |button|Add4~0        ; |button|Add4~0        ; combout          ;
+; |button|hora0~1       ; |button|hora0~1       ; combout          ;
+; |button|aux_hora[0]   ; |button|aux_hora[0]   ; regout           ;
+; |button|aux_hora[1]   ; |button|aux_hora[1]   ; regout           ;
+; |button|aux_hora[2]   ; |button|aux_hora[2]   ; regout           ;
+; |button|aux_hora[3]   ; |button|aux_hora[3]   ; regout           ;
+; |button|Equal6~0      ; |button|Equal6~0      ; combout          ;
+; |button|hora1~2       ; |button|hora1~2       ; combout          ;
+; |button|Equal5~0      ; |button|Equal5~0      ; combout          ;
+; |button|hora1~3       ; |button|hora1~3       ; combout          ;
+; |button|Add6~0        ; |button|Add6~0        ; combout          ;
+; |button|hora1~4       ; |button|hora1~4       ; combout          ;
+; |button|Add6~1        ; |button|Add6~1        ; combout          ;
+; |button|hora1~5       ; |button|hora1~5       ; combout          ;
+; |button|aux_dias[4]   ; |button|aux_dias[4]   ; regout           ;
+; |button|aux_dias[1]   ; |button|aux_dias[1]   ; regout           ;
+; |button|aux_dias[2]   ; |button|aux_dias[2]   ; regout           ;
+; |button|aux_dias[3]   ; |button|aux_dias[3]   ; regout           ;
+; |button|Equal9~0      ; |button|Equal9~0      ; combout          ;
+; |button|aux_dias[0]   ; |button|aux_dias[0]   ; regout           ;
+; |button|Add8~0        ; |button|Add8~0        ; combout          ;
+; |button|Equal9~1      ; |button|Equal9~1      ; combout          ;
+; |button|Equal8~0      ; |button|Equal8~0      ; combout          ;
+; |button|dias0~0       ; |button|dias0~0       ; combout          ;
+; |button|anos1[3]~2    ; |button|anos1[3]~2    ; combout          ;
+; |button|dias0~1       ; |button|dias0~1       ; combout          ;
+; |button|Add7~0        ; |button|Add7~0        ; combout          ;
+; |button|dias0~2       ; |button|dias0~2       ; combout          ;
+; |button|dias1~4       ; |button|dias1~4       ; combout          ;
+; |button|dias1~5       ; |button|dias1~5       ; combout          ;
+; |button|Add9~0        ; |button|Add9~0        ; combout          ;
+; |button|dias1~6       ; |button|dias1~6       ; combout          ;
+; |button|anos0~0       ; |button|anos0~0       ; combout          ;
+; |button|Add13~0       ; |button|Add13~0       ; combout          ;
+; |button|anos0~1       ; |button|anos0~1       ; combout          ;
+; |button|Equal12~0     ; |button|Equal12~0     ; combout          ;
+; |button|anos1~3       ; |button|anos1~3       ; combout          ;
+; |button|Add14~0       ; |button|Add14~0       ; combout          ;
+; |button|anos1~4       ; |button|anos1~4       ; combout          ;
+; |button|Equal13~0     ; |button|Equal13~0     ; combout          ;
+; |button|anos2~2       ; |button|anos2~2       ; combout          ;
+; |button|Add15~0       ; |button|Add15~0       ; combout          ;
+; |button|anos2~3       ; |button|anos2~3       ; combout          ;
+; |button|Equal14~0     ; |button|Equal14~0     ; combout          ;
+; |button|anos3[3]~0    ; |button|anos3[3]~0    ; combout          ;
+; |button|anos3~1       ; |button|anos3~1       ; combout          ;
+; |button|Add16~0       ; |button|Add16~0       ; combout          ;
+; |button|anos3~2       ; |button|anos3~2       ; combout          ;
+; |button|aux_hora~0    ; |button|aux_hora~0    ; combout          ;
+; |button|aux_hora~1    ; |button|aux_hora~1    ; combout          ;
+; |button|Add8~1        ; |button|Add8~1        ; combout          ;
+; |button|aux_dias~0    ; |button|aux_dias~0    ; combout          ;
+; |button|Add8~2        ; |button|Add8~2        ; combout          ;
+; |button|aux_dias~1    ; |button|aux_dias~1    ; combout          ;
+; |button|aux_dias~2    ; |button|aux_dias~2    ; combout          ;
+; |button|aux_dias~3    ; |button|aux_dias~3    ; combout          ;
+; |button|segu1[3]~4    ; |button|segu1[3]~4    ; combout          ;
+; |button|minu1[3]~4    ; |button|minu1[3]~4    ; combout          ;
+; |button|hora1[3]~6    ; |button|hora1[3]~6    ; combout          ;
+; |button|dias1[3]~7    ; |button|dias1[3]~7    ; combout          ;
+; |button|dias1~8       ; |button|dias1~8       ; combout          ;
+; |button|anos1[3]~5    ; |button|anos1[3]~5    ; combout          ;
+; |button|anos2[3]~4    ; |button|anos2[3]~4    ; combout          ;
+; |button|segu0[3]~2    ; |button|segu0[3]~2    ; combout          ;
+; |button|segu1[3]~5    ; |button|segu1[3]~5    ; combout          ;
+; |button|minu0[3]~2    ; |button|minu0[3]~2    ; combout          ;
+; |button|minu1[3]~5    ; |button|minu1[3]~5    ; combout          ;
+; |button|hora0[3]~2    ; |button|hora0[3]~2    ; combout          ;
+; |button|anos0[3]~2    ; |button|anos0[3]~2    ; combout          ;
+; |button|anos1[3]~6    ; |button|anos1[3]~6    ; combout          ;
+; |button|anos2[3]~5    ; |button|anos2[3]~5    ; combout          ;
+; |button|anos3[3]~3    ; |button|anos3[3]~3    ; combout          ;
+; |button|aux_dias[4]~4 ; |button|aux_dias[4]~4 ; combout          ;
+; |button|q0[0]         ; |button|q0[0]         ; padio            ;
+; |button|q0[1]         ; |button|q0[1]         ; padio            ;
+; |button|q0[2]         ; |button|q0[2]         ; padio            ;
+; |button|q0[3]         ; |button|q0[3]         ; padio            ;
+; |button|q1[0]         ; |button|q1[0]         ; padio            ;
+; |button|q1[1]         ; |button|q1[1]         ; padio            ;
+; |button|q1[2]         ; |button|q1[2]         ; padio            ;
+; |button|q1[3]         ; |button|q1[3]         ; padio            ;
+; |button|q2[0]         ; |button|q2[0]         ; padio            ;
+; |button|q2[1]         ; |button|q2[1]         ; padio            ;
+; |button|q2[2]         ; |button|q2[2]         ; padio            ;
+; |button|q2[3]         ; |button|q2[3]         ; padio            ;
+; |button|q3[0]         ; |button|q3[0]         ; padio            ;
+; |button|q3[1]         ; |button|q3[1]         ; padio            ;
+; |button|q3[2]         ; |button|q3[2]         ; padio            ;
+; |button|q3[3]         ; |button|q3[3]         ; padio            ;
+; |button|q4[0]         ; |button|q4[0]         ; padio            ;
+; |button|q4[1]         ; |button|q4[1]         ; padio            ;
+; |button|q4[2]         ; |button|q4[2]         ; padio            ;
+; |button|q4[3]         ; |button|q4[3]         ; padio            ;
+; |button|q5[0]         ; |button|q5[0]         ; padio            ;
+; |button|q5[1]         ; |button|q5[1]         ; padio            ;
+; |button|q5[2]         ; |button|q5[2]         ; padio            ;
+; |button|q5[3]         ; |button|q5[3]         ; padio            ;
+; |button|q6[0]         ; |button|q6[0]         ; padio            ;
+; |button|q6[1]         ; |button|q6[1]         ; padio            ;
+; |button|q6[2]         ; |button|q6[2]         ; padio            ;
+; |button|q6[3]         ; |button|q6[3]         ; padio            ;
+; |button|q7[0]         ; |button|q7[0]         ; padio            ;
+; |button|q7[1]         ; |button|q7[1]         ; padio            ;
+; |button|q7[2]         ; |button|q7[2]         ; padio            ;
+; |button|q7[3]         ; |button|q7[3]         ; padio            ;
+; |button|q9[3]         ; |button|q9[3]         ; padio            ;
+; |button|q10[0]        ; |button|q10[0]        ; padio            ;
+; |button|q10[1]        ; |button|q10[1]        ; padio            ;
+; |button|q10[2]        ; |button|q10[2]        ; padio            ;
+; |button|q10[3]        ; |button|q10[3]        ; padio            ;
+; |button|q11[0]        ; |button|q11[0]        ; padio            ;
+; |button|q11[1]        ; |button|q11[1]        ; padio            ;
+; |button|q11[2]        ; |button|q11[2]        ; padio            ;
+; |button|q11[3]        ; |button|q11[3]        ; padio            ;
+; |button|q12[0]        ; |button|q12[0]        ; padio            ;
+; |button|q12[1]        ; |button|q12[1]        ; padio            ;
+; |button|q12[2]        ; |button|q12[2]        ; padio            ;
+; |button|q12[3]        ; |button|q12[3]        ; padio            ;
+; |button|q13[0]        ; |button|q13[0]        ; padio            ;
+; |button|q13[1]        ; |button|q13[1]        ; padio            ;
+; |button|q13[2]        ; |button|q13[2]        ; padio            ;
+; |button|q13[3]        ; |button|q13[3]        ; padio            ;
+; |button|b0            ; |button|b0~corein     ; combout          ;
+; |button|sel[1]        ; |button|sel[1]~corein ; combout          ;
+; |button|sel[0]        ; |button|sel[0]~corein ; combout          ;
+; |button|b2            ; |button|b2~corein     ; combout          ;
+; |button|b2~clkctrl    ; |button|b2~clkctrl    ; outclk           ;
+; |button|b0~clkctrl    ; |button|b0~clkctrl    ; outclk           ;
++-----------------------+-----------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon Jun 13 22:42:22 2011
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off button -c button
+Info: Using vector source file "E:/UFPEL/Circuitos Digitais 2/Projetos/CD2_button/button.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      17.21 %
+Info: Number of transitions in simulation is 2152
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 153 megabytes
+    Info: Processing ended: Mon Jun 13 22:42:23 2011
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

@@ -1,0 +1,16 @@
+|exemplo8_mult41
+a => y.IN1
+b => y.IN1
+c => y.IN1
+d => y.IN1
+sel0 => y.IN0
+sel0 => y.IN0
+sel0 => y.IN0
+sel0 => y.IN0
+sel1 => y.IN1
+sel1 => y.IN1
+sel1 => y.IN1
+sel1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+

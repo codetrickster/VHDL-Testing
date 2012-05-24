@@ -1,0 +1,15 @@
+|decodificador
+a[0] => s.IN0
+a[0] => s.IN0
+a[0] => s.IN0
+a[0] => s.IN0
+a[1] => s.IN1
+a[1] => s.IN1
+a[1] => s.IN1
+a[1] => s.IN1
+s[0] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+

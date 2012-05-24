@@ -1,0 +1,1104 @@
+Simulator report for Relogio
+Thu Jun 09 20:46:16 2011
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 453 nodes    ;
+; Simulation Coverage         ;       8.38 % ;
+; Total Number of Transitions ; 2060         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C35F672C6 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       8.38 % ;
+; Total nodes checked                                 ; 453          ;
+; Total output ports checked                          ; 489          ;
+; Total output ports with complete 1/0-value coverage ; 41           ;
+; Total output ports with no 1/0-value coverage       ; 448          ;
+; Total output ports with no 1-value coverage         ; 448          ;
+; Total output ports with no 0-value coverage         ; 448          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                      ;
++---------------------------------------+---------------------------------------+------------------+
+; Node Name                             ; Output Port Name                      ; Output Port Type ;
++---------------------------------------+---------------------------------------+------------------+
+; |Relogio|Divider:div_clk|count3[0]    ; |Relogio|Divider:div_clk|count3[0]    ; regout           ;
+; |Relogio|Divider:div_clk|count1[0]    ; |Relogio|Divider:div_clk|count1[0]    ; regout           ;
+; |Relogio|Divider:div_clk|count1[1]    ; |Relogio|Divider:div_clk|count1[1]    ; regout           ;
+; |Relogio|Divider:div_clk|count2[0]    ; |Relogio|Divider:div_clk|count2[0]    ; regout           ;
+; |Relogio|Divider:div_clk|count2[1]    ; |Relogio|Divider:div_clk|count2[1]    ; regout           ;
+; |Relogio|Divider:div_clk|count3[0]~10 ; |Relogio|Divider:div_clk|count3[0]~10 ; combout          ;
+; |Relogio|Divider:div_clk|count3[0]~10 ; |Relogio|Divider:div_clk|count3[0]~11 ; cout             ;
+; |Relogio|Divider:div_clk|count3[1]~12 ; |Relogio|Divider:div_clk|count3[1]~12 ; combout          ;
+; |Relogio|Divider:div_clk|count1[0]~10 ; |Relogio|Divider:div_clk|count1[0]~10 ; combout          ;
+; |Relogio|Divider:div_clk|count1[0]~10 ; |Relogio|Divider:div_clk|count1[0]~11 ; cout             ;
+; |Relogio|Divider:div_clk|count1[1]~12 ; |Relogio|Divider:div_clk|count1[1]~12 ; combout          ;
+; |Relogio|Divider:div_clk|count1[1]~12 ; |Relogio|Divider:div_clk|count1[1]~13 ; cout             ;
+; |Relogio|Divider:div_clk|count1[2]~14 ; |Relogio|Divider:div_clk|count1[2]~14 ; combout          ;
+; |Relogio|Divider:div_clk|Add0~0       ; |Relogio|Divider:div_clk|Add0~0       ; combout          ;
+; |Relogio|Divider:div_clk|Add0~0       ; |Relogio|Divider:div_clk|Add0~1       ; cout             ;
+; |Relogio|Divider:div_clk|Add0~2       ; |Relogio|Divider:div_clk|Add0~2       ; combout          ;
+; |Relogio|Divider:div_clk|Add0~2       ; |Relogio|Divider:div_clk|Add0~3       ; cout             ;
+; |Relogio|Divider:div_clk|Add0~4       ; |Relogio|Divider:div_clk|Add0~4       ; combout          ;
+; |Relogio|Divider:div_clk|count2[0]~10 ; |Relogio|Divider:div_clk|count2[0]~10 ; combout          ;
+; |Relogio|Divider:div_clk|count2[0]~10 ; |Relogio|Divider:div_clk|count2[0]~11 ; cout             ;
+; |Relogio|Divider:div_clk|count2[1]~13 ; |Relogio|Divider:div_clk|count2[1]~13 ; combout          ;
+; |Relogio|Divider:div_clk|D            ; |Relogio|Divider:div_clk|D            ; regout           ;
+; |Relogio|Divider:div_clk|Equal3~0     ; |Relogio|Divider:div_clk|Equal3~0     ; combout          ;
+; |Relogio|Divider:div_clk|Equal3~2     ; |Relogio|Divider:div_clk|Equal3~2     ; combout          ;
+; |Relogio|Divider:div_clk|Equal1~0     ; |Relogio|Divider:div_clk|Equal1~0     ; combout          ;
+; |Relogio|Divider:div_clk|Equal1~2     ; |Relogio|Divider:div_clk|Equal1~2     ; combout          ;
+; |Relogio|Divider:div_clk|count0[1]    ; |Relogio|Divider:div_clk|count0[1]    ; regout           ;
+; |Relogio|Divider:div_clk|count0[0]    ; |Relogio|Divider:div_clk|count0[0]    ; regout           ;
+; |Relogio|Divider:div_clk|Equal0~0     ; |Relogio|Divider:div_clk|Equal0~0     ; combout          ;
+; |Relogio|Divider:div_clk|Equal0~2     ; |Relogio|Divider:div_clk|Equal0~2     ; combout          ;
+; |Relogio|Divider:div_clk|D~0          ; |Relogio|Divider:div_clk|D~0          ; combout          ;
+; |Relogio|Divider:div_clk|Equal2~0     ; |Relogio|Divider:div_clk|Equal2~0     ; combout          ;
+; |Relogio|Divider:div_clk|Equal2~2     ; |Relogio|Divider:div_clk|Equal2~2     ; combout          ;
+; |Relogio|Divider:div_clk|D~1          ; |Relogio|Divider:div_clk|D~1          ; combout          ;
+; |Relogio|Divider:div_clk|count3[0]~14 ; |Relogio|Divider:div_clk|count3[0]~14 ; combout          ;
+; |Relogio|Divider:div_clk|count0~0     ; |Relogio|Divider:div_clk|count0~0     ; combout          ;
+; |Relogio|Divider:div_clk|count0~1     ; |Relogio|Divider:div_clk|count0~1     ; combout          ;
+; |Relogio|Divider:div_clk|count2[0]~12 ; |Relogio|Divider:div_clk|count2[0]~12 ; combout          ;
+; |Relogio|clk                          ; |Relogio|clk~corein                   ; combout          ;
+; |Relogio|Divider:div_clk|D~clkctrl    ; |Relogio|Divider:div_clk|D~clkctrl    ; outclk           ;
+; |Relogio|clk~clkctrl                  ; |Relogio|clk~clkctrl                  ; outclk           ;
++---------------------------------------+---------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                         ;
++-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+------------------+
+; Node Name                                                                     ; Output Port Name                                                              ; Output Port Type ;
++-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+------------------+
+; |Relogio|Divider:div_clk|count3[1]                                            ; |Relogio|Divider:div_clk|count3[1]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count3[2]                                            ; |Relogio|Divider:div_clk|count3[2]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count3[3]                                            ; |Relogio|Divider:div_clk|count3[3]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count3[4]                                            ; |Relogio|Divider:div_clk|count3[4]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count3[5]                                            ; |Relogio|Divider:div_clk|count3[5]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count3[6]                                            ; |Relogio|Divider:div_clk|count3[6]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count3[7]                                            ; |Relogio|Divider:div_clk|count3[7]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count3[8]                                            ; |Relogio|Divider:div_clk|count3[8]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count3[9]                                            ; |Relogio|Divider:div_clk|count3[9]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count1[2]                                            ; |Relogio|Divider:div_clk|count1[2]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count1[3]                                            ; |Relogio|Divider:div_clk|count1[3]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count1[4]                                            ; |Relogio|Divider:div_clk|count1[4]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count1[5]                                            ; |Relogio|Divider:div_clk|count1[5]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count1[6]                                            ; |Relogio|Divider:div_clk|count1[6]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count1[7]                                            ; |Relogio|Divider:div_clk|count1[7]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count1[8]                                            ; |Relogio|Divider:div_clk|count1[8]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count1[9]                                            ; |Relogio|Divider:div_clk|count1[9]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count2[2]                                            ; |Relogio|Divider:div_clk|count2[2]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count2[3]                                            ; |Relogio|Divider:div_clk|count2[3]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count2[4]                                            ; |Relogio|Divider:div_clk|count2[4]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count2[5]                                            ; |Relogio|Divider:div_clk|count2[5]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count2[6]                                            ; |Relogio|Divider:div_clk|count2[6]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count2[7]                                            ; |Relogio|Divider:div_clk|count2[7]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count2[8]                                            ; |Relogio|Divider:div_clk|count2[8]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count2[9]                                            ; |Relogio|Divider:div_clk|count2[9]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count3[1]~12                                         ; |Relogio|Divider:div_clk|count3[1]~13                                         ; cout             ;
+; |Relogio|Divider:div_clk|count3[2]~15                                         ; |Relogio|Divider:div_clk|count3[2]~15                                         ; combout          ;
+; |Relogio|Divider:div_clk|count3[2]~15                                         ; |Relogio|Divider:div_clk|count3[2]~16                                         ; cout             ;
+; |Relogio|Divider:div_clk|count3[3]~17                                         ; |Relogio|Divider:div_clk|count3[3]~17                                         ; combout          ;
+; |Relogio|Divider:div_clk|count3[3]~17                                         ; |Relogio|Divider:div_clk|count3[3]~18                                         ; cout             ;
+; |Relogio|Divider:div_clk|count3[4]~19                                         ; |Relogio|Divider:div_clk|count3[4]~19                                         ; combout          ;
+; |Relogio|Divider:div_clk|count3[4]~19                                         ; |Relogio|Divider:div_clk|count3[4]~20                                         ; cout             ;
+; |Relogio|Divider:div_clk|count3[5]~21                                         ; |Relogio|Divider:div_clk|count3[5]~21                                         ; combout          ;
+; |Relogio|Divider:div_clk|count3[5]~21                                         ; |Relogio|Divider:div_clk|count3[5]~22                                         ; cout             ;
+; |Relogio|Divider:div_clk|count3[6]~23                                         ; |Relogio|Divider:div_clk|count3[6]~23                                         ; combout          ;
+; |Relogio|Divider:div_clk|count3[6]~23                                         ; |Relogio|Divider:div_clk|count3[6]~24                                         ; cout             ;
+; |Relogio|Divider:div_clk|count3[7]~25                                         ; |Relogio|Divider:div_clk|count3[7]~25                                         ; combout          ;
+; |Relogio|Divider:div_clk|count3[7]~25                                         ; |Relogio|Divider:div_clk|count3[7]~26                                         ; cout             ;
+; |Relogio|Divider:div_clk|count3[8]~27                                         ; |Relogio|Divider:div_clk|count3[8]~27                                         ; combout          ;
+; |Relogio|Divider:div_clk|count3[8]~27                                         ; |Relogio|Divider:div_clk|count3[8]~28                                         ; cout             ;
+; |Relogio|Divider:div_clk|count3[9]~29                                         ; |Relogio|Divider:div_clk|count3[9]~29                                         ; combout          ;
+; |Relogio|Divider:div_clk|count1[2]~14                                         ; |Relogio|Divider:div_clk|count1[2]~15                                         ; cout             ;
+; |Relogio|Divider:div_clk|count1[3]~16                                         ; |Relogio|Divider:div_clk|count1[3]~16                                         ; combout          ;
+; |Relogio|Divider:div_clk|count1[3]~16                                         ; |Relogio|Divider:div_clk|count1[3]~17                                         ; cout             ;
+; |Relogio|Divider:div_clk|count1[4]~18                                         ; |Relogio|Divider:div_clk|count1[4]~18                                         ; combout          ;
+; |Relogio|Divider:div_clk|count1[4]~18                                         ; |Relogio|Divider:div_clk|count1[4]~19                                         ; cout             ;
+; |Relogio|Divider:div_clk|count1[5]~20                                         ; |Relogio|Divider:div_clk|count1[5]~20                                         ; combout          ;
+; |Relogio|Divider:div_clk|count1[5]~20                                         ; |Relogio|Divider:div_clk|count1[5]~21                                         ; cout             ;
+; |Relogio|Divider:div_clk|count1[6]~22                                         ; |Relogio|Divider:div_clk|count1[6]~22                                         ; combout          ;
+; |Relogio|Divider:div_clk|count1[6]~22                                         ; |Relogio|Divider:div_clk|count1[6]~23                                         ; cout             ;
+; |Relogio|Divider:div_clk|count1[7]~24                                         ; |Relogio|Divider:div_clk|count1[7]~24                                         ; combout          ;
+; |Relogio|Divider:div_clk|count1[7]~24                                         ; |Relogio|Divider:div_clk|count1[7]~25                                         ; cout             ;
+; |Relogio|Divider:div_clk|count1[8]~26                                         ; |Relogio|Divider:div_clk|count1[8]~26                                         ; combout          ;
+; |Relogio|Divider:div_clk|count1[8]~26                                         ; |Relogio|Divider:div_clk|count1[8]~27                                         ; cout             ;
+; |Relogio|Divider:div_clk|count1[9]~28                                         ; |Relogio|Divider:div_clk|count1[9]~28                                         ; combout          ;
+; |Relogio|Divider:div_clk|Add0~4                                               ; |Relogio|Divider:div_clk|Add0~5                                               ; cout             ;
+; |Relogio|Divider:div_clk|Add0~6                                               ; |Relogio|Divider:div_clk|Add0~6                                               ; combout          ;
+; |Relogio|Divider:div_clk|Add0~6                                               ; |Relogio|Divider:div_clk|Add0~7                                               ; cout             ;
+; |Relogio|Divider:div_clk|Add0~8                                               ; |Relogio|Divider:div_clk|Add0~8                                               ; combout          ;
+; |Relogio|Divider:div_clk|Add0~8                                               ; |Relogio|Divider:div_clk|Add0~9                                               ; cout             ;
+; |Relogio|Divider:div_clk|Add0~10                                              ; |Relogio|Divider:div_clk|Add0~10                                              ; combout          ;
+; |Relogio|Divider:div_clk|Add0~10                                              ; |Relogio|Divider:div_clk|Add0~11                                              ; cout             ;
+; |Relogio|Divider:div_clk|Add0~12                                              ; |Relogio|Divider:div_clk|Add0~12                                              ; combout          ;
+; |Relogio|Divider:div_clk|Add0~12                                              ; |Relogio|Divider:div_clk|Add0~13                                              ; cout             ;
+; |Relogio|Divider:div_clk|Add0~14                                              ; |Relogio|Divider:div_clk|Add0~14                                              ; combout          ;
+; |Relogio|Divider:div_clk|Add0~14                                              ; |Relogio|Divider:div_clk|Add0~15                                              ; cout             ;
+; |Relogio|Divider:div_clk|Add0~16                                              ; |Relogio|Divider:div_clk|Add0~16                                              ; combout          ;
+; |Relogio|Divider:div_clk|Add0~16                                              ; |Relogio|Divider:div_clk|Add0~17                                              ; cout             ;
+; |Relogio|Divider:div_clk|Add0~18                                              ; |Relogio|Divider:div_clk|Add0~18                                              ; combout          ;
+; |Relogio|Divider:div_clk|count2[1]~13                                         ; |Relogio|Divider:div_clk|count2[1]~14                                         ; cout             ;
+; |Relogio|Divider:div_clk|count2[2]~15                                         ; |Relogio|Divider:div_clk|count2[2]~15                                         ; combout          ;
+; |Relogio|Divider:div_clk|count2[2]~15                                         ; |Relogio|Divider:div_clk|count2[2]~16                                         ; cout             ;
+; |Relogio|Divider:div_clk|count2[3]~17                                         ; |Relogio|Divider:div_clk|count2[3]~17                                         ; combout          ;
+; |Relogio|Divider:div_clk|count2[3]~17                                         ; |Relogio|Divider:div_clk|count2[3]~18                                         ; cout             ;
+; |Relogio|Divider:div_clk|count2[4]~19                                         ; |Relogio|Divider:div_clk|count2[4]~19                                         ; combout          ;
+; |Relogio|Divider:div_clk|count2[4]~19                                         ; |Relogio|Divider:div_clk|count2[4]~20                                         ; cout             ;
+; |Relogio|Divider:div_clk|count2[5]~21                                         ; |Relogio|Divider:div_clk|count2[5]~21                                         ; combout          ;
+; |Relogio|Divider:div_clk|count2[5]~21                                         ; |Relogio|Divider:div_clk|count2[5]~22                                         ; cout             ;
+; |Relogio|Divider:div_clk|count2[6]~23                                         ; |Relogio|Divider:div_clk|count2[6]~23                                         ; combout          ;
+; |Relogio|Divider:div_clk|count2[6]~23                                         ; |Relogio|Divider:div_clk|count2[6]~24                                         ; cout             ;
+; |Relogio|Divider:div_clk|count2[7]~25                                         ; |Relogio|Divider:div_clk|count2[7]~25                                         ; combout          ;
+; |Relogio|Divider:div_clk|count2[7]~25                                         ; |Relogio|Divider:div_clk|count2[7]~26                                         ; cout             ;
+; |Relogio|Divider:div_clk|count2[8]~27                                         ; |Relogio|Divider:div_clk|count2[8]~27                                         ; combout          ;
+; |Relogio|Divider:div_clk|count2[8]~27                                         ; |Relogio|Divider:div_clk|count2[8]~28                                         ; cout             ;
+; |Relogio|Divider:div_clk|count2[9]~29                                         ; |Relogio|Divider:div_clk|count2[9]~29                                         ; combout          ;
+; |Relogio|tempo_data:tempo_data0|Mux3~0                                        ; |Relogio|tempo_data:tempo_data0|Mux3~0                                        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux3~1                                        ; |Relogio|tempo_data:tempo_data0|Mux3~1                                        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux2~0                                        ; |Relogio|tempo_data:tempo_data0|Mux2~0                                        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux1~0                                        ; |Relogio|tempo_data:tempo_data0|Mux1~0                                        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux0~0                                        ; |Relogio|tempo_data:tempo_data0|Mux0~0                                        ; combout          ;
+; |Relogio|seg7:conversor0|Mux6~0                                               ; |Relogio|seg7:conversor0|Mux6~0                                               ; combout          ;
+; |Relogio|seg7:conversor0|Mux5~0                                               ; |Relogio|seg7:conversor0|Mux5~0                                               ; combout          ;
+; |Relogio|seg7:conversor0|Mux4~0                                               ; |Relogio|seg7:conversor0|Mux4~0                                               ; combout          ;
+; |Relogio|seg7:conversor0|Mux3~0                                               ; |Relogio|seg7:conversor0|Mux3~0                                               ; combout          ;
+; |Relogio|seg7:conversor0|Mux2~0                                               ; |Relogio|seg7:conversor0|Mux2~0                                               ; combout          ;
+; |Relogio|seg7:conversor0|Mux1~0                                               ; |Relogio|seg7:conversor0|Mux1~0                                               ; combout          ;
+; |Relogio|seg7:conversor0|Mux0~0                                               ; |Relogio|seg7:conversor0|Mux0~0                                               ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu0[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu0[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux11~0                                       ; |Relogio|tempo_data:tempo_data0|Mux11~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|Mux11~1                                       ; |Relogio|tempo_data:tempo_data0|Mux11~1                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu0[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu0[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux10~0                                       ; |Relogio|tempo_data:tempo_data0|Mux10~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu0[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu0[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux9~0                                        ; |Relogio|tempo_data:tempo_data0|Mux9~0                                        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu0[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu0[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux8~0                                        ; |Relogio|tempo_data:tempo_data0|Mux8~0                                        ; combout          ;
+; |Relogio|seg7:conversor2|Mux6~0                                               ; |Relogio|seg7:conversor2|Mux6~0                                               ; combout          ;
+; |Relogio|seg7:conversor2|Mux5~0                                               ; |Relogio|seg7:conversor2|Mux5~0                                               ; combout          ;
+; |Relogio|seg7:conversor2|Mux4~0                                               ; |Relogio|seg7:conversor2|Mux4~0                                               ; combout          ;
+; |Relogio|seg7:conversor2|Mux3~0                                               ; |Relogio|seg7:conversor2|Mux3~0                                               ; combout          ;
+; |Relogio|seg7:conversor2|Mux2~0                                               ; |Relogio|seg7:conversor2|Mux2~0                                               ; combout          ;
+; |Relogio|seg7:conversor2|Mux1~0                                               ; |Relogio|seg7:conversor2|Mux1~0                                               ; combout          ;
+; |Relogio|seg7:conversor2|Mux0~0                                               ; |Relogio|seg7:conversor2|Mux0~0                                               ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu1[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu1[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux15~0                                       ; |Relogio|tempo_data:tempo_data0|Mux15~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu1[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu1[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux14~0                                       ; |Relogio|tempo_data:tempo_data0|Mux14~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu1[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu1[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux13~0                                       ; |Relogio|tempo_data:tempo_data0|Mux13~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu1[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu1[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux12~0                                       ; |Relogio|tempo_data:tempo_data0|Mux12~0                                       ; combout          ;
+; |Relogio|seg7:conversor3|Mux6~0                                               ; |Relogio|seg7:conversor3|Mux6~0                                               ; combout          ;
+; |Relogio|seg7:conversor3|Mux5~0                                               ; |Relogio|seg7:conversor3|Mux5~0                                               ; combout          ;
+; |Relogio|seg7:conversor3|Mux4~0                                               ; |Relogio|seg7:conversor3|Mux4~0                                               ; combout          ;
+; |Relogio|seg7:conversor3|Mux3~0                                               ; |Relogio|seg7:conversor3|Mux3~0                                               ; combout          ;
+; |Relogio|seg7:conversor3|Mux2~0                                               ; |Relogio|seg7:conversor3|Mux2~0                                               ; combout          ;
+; |Relogio|seg7:conversor3|Mux1~0                                               ; |Relogio|seg7:conversor3|Mux1~0                                               ; combout          ;
+; |Relogio|seg7:conversor3|Mux0~0                                               ; |Relogio|seg7:conversor3|Mux0~0                                               ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias0[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias0[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux19~0                                       ; |Relogio|tempo_data:tempo_data0|Mux19~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|Mux19~1                                       ; |Relogio|tempo_data:tempo_data0|Mux19~1                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|Mux19~2                                       ; |Relogio|tempo_data:tempo_data0|Mux19~2                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias0[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias0[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux18~0                                       ; |Relogio|tempo_data:tempo_data0|Mux18~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|Mux18~1                                       ; |Relogio|tempo_data:tempo_data0|Mux18~1                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias0[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias0[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux17~0                                       ; |Relogio|tempo_data:tempo_data0|Mux17~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias0[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias0[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux16~0                                       ; |Relogio|tempo_data:tempo_data0|Mux16~0                                       ; combout          ;
+; |Relogio|seg7:conversor4|Mux6~0                                               ; |Relogio|seg7:conversor4|Mux6~0                                               ; combout          ;
+; |Relogio|seg7:conversor4|Mux5~0                                               ; |Relogio|seg7:conversor4|Mux5~0                                               ; combout          ;
+; |Relogio|seg7:conversor4|Mux4~0                                               ; |Relogio|seg7:conversor4|Mux4~0                                               ; combout          ;
+; |Relogio|seg7:conversor4|Mux3~0                                               ; |Relogio|seg7:conversor4|Mux3~0                                               ; combout          ;
+; |Relogio|seg7:conversor4|Mux2~0                                               ; |Relogio|seg7:conversor4|Mux2~0                                               ; combout          ;
+; |Relogio|seg7:conversor4|Mux1~0                                               ; |Relogio|seg7:conversor4|Mux1~0                                               ; combout          ;
+; |Relogio|seg7:conversor4|Mux0~0                                               ; |Relogio|seg7:conversor4|Mux0~0                                               ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias1[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias1[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux23~0                                       ; |Relogio|tempo_data:tempo_data0|Mux23~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias1[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias1[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux22~0                                       ; |Relogio|tempo_data:tempo_data0|Mux22~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias1[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias1[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux21~0                                       ; |Relogio|tempo_data:tempo_data0|Mux21~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias1[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias1[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux20~0                                       ; |Relogio|tempo_data:tempo_data0|Mux20~0                                       ; combout          ;
+; |Relogio|seg7:conversor5|Mux6~0                                               ; |Relogio|seg7:conversor5|Mux6~0                                               ; combout          ;
+; |Relogio|seg7:conversor5|Mux5~0                                               ; |Relogio|seg7:conversor5|Mux5~0                                               ; combout          ;
+; |Relogio|seg7:conversor5|Mux4~0                                               ; |Relogio|seg7:conversor5|Mux4~0                                               ; combout          ;
+; |Relogio|seg7:conversor5|Mux3~0                                               ; |Relogio|seg7:conversor5|Mux3~0                                               ; combout          ;
+; |Relogio|seg7:conversor5|Mux2~0                                               ; |Relogio|seg7:conversor5|Mux2~0                                               ; combout          ;
+; |Relogio|seg7:conversor5|Mux1~0                                               ; |Relogio|seg7:conversor5|Mux1~0                                               ; combout          ;
+; |Relogio|seg7:conversor5|Mux0~0                                               ; |Relogio|seg7:conversor5|Mux0~0                                               ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora0[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora0[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux27~0                                       ; |Relogio|tempo_data:tempo_data0|Mux27~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|Mux27~1                                       ; |Relogio|tempo_data:tempo_data0|Mux27~1                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora0[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora0[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux26~0                                       ; |Relogio|tempo_data:tempo_data0|Mux26~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|Mux26~1                                       ; |Relogio|tempo_data:tempo_data0|Mux26~1                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora0[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora0[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux25~0                                       ; |Relogio|tempo_data:tempo_data0|Mux25~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora0[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora0[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux24~0                                       ; |Relogio|tempo_data:tempo_data0|Mux24~0                                       ; combout          ;
+; |Relogio|seg7:conversor6|Mux6~0                                               ; |Relogio|seg7:conversor6|Mux6~0                                               ; combout          ;
+; |Relogio|seg7:conversor6|Mux5~0                                               ; |Relogio|seg7:conversor6|Mux5~0                                               ; combout          ;
+; |Relogio|seg7:conversor6|Mux4~0                                               ; |Relogio|seg7:conversor6|Mux4~0                                               ; combout          ;
+; |Relogio|seg7:conversor6|Mux3~0                                               ; |Relogio|seg7:conversor6|Mux3~0                                               ; combout          ;
+; |Relogio|seg7:conversor6|Mux2~0                                               ; |Relogio|seg7:conversor6|Mux2~0                                               ; combout          ;
+; |Relogio|seg7:conversor6|Mux1~0                                               ; |Relogio|seg7:conversor6|Mux1~0                                               ; combout          ;
+; |Relogio|seg7:conversor6|Mux0~0                                               ; |Relogio|seg7:conversor6|Mux0~0                                               ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese1[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese1[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora1[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora1[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux31~0                                       ; |Relogio|tempo_data:tempo_data0|Mux31~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese1[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese1[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora1[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora1[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux30~0                                       ; |Relogio|tempo_data:tempo_data0|Mux30~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese1[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese1[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora1[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora1[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux29~0                                       ; |Relogio|tempo_data:tempo_data0|Mux29~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese1[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese1[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora1[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora1[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux28~0                                       ; |Relogio|tempo_data:tempo_data0|Mux28~0                                       ; combout          ;
+; |Relogio|seg7:conversor7|Mux6~0                                               ; |Relogio|seg7:conversor7|Mux6~0                                               ; combout          ;
+; |Relogio|seg7:conversor7|Mux5~0                                               ; |Relogio|seg7:conversor7|Mux5~0                                               ; combout          ;
+; |Relogio|seg7:conversor7|Mux4~0                                               ; |Relogio|seg7:conversor7|Mux4~0                                               ; combout          ;
+; |Relogio|seg7:conversor7|Mux3~0                                               ; |Relogio|seg7:conversor7|Mux3~0                                               ; combout          ;
+; |Relogio|seg7:conversor7|Mux2~0                                               ; |Relogio|seg7:conversor7|Mux2~0                                               ; combout          ;
+; |Relogio|seg7:conversor7|Mux1~0                                               ; |Relogio|seg7:conversor7|Mux1~0                                               ; combout          ;
+; |Relogio|seg7:conversor7|Mux0~0                                               ; |Relogio|seg7:conversor7|Mux0~0                                               ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[3]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[3]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal11~0                    ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal11~0                    ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[0]       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[0]       ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[1]       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[1]       ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[2]       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[2]       ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[3]       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[3]       ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[4]       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[4]       ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add9~0                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add9~0                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal12~0                    ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal12~0                    ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal8~0                     ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal8~0                     ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal6~0                     ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal6~0                     ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal7~0                     ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal7~0                     ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~2                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~2                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal5~0                     ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal5~0                     ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal9~0                     ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal9~0                     ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[1]       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[1]       ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[2]       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[2]       ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[3]       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[3]       ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[4]       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[4]       ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal10~0                    ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal10~0                    ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[0]       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[0]       ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add6~0                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add6~0                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal10~1                    ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal10~1                    ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias0[0]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias0[0]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal13~0                    ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal13~0                    ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[0]      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[0]      ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[1]      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[1]      ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[2]      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[2]      ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[3]      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[3]      ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[4]      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[4]      ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add12~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add12~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal14~0                    ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal14~0                    ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_meses~0                  ; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_meses~0                  ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[0]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[0]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos0~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos0~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add14~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add14~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos0~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos0~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal15~0                    ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal15~0                    ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[0]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[0]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos1~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos1~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add15~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add15~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos1~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos1~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal16~0                    ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal16~0                    ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[0]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[0]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[0]~1        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[0]~1        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos2~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos2~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|segu0~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|segu0~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add16~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add16~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add1~0                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add1~0                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos2~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos2~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|segu0~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|segu0~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[0]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[0]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[0]~1        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[0]~1        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[0]~2        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[0]~2        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|segu1~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|segu1~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos3~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos3~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add17~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add17~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|segu1~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|segu1~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos3~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos3~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add2~0                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add2~0                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[0]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[0]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal12~1                    ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal12~1                    ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias0~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias0~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias0~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias0~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|minu0~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|minu0~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias0~2                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias0~2                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add3~0                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add3~0                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add8~0                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add8~0                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias0~3                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias0~3                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|minu0~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|minu0~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~3                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~3                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[0]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[0]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~2                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~2                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~3                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~3                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~4                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~4                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|minu1~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|minu1~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~5                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~5                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~6                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~6                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~7                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~7                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|minu1~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|minu1~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~8                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~8                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add4~0                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add4~0                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora0~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora0~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora0[0]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora0[0]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add12~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add12~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese0~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese0~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[0]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[0]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[3]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[3]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese0~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese0~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora0~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora0~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese0~2                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese0~2                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora0~2                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora0~2                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add11~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add11~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese0~3                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese0~3                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add5~0                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add5~0                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora0~3                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora0~3                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese1~2                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese1~2                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese1[0]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese1[0]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~4                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~4                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese1~3                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese1~3                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~5                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~5                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add13~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add13~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~6                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~6                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~7                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~7                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese1~4                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese1~4                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~8                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~8                      ; combout          ;
+; |Relogio|Divider:div_clk|Equal3~1                                             ; |Relogio|Divider:div_clk|Equal3~1                                             ; combout          ;
+; |Relogio|Divider:div_clk|Equal1~1                                             ; |Relogio|Divider:div_clk|Equal1~1                                             ; combout          ;
+; |Relogio|Divider:div_clk|count0[2]                                            ; |Relogio|Divider:div_clk|count0[2]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count0[3]                                            ; |Relogio|Divider:div_clk|count0[3]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count0[4]                                            ; |Relogio|Divider:div_clk|count0[4]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count0[5]                                            ; |Relogio|Divider:div_clk|count0[5]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count0[6]                                            ; |Relogio|Divider:div_clk|count0[6]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count0[7]                                            ; |Relogio|Divider:div_clk|count0[7]                                            ; regout           ;
+; |Relogio|Divider:div_clk|Equal0~1                                             ; |Relogio|Divider:div_clk|Equal0~1                                             ; combout          ;
+; |Relogio|Divider:div_clk|count0[8]                                            ; |Relogio|Divider:div_clk|count0[8]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count0[9]                                            ; |Relogio|Divider:div_clk|count0[9]                                            ; regout           ;
+; |Relogio|Divider:div_clk|Equal2~1                                             ; |Relogio|Divider:div_clk|Equal2~1                                             ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_dias~0                   ; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_dias~0                   ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add9~1                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add9~1                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_dias~1                   ; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_dias~1                   ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_dias~2                   ; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_dias~2                   ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_dias~3                   ; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_dias~3                   ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add6~1                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add6~1                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_hora~0                   ; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_hora~0                   ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add6~2                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add6~2                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add6~3                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add6~3                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_hora~1                   ; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_hora~1                   ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add12~2                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add12~2                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_meses~1                  ; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_meses~1                  ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_meses~2                  ; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_meses~2                  ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add12~3                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add12~3                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~9                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~9                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese1~5                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese1~5                      ; combout          ;
+; |Relogio|seg7:conversor1|Mux6~3                                               ; |Relogio|seg7:conversor1|Mux6~3                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux6~6                                               ; |Relogio|seg7:conversor1|Mux6~6                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux5~3                                               ; |Relogio|seg7:conversor1|Mux5~3                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux5~6                                               ; |Relogio|seg7:conversor1|Mux5~6                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux4~4                                               ; |Relogio|seg7:conversor1|Mux4~4                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux4~9                                               ; |Relogio|seg7:conversor1|Mux4~9                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux3~3                                               ; |Relogio|seg7:conversor1|Mux3~3                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux3~6                                               ; |Relogio|seg7:conversor1|Mux3~6                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux2~3                                               ; |Relogio|seg7:conversor1|Mux2~3                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux2~6                                               ; |Relogio|seg7:conversor1|Mux2~6                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux1~3                                               ; |Relogio|seg7:conversor1|Mux1~3                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux1~6                                               ; |Relogio|seg7:conversor1|Mux1~6                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux0~3                                               ; |Relogio|seg7:conversor1|Mux0~3                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux0~6                                               ; |Relogio|seg7:conversor1|Mux0~6                                               ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[3]~1        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[3]~1        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[3]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[3]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[3]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[3]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu0[3]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu0[3]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[3]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[3]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu1[3]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu1[3]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[3]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[3]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[3]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[3]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[4]~0     ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[4]~0     ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[4]~0     ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[4]~0     ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[4]~0    ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[4]~0    ; combout          ;
+; |Relogio|s0[6]                                                                ; |Relogio|s0[6]                                                                ; padio            ;
+; |Relogio|s0[5]                                                                ; |Relogio|s0[5]                                                                ; padio            ;
+; |Relogio|s0[4]                                                                ; |Relogio|s0[4]                                                                ; padio            ;
+; |Relogio|s0[3]                                                                ; |Relogio|s0[3]                                                                ; padio            ;
+; |Relogio|s0[2]                                                                ; |Relogio|s0[2]                                                                ; padio            ;
+; |Relogio|s0[1]                                                                ; |Relogio|s0[1]                                                                ; padio            ;
+; |Relogio|s0[0]                                                                ; |Relogio|s0[0]                                                                ; padio            ;
+; |Relogio|s1[6]                                                                ; |Relogio|s1[6]                                                                ; padio            ;
+; |Relogio|s1[5]                                                                ; |Relogio|s1[5]                                                                ; padio            ;
+; |Relogio|s1[4]                                                                ; |Relogio|s1[4]                                                                ; padio            ;
+; |Relogio|s1[3]                                                                ; |Relogio|s1[3]                                                                ; padio            ;
+; |Relogio|s1[2]                                                                ; |Relogio|s1[2]                                                                ; padio            ;
+; |Relogio|s1[1]                                                                ; |Relogio|s1[1]                                                                ; padio            ;
+; |Relogio|s1[0]                                                                ; |Relogio|s1[0]                                                                ; padio            ;
+; |Relogio|s2[6]                                                                ; |Relogio|s2[6]                                                                ; padio            ;
+; |Relogio|s2[5]                                                                ; |Relogio|s2[5]                                                                ; padio            ;
+; |Relogio|s2[4]                                                                ; |Relogio|s2[4]                                                                ; padio            ;
+; |Relogio|s2[3]                                                                ; |Relogio|s2[3]                                                                ; padio            ;
+; |Relogio|s2[2]                                                                ; |Relogio|s2[2]                                                                ; padio            ;
+; |Relogio|s2[1]                                                                ; |Relogio|s2[1]                                                                ; padio            ;
+; |Relogio|s2[0]                                                                ; |Relogio|s2[0]                                                                ; padio            ;
+; |Relogio|s3[6]                                                                ; |Relogio|s3[6]                                                                ; padio            ;
+; |Relogio|s3[5]                                                                ; |Relogio|s3[5]                                                                ; padio            ;
+; |Relogio|s3[4]                                                                ; |Relogio|s3[4]                                                                ; padio            ;
+; |Relogio|s3[3]                                                                ; |Relogio|s3[3]                                                                ; padio            ;
+; |Relogio|s3[2]                                                                ; |Relogio|s3[2]                                                                ; padio            ;
+; |Relogio|s3[1]                                                                ; |Relogio|s3[1]                                                                ; padio            ;
+; |Relogio|s3[0]                                                                ; |Relogio|s3[0]                                                                ; padio            ;
+; |Relogio|s4[6]                                                                ; |Relogio|s4[6]                                                                ; padio            ;
+; |Relogio|s4[5]                                                                ; |Relogio|s4[5]                                                                ; padio            ;
+; |Relogio|s4[4]                                                                ; |Relogio|s4[4]                                                                ; padio            ;
+; |Relogio|s4[3]                                                                ; |Relogio|s4[3]                                                                ; padio            ;
+; |Relogio|s4[2]                                                                ; |Relogio|s4[2]                                                                ; padio            ;
+; |Relogio|s4[1]                                                                ; |Relogio|s4[1]                                                                ; padio            ;
+; |Relogio|s4[0]                                                                ; |Relogio|s4[0]                                                                ; padio            ;
+; |Relogio|s5[6]                                                                ; |Relogio|s5[6]                                                                ; padio            ;
+; |Relogio|s5[5]                                                                ; |Relogio|s5[5]                                                                ; padio            ;
+; |Relogio|s5[4]                                                                ; |Relogio|s5[4]                                                                ; padio            ;
+; |Relogio|s5[3]                                                                ; |Relogio|s5[3]                                                                ; padio            ;
+; |Relogio|s5[2]                                                                ; |Relogio|s5[2]                                                                ; padio            ;
+; |Relogio|s5[1]                                                                ; |Relogio|s5[1]                                                                ; padio            ;
+; |Relogio|s5[0]                                                                ; |Relogio|s5[0]                                                                ; padio            ;
+; |Relogio|s6[6]                                                                ; |Relogio|s6[6]                                                                ; padio            ;
+; |Relogio|s6[5]                                                                ; |Relogio|s6[5]                                                                ; padio            ;
+; |Relogio|s6[4]                                                                ; |Relogio|s6[4]                                                                ; padio            ;
+; |Relogio|s6[3]                                                                ; |Relogio|s6[3]                                                                ; padio            ;
+; |Relogio|s6[2]                                                                ; |Relogio|s6[2]                                                                ; padio            ;
+; |Relogio|s6[1]                                                                ; |Relogio|s6[1]                                                                ; padio            ;
+; |Relogio|s6[0]                                                                ; |Relogio|s6[0]                                                                ; padio            ;
+; |Relogio|s7[6]                                                                ; |Relogio|s7[6]                                                                ; padio            ;
+; |Relogio|s7[5]                                                                ; |Relogio|s7[5]                                                                ; padio            ;
+; |Relogio|s7[4]                                                                ; |Relogio|s7[4]                                                                ; padio            ;
+; |Relogio|s7[3]                                                                ; |Relogio|s7[3]                                                                ; padio            ;
+; |Relogio|s7[2]                                                                ; |Relogio|s7[2]                                                                ; padio            ;
+; |Relogio|s7[1]                                                                ; |Relogio|s7[1]                                                                ; padio            ;
+; |Relogio|s7[0]                                                                ; |Relogio|s7[0]                                                                ; padio            ;
+; |Relogio|sel[1]                                                               ; |Relogio|sel[1]~corein                                                        ; combout          ;
+; |Relogio|sel[0]                                                               ; |Relogio|sel[0]~corein                                                        ; combout          ;
+; |Relogio|button[0]                                                            ; |Relogio|button[0]~corein                                                     ; combout          ;
+; |Relogio|button[1]                                                            ; |Relogio|button[1]~corein                                                     ; combout          ;
+; |Relogio|clr                                                                  ; |Relogio|clr~corein                                                           ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[3]~0clkctrl ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[3]~0clkctrl ; outclk           ;
++-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                         ;
++-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+------------------+
+; Node Name                                                                     ; Output Port Name                                                              ; Output Port Type ;
++-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+------------------+
+; |Relogio|Divider:div_clk|count3[1]                                            ; |Relogio|Divider:div_clk|count3[1]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count3[2]                                            ; |Relogio|Divider:div_clk|count3[2]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count3[3]                                            ; |Relogio|Divider:div_clk|count3[3]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count3[4]                                            ; |Relogio|Divider:div_clk|count3[4]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count3[5]                                            ; |Relogio|Divider:div_clk|count3[5]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count3[6]                                            ; |Relogio|Divider:div_clk|count3[6]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count3[7]                                            ; |Relogio|Divider:div_clk|count3[7]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count3[8]                                            ; |Relogio|Divider:div_clk|count3[8]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count3[9]                                            ; |Relogio|Divider:div_clk|count3[9]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count1[2]                                            ; |Relogio|Divider:div_clk|count1[2]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count1[3]                                            ; |Relogio|Divider:div_clk|count1[3]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count1[4]                                            ; |Relogio|Divider:div_clk|count1[4]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count1[5]                                            ; |Relogio|Divider:div_clk|count1[5]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count1[6]                                            ; |Relogio|Divider:div_clk|count1[6]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count1[7]                                            ; |Relogio|Divider:div_clk|count1[7]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count1[8]                                            ; |Relogio|Divider:div_clk|count1[8]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count1[9]                                            ; |Relogio|Divider:div_clk|count1[9]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count2[2]                                            ; |Relogio|Divider:div_clk|count2[2]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count2[3]                                            ; |Relogio|Divider:div_clk|count2[3]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count2[4]                                            ; |Relogio|Divider:div_clk|count2[4]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count2[5]                                            ; |Relogio|Divider:div_clk|count2[5]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count2[6]                                            ; |Relogio|Divider:div_clk|count2[6]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count2[7]                                            ; |Relogio|Divider:div_clk|count2[7]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count2[8]                                            ; |Relogio|Divider:div_clk|count2[8]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count2[9]                                            ; |Relogio|Divider:div_clk|count2[9]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count3[1]~12                                         ; |Relogio|Divider:div_clk|count3[1]~13                                         ; cout             ;
+; |Relogio|Divider:div_clk|count3[2]~15                                         ; |Relogio|Divider:div_clk|count3[2]~15                                         ; combout          ;
+; |Relogio|Divider:div_clk|count3[2]~15                                         ; |Relogio|Divider:div_clk|count3[2]~16                                         ; cout             ;
+; |Relogio|Divider:div_clk|count3[3]~17                                         ; |Relogio|Divider:div_clk|count3[3]~17                                         ; combout          ;
+; |Relogio|Divider:div_clk|count3[3]~17                                         ; |Relogio|Divider:div_clk|count3[3]~18                                         ; cout             ;
+; |Relogio|Divider:div_clk|count3[4]~19                                         ; |Relogio|Divider:div_clk|count3[4]~19                                         ; combout          ;
+; |Relogio|Divider:div_clk|count3[4]~19                                         ; |Relogio|Divider:div_clk|count3[4]~20                                         ; cout             ;
+; |Relogio|Divider:div_clk|count3[5]~21                                         ; |Relogio|Divider:div_clk|count3[5]~21                                         ; combout          ;
+; |Relogio|Divider:div_clk|count3[5]~21                                         ; |Relogio|Divider:div_clk|count3[5]~22                                         ; cout             ;
+; |Relogio|Divider:div_clk|count3[6]~23                                         ; |Relogio|Divider:div_clk|count3[6]~23                                         ; combout          ;
+; |Relogio|Divider:div_clk|count3[6]~23                                         ; |Relogio|Divider:div_clk|count3[6]~24                                         ; cout             ;
+; |Relogio|Divider:div_clk|count3[7]~25                                         ; |Relogio|Divider:div_clk|count3[7]~25                                         ; combout          ;
+; |Relogio|Divider:div_clk|count3[7]~25                                         ; |Relogio|Divider:div_clk|count3[7]~26                                         ; cout             ;
+; |Relogio|Divider:div_clk|count3[8]~27                                         ; |Relogio|Divider:div_clk|count3[8]~27                                         ; combout          ;
+; |Relogio|Divider:div_clk|count3[8]~27                                         ; |Relogio|Divider:div_clk|count3[8]~28                                         ; cout             ;
+; |Relogio|Divider:div_clk|count3[9]~29                                         ; |Relogio|Divider:div_clk|count3[9]~29                                         ; combout          ;
+; |Relogio|Divider:div_clk|count1[2]~14                                         ; |Relogio|Divider:div_clk|count1[2]~15                                         ; cout             ;
+; |Relogio|Divider:div_clk|count1[3]~16                                         ; |Relogio|Divider:div_clk|count1[3]~16                                         ; combout          ;
+; |Relogio|Divider:div_clk|count1[3]~16                                         ; |Relogio|Divider:div_clk|count1[3]~17                                         ; cout             ;
+; |Relogio|Divider:div_clk|count1[4]~18                                         ; |Relogio|Divider:div_clk|count1[4]~18                                         ; combout          ;
+; |Relogio|Divider:div_clk|count1[4]~18                                         ; |Relogio|Divider:div_clk|count1[4]~19                                         ; cout             ;
+; |Relogio|Divider:div_clk|count1[5]~20                                         ; |Relogio|Divider:div_clk|count1[5]~20                                         ; combout          ;
+; |Relogio|Divider:div_clk|count1[5]~20                                         ; |Relogio|Divider:div_clk|count1[5]~21                                         ; cout             ;
+; |Relogio|Divider:div_clk|count1[6]~22                                         ; |Relogio|Divider:div_clk|count1[6]~22                                         ; combout          ;
+; |Relogio|Divider:div_clk|count1[6]~22                                         ; |Relogio|Divider:div_clk|count1[6]~23                                         ; cout             ;
+; |Relogio|Divider:div_clk|count1[7]~24                                         ; |Relogio|Divider:div_clk|count1[7]~24                                         ; combout          ;
+; |Relogio|Divider:div_clk|count1[7]~24                                         ; |Relogio|Divider:div_clk|count1[7]~25                                         ; cout             ;
+; |Relogio|Divider:div_clk|count1[8]~26                                         ; |Relogio|Divider:div_clk|count1[8]~26                                         ; combout          ;
+; |Relogio|Divider:div_clk|count1[8]~26                                         ; |Relogio|Divider:div_clk|count1[8]~27                                         ; cout             ;
+; |Relogio|Divider:div_clk|count1[9]~28                                         ; |Relogio|Divider:div_clk|count1[9]~28                                         ; combout          ;
+; |Relogio|Divider:div_clk|Add0~4                                               ; |Relogio|Divider:div_clk|Add0~5                                               ; cout             ;
+; |Relogio|Divider:div_clk|Add0~6                                               ; |Relogio|Divider:div_clk|Add0~6                                               ; combout          ;
+; |Relogio|Divider:div_clk|Add0~6                                               ; |Relogio|Divider:div_clk|Add0~7                                               ; cout             ;
+; |Relogio|Divider:div_clk|Add0~8                                               ; |Relogio|Divider:div_clk|Add0~8                                               ; combout          ;
+; |Relogio|Divider:div_clk|Add0~8                                               ; |Relogio|Divider:div_clk|Add0~9                                               ; cout             ;
+; |Relogio|Divider:div_clk|Add0~10                                              ; |Relogio|Divider:div_clk|Add0~10                                              ; combout          ;
+; |Relogio|Divider:div_clk|Add0~10                                              ; |Relogio|Divider:div_clk|Add0~11                                              ; cout             ;
+; |Relogio|Divider:div_clk|Add0~12                                              ; |Relogio|Divider:div_clk|Add0~12                                              ; combout          ;
+; |Relogio|Divider:div_clk|Add0~12                                              ; |Relogio|Divider:div_clk|Add0~13                                              ; cout             ;
+; |Relogio|Divider:div_clk|Add0~14                                              ; |Relogio|Divider:div_clk|Add0~14                                              ; combout          ;
+; |Relogio|Divider:div_clk|Add0~14                                              ; |Relogio|Divider:div_clk|Add0~15                                              ; cout             ;
+; |Relogio|Divider:div_clk|Add0~16                                              ; |Relogio|Divider:div_clk|Add0~16                                              ; combout          ;
+; |Relogio|Divider:div_clk|Add0~16                                              ; |Relogio|Divider:div_clk|Add0~17                                              ; cout             ;
+; |Relogio|Divider:div_clk|Add0~18                                              ; |Relogio|Divider:div_clk|Add0~18                                              ; combout          ;
+; |Relogio|Divider:div_clk|count2[1]~13                                         ; |Relogio|Divider:div_clk|count2[1]~14                                         ; cout             ;
+; |Relogio|Divider:div_clk|count2[2]~15                                         ; |Relogio|Divider:div_clk|count2[2]~15                                         ; combout          ;
+; |Relogio|Divider:div_clk|count2[2]~15                                         ; |Relogio|Divider:div_clk|count2[2]~16                                         ; cout             ;
+; |Relogio|Divider:div_clk|count2[3]~17                                         ; |Relogio|Divider:div_clk|count2[3]~17                                         ; combout          ;
+; |Relogio|Divider:div_clk|count2[3]~17                                         ; |Relogio|Divider:div_clk|count2[3]~18                                         ; cout             ;
+; |Relogio|Divider:div_clk|count2[4]~19                                         ; |Relogio|Divider:div_clk|count2[4]~19                                         ; combout          ;
+; |Relogio|Divider:div_clk|count2[4]~19                                         ; |Relogio|Divider:div_clk|count2[4]~20                                         ; cout             ;
+; |Relogio|Divider:div_clk|count2[5]~21                                         ; |Relogio|Divider:div_clk|count2[5]~21                                         ; combout          ;
+; |Relogio|Divider:div_clk|count2[5]~21                                         ; |Relogio|Divider:div_clk|count2[5]~22                                         ; cout             ;
+; |Relogio|Divider:div_clk|count2[6]~23                                         ; |Relogio|Divider:div_clk|count2[6]~23                                         ; combout          ;
+; |Relogio|Divider:div_clk|count2[6]~23                                         ; |Relogio|Divider:div_clk|count2[6]~24                                         ; cout             ;
+; |Relogio|Divider:div_clk|count2[7]~25                                         ; |Relogio|Divider:div_clk|count2[7]~25                                         ; combout          ;
+; |Relogio|Divider:div_clk|count2[7]~25                                         ; |Relogio|Divider:div_clk|count2[7]~26                                         ; cout             ;
+; |Relogio|Divider:div_clk|count2[8]~27                                         ; |Relogio|Divider:div_clk|count2[8]~27                                         ; combout          ;
+; |Relogio|Divider:div_clk|count2[8]~27                                         ; |Relogio|Divider:div_clk|count2[8]~28                                         ; cout             ;
+; |Relogio|Divider:div_clk|count2[9]~29                                         ; |Relogio|Divider:div_clk|count2[9]~29                                         ; combout          ;
+; |Relogio|tempo_data:tempo_data0|Mux3~0                                        ; |Relogio|tempo_data:tempo_data0|Mux3~0                                        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux3~1                                        ; |Relogio|tempo_data:tempo_data0|Mux3~1                                        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux2~0                                        ; |Relogio|tempo_data:tempo_data0|Mux2~0                                        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux1~0                                        ; |Relogio|tempo_data:tempo_data0|Mux1~0                                        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux0~0                                        ; |Relogio|tempo_data:tempo_data0|Mux0~0                                        ; combout          ;
+; |Relogio|seg7:conversor0|Mux6~0                                               ; |Relogio|seg7:conversor0|Mux6~0                                               ; combout          ;
+; |Relogio|seg7:conversor0|Mux5~0                                               ; |Relogio|seg7:conversor0|Mux5~0                                               ; combout          ;
+; |Relogio|seg7:conversor0|Mux4~0                                               ; |Relogio|seg7:conversor0|Mux4~0                                               ; combout          ;
+; |Relogio|seg7:conversor0|Mux3~0                                               ; |Relogio|seg7:conversor0|Mux3~0                                               ; combout          ;
+; |Relogio|seg7:conversor0|Mux2~0                                               ; |Relogio|seg7:conversor0|Mux2~0                                               ; combout          ;
+; |Relogio|seg7:conversor0|Mux1~0                                               ; |Relogio|seg7:conversor0|Mux1~0                                               ; combout          ;
+; |Relogio|seg7:conversor0|Mux0~0                                               ; |Relogio|seg7:conversor0|Mux0~0                                               ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu0[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu0[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux11~0                                       ; |Relogio|tempo_data:tempo_data0|Mux11~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|Mux11~1                                       ; |Relogio|tempo_data:tempo_data0|Mux11~1                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu0[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu0[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux10~0                                       ; |Relogio|tempo_data:tempo_data0|Mux10~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu0[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu0[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux9~0                                        ; |Relogio|tempo_data:tempo_data0|Mux9~0                                        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu0[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu0[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux8~0                                        ; |Relogio|tempo_data:tempo_data0|Mux8~0                                        ; combout          ;
+; |Relogio|seg7:conversor2|Mux6~0                                               ; |Relogio|seg7:conversor2|Mux6~0                                               ; combout          ;
+; |Relogio|seg7:conversor2|Mux5~0                                               ; |Relogio|seg7:conversor2|Mux5~0                                               ; combout          ;
+; |Relogio|seg7:conversor2|Mux4~0                                               ; |Relogio|seg7:conversor2|Mux4~0                                               ; combout          ;
+; |Relogio|seg7:conversor2|Mux3~0                                               ; |Relogio|seg7:conversor2|Mux3~0                                               ; combout          ;
+; |Relogio|seg7:conversor2|Mux2~0                                               ; |Relogio|seg7:conversor2|Mux2~0                                               ; combout          ;
+; |Relogio|seg7:conversor2|Mux1~0                                               ; |Relogio|seg7:conversor2|Mux1~0                                               ; combout          ;
+; |Relogio|seg7:conversor2|Mux0~0                                               ; |Relogio|seg7:conversor2|Mux0~0                                               ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu1[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu1[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux15~0                                       ; |Relogio|tempo_data:tempo_data0|Mux15~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu1[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu1[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux14~0                                       ; |Relogio|tempo_data:tempo_data0|Mux14~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu1[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu1[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux13~0                                       ; |Relogio|tempo_data:tempo_data0|Mux13~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu1[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu1[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux12~0                                       ; |Relogio|tempo_data:tempo_data0|Mux12~0                                       ; combout          ;
+; |Relogio|seg7:conversor3|Mux6~0                                               ; |Relogio|seg7:conversor3|Mux6~0                                               ; combout          ;
+; |Relogio|seg7:conversor3|Mux5~0                                               ; |Relogio|seg7:conversor3|Mux5~0                                               ; combout          ;
+; |Relogio|seg7:conversor3|Mux4~0                                               ; |Relogio|seg7:conversor3|Mux4~0                                               ; combout          ;
+; |Relogio|seg7:conversor3|Mux3~0                                               ; |Relogio|seg7:conversor3|Mux3~0                                               ; combout          ;
+; |Relogio|seg7:conversor3|Mux2~0                                               ; |Relogio|seg7:conversor3|Mux2~0                                               ; combout          ;
+; |Relogio|seg7:conversor3|Mux1~0                                               ; |Relogio|seg7:conversor3|Mux1~0                                               ; combout          ;
+; |Relogio|seg7:conversor3|Mux0~0                                               ; |Relogio|seg7:conversor3|Mux0~0                                               ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias0[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias0[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux19~0                                       ; |Relogio|tempo_data:tempo_data0|Mux19~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|Mux19~1                                       ; |Relogio|tempo_data:tempo_data0|Mux19~1                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|Mux19~2                                       ; |Relogio|tempo_data:tempo_data0|Mux19~2                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias0[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias0[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux18~0                                       ; |Relogio|tempo_data:tempo_data0|Mux18~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|Mux18~1                                       ; |Relogio|tempo_data:tempo_data0|Mux18~1                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias0[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias0[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux17~0                                       ; |Relogio|tempo_data:tempo_data0|Mux17~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias0[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias0[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux16~0                                       ; |Relogio|tempo_data:tempo_data0|Mux16~0                                       ; combout          ;
+; |Relogio|seg7:conversor4|Mux6~0                                               ; |Relogio|seg7:conversor4|Mux6~0                                               ; combout          ;
+; |Relogio|seg7:conversor4|Mux5~0                                               ; |Relogio|seg7:conversor4|Mux5~0                                               ; combout          ;
+; |Relogio|seg7:conversor4|Mux4~0                                               ; |Relogio|seg7:conversor4|Mux4~0                                               ; combout          ;
+; |Relogio|seg7:conversor4|Mux3~0                                               ; |Relogio|seg7:conversor4|Mux3~0                                               ; combout          ;
+; |Relogio|seg7:conversor4|Mux2~0                                               ; |Relogio|seg7:conversor4|Mux2~0                                               ; combout          ;
+; |Relogio|seg7:conversor4|Mux1~0                                               ; |Relogio|seg7:conversor4|Mux1~0                                               ; combout          ;
+; |Relogio|seg7:conversor4|Mux0~0                                               ; |Relogio|seg7:conversor4|Mux0~0                                               ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias1[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias1[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux23~0                                       ; |Relogio|tempo_data:tempo_data0|Mux23~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias1[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias1[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux22~0                                       ; |Relogio|tempo_data:tempo_data0|Mux22~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias1[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias1[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux21~0                                       ; |Relogio|tempo_data:tempo_data0|Mux21~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias1[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias1[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux20~0                                       ; |Relogio|tempo_data:tempo_data0|Mux20~0                                       ; combout          ;
+; |Relogio|seg7:conversor5|Mux6~0                                               ; |Relogio|seg7:conversor5|Mux6~0                                               ; combout          ;
+; |Relogio|seg7:conversor5|Mux5~0                                               ; |Relogio|seg7:conversor5|Mux5~0                                               ; combout          ;
+; |Relogio|seg7:conversor5|Mux4~0                                               ; |Relogio|seg7:conversor5|Mux4~0                                               ; combout          ;
+; |Relogio|seg7:conversor5|Mux3~0                                               ; |Relogio|seg7:conversor5|Mux3~0                                               ; combout          ;
+; |Relogio|seg7:conversor5|Mux2~0                                               ; |Relogio|seg7:conversor5|Mux2~0                                               ; combout          ;
+; |Relogio|seg7:conversor5|Mux1~0                                               ; |Relogio|seg7:conversor5|Mux1~0                                               ; combout          ;
+; |Relogio|seg7:conversor5|Mux0~0                                               ; |Relogio|seg7:conversor5|Mux0~0                                               ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora0[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora0[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux27~0                                       ; |Relogio|tempo_data:tempo_data0|Mux27~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|Mux27~1                                       ; |Relogio|tempo_data:tempo_data0|Mux27~1                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora0[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora0[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux26~0                                       ; |Relogio|tempo_data:tempo_data0|Mux26~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|Mux26~1                                       ; |Relogio|tempo_data:tempo_data0|Mux26~1                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora0[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora0[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux25~0                                       ; |Relogio|tempo_data:tempo_data0|Mux25~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora0[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora0[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux24~0                                       ; |Relogio|tempo_data:tempo_data0|Mux24~0                                       ; combout          ;
+; |Relogio|seg7:conversor6|Mux6~0                                               ; |Relogio|seg7:conversor6|Mux6~0                                               ; combout          ;
+; |Relogio|seg7:conversor6|Mux5~0                                               ; |Relogio|seg7:conversor6|Mux5~0                                               ; combout          ;
+; |Relogio|seg7:conversor6|Mux4~0                                               ; |Relogio|seg7:conversor6|Mux4~0                                               ; combout          ;
+; |Relogio|seg7:conversor6|Mux3~0                                               ; |Relogio|seg7:conversor6|Mux3~0                                               ; combout          ;
+; |Relogio|seg7:conversor6|Mux2~0                                               ; |Relogio|seg7:conversor6|Mux2~0                                               ; combout          ;
+; |Relogio|seg7:conversor6|Mux1~0                                               ; |Relogio|seg7:conversor6|Mux1~0                                               ; combout          ;
+; |Relogio|seg7:conversor6|Mux0~0                                               ; |Relogio|seg7:conversor6|Mux0~0                                               ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese1[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese1[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora1[3]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora1[3]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux31~0                                       ; |Relogio|tempo_data:tempo_data0|Mux31~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese1[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese1[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora1[2]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora1[2]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux30~0                                       ; |Relogio|tempo_data:tempo_data0|Mux30~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese1[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese1[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora1[1]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora1[1]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux29~0                                       ; |Relogio|tempo_data:tempo_data0|Mux29~0                                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese1[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese1[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora1[0]          ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora1[0]          ; regout           ;
+; |Relogio|tempo_data:tempo_data0|Mux28~0                                       ; |Relogio|tempo_data:tempo_data0|Mux28~0                                       ; combout          ;
+; |Relogio|seg7:conversor7|Mux6~0                                               ; |Relogio|seg7:conversor7|Mux6~0                                               ; combout          ;
+; |Relogio|seg7:conversor7|Mux5~0                                               ; |Relogio|seg7:conversor7|Mux5~0                                               ; combout          ;
+; |Relogio|seg7:conversor7|Mux4~0                                               ; |Relogio|seg7:conversor7|Mux4~0                                               ; combout          ;
+; |Relogio|seg7:conversor7|Mux3~0                                               ; |Relogio|seg7:conversor7|Mux3~0                                               ; combout          ;
+; |Relogio|seg7:conversor7|Mux2~0                                               ; |Relogio|seg7:conversor7|Mux2~0                                               ; combout          ;
+; |Relogio|seg7:conversor7|Mux1~0                                               ; |Relogio|seg7:conversor7|Mux1~0                                               ; combout          ;
+; |Relogio|seg7:conversor7|Mux0~0                                               ; |Relogio|seg7:conversor7|Mux0~0                                               ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[3]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[3]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal11~0                    ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal11~0                    ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[0]       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[0]       ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[1]       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[1]       ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[2]       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[2]       ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[3]       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[3]       ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[4]       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[4]       ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add9~0                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add9~0                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal12~0                    ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal12~0                    ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal8~0                     ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal8~0                     ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal6~0                     ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal6~0                     ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal7~0                     ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal7~0                     ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~2                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~2                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal5~0                     ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal5~0                     ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal9~0                     ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal9~0                     ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[1]       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[1]       ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[2]       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[2]       ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[3]       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[3]       ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[4]       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[4]       ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal10~0                    ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal10~0                    ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[0]       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[0]       ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add6~0                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add6~0                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal10~1                    ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal10~1                    ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias0[0]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias0[0]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal13~0                    ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal13~0                    ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[0]      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[0]      ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[1]      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[1]      ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[2]      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[2]      ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[3]      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[3]      ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[4]      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[4]      ; regout           ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add12~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add12~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal14~0                    ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal14~0                    ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_meses~0                  ; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_meses~0                  ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[0]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[0]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos0~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos0~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add14~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add14~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos0~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos0~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal15~0                    ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal15~0                    ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[0]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[0]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos1~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos1~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add15~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add15~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos1~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos1~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal16~0                    ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal16~0                    ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[0]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[0]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[0]~1        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[0]~1        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos2~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos2~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|segu0~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|segu0~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add16~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add16~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add1~0                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add1~0                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos2~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos2~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|segu0~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|segu0~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[0]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[0]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[0]~1        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[0]~1        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[0]~2        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[0]~2        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|segu1~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|segu1~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos3~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos3~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add17~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add17~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|segu1~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|segu1~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos3~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|anos3~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add2~0                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add2~0                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[0]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[0]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal12~1                    ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Equal12~1                    ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias0~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias0~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias0~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias0~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|minu0~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|minu0~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias0~2                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias0~2                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add3~0                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add3~0                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add8~0                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add8~0                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias0~3                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias0~3                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|minu0~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|minu0~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~3                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~3                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[0]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[0]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~2                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~2                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~3                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~3                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~4                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~4                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|minu1~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|minu1~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~5                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~5                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~6                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~6                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~7                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~7                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|minu1~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|minu1~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~8                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|dias1~8                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add4~0                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add4~0                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora0~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora0~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora0[0]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:hora0[0]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add12~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add12~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese0~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese0~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[0]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[0]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[3]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[3]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese0~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese0~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora0~1                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora0~1                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese0~2                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese0~2                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora0~2                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora0~2                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add11~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add11~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese0~3                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese0~3                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add5~0                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add5~0                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora0~3                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora0~3                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese1~2                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese1~2                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese1[0]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese1[0]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~4                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~4                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese1~3                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese1~3                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~5                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~5                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add13~0                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add13~0                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~6                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~6                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~7                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~7                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese1~4                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese1~4                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~8                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~8                      ; combout          ;
+; |Relogio|Divider:div_clk|Equal3~1                                             ; |Relogio|Divider:div_clk|Equal3~1                                             ; combout          ;
+; |Relogio|Divider:div_clk|Equal1~1                                             ; |Relogio|Divider:div_clk|Equal1~1                                             ; combout          ;
+; |Relogio|Divider:div_clk|count0[2]                                            ; |Relogio|Divider:div_clk|count0[2]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count0[3]                                            ; |Relogio|Divider:div_clk|count0[3]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count0[4]                                            ; |Relogio|Divider:div_clk|count0[4]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count0[5]                                            ; |Relogio|Divider:div_clk|count0[5]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count0[6]                                            ; |Relogio|Divider:div_clk|count0[6]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count0[7]                                            ; |Relogio|Divider:div_clk|count0[7]                                            ; regout           ;
+; |Relogio|Divider:div_clk|Equal0~1                                             ; |Relogio|Divider:div_clk|Equal0~1                                             ; combout          ;
+; |Relogio|Divider:div_clk|count0[8]                                            ; |Relogio|Divider:div_clk|count0[8]                                            ; regout           ;
+; |Relogio|Divider:div_clk|count0[9]                                            ; |Relogio|Divider:div_clk|count0[9]                                            ; regout           ;
+; |Relogio|Divider:div_clk|Equal2~1                                             ; |Relogio|Divider:div_clk|Equal2~1                                             ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_dias~0                   ; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_dias~0                   ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add9~1                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add9~1                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_dias~1                   ; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_dias~1                   ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_dias~2                   ; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_dias~2                   ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_dias~3                   ; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_dias~3                   ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add6~1                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add6~1                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_hora~0                   ; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_hora~0                   ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add6~2                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add6~2                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add6~3                       ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add6~3                       ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_hora~1                   ; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_hora~1                   ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add12~2                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add12~2                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_meses~1                  ; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_meses~1                  ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_meses~2                  ; |Relogio|tempo_data:tempo_data0|contador:Selecao|aux_meses~2                  ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add12~3                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|Add12~3                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~9                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|hora1~9                      ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese1~5                      ; |Relogio|tempo_data:tempo_data0|contador:Selecao|mese1~5                      ; combout          ;
+; |Relogio|seg7:conversor1|Mux6~3                                               ; |Relogio|seg7:conversor1|Mux6~3                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux6~6                                               ; |Relogio|seg7:conversor1|Mux6~6                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux5~3                                               ; |Relogio|seg7:conversor1|Mux5~3                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux5~6                                               ; |Relogio|seg7:conversor1|Mux5~6                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux4~4                                               ; |Relogio|seg7:conversor1|Mux4~4                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux4~9                                               ; |Relogio|seg7:conversor1|Mux4~9                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux3~3                                               ; |Relogio|seg7:conversor1|Mux3~3                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux3~6                                               ; |Relogio|seg7:conversor1|Mux3~6                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux2~3                                               ; |Relogio|seg7:conversor1|Mux2~3                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux2~6                                               ; |Relogio|seg7:conversor1|Mux2~6                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux1~3                                               ; |Relogio|seg7:conversor1|Mux1~3                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux1~6                                               ; |Relogio|seg7:conversor1|Mux1~6                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux0~3                                               ; |Relogio|seg7:conversor1|Mux0~3                                               ; combout          ;
+; |Relogio|seg7:conversor1|Mux0~6                                               ; |Relogio|seg7:conversor1|Mux0~6                                               ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[3]~1        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[3]~1        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[3]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos1[3]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[3]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos2[3]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu0[3]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu0[3]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[3]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[3]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu1[3]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:segu1[3]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[3]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu0[3]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[3]~0        ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:minu1[3]~0        ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[4]~0     ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[4]~0     ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[4]~0     ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_hora[4]~0     ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[4]~0    ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[4]~0    ; combout          ;
+; |Relogio|s0[6]                                                                ; |Relogio|s0[6]                                                                ; padio            ;
+; |Relogio|s0[5]                                                                ; |Relogio|s0[5]                                                                ; padio            ;
+; |Relogio|s0[4]                                                                ; |Relogio|s0[4]                                                                ; padio            ;
+; |Relogio|s0[3]                                                                ; |Relogio|s0[3]                                                                ; padio            ;
+; |Relogio|s0[2]                                                                ; |Relogio|s0[2]                                                                ; padio            ;
+; |Relogio|s0[1]                                                                ; |Relogio|s0[1]                                                                ; padio            ;
+; |Relogio|s0[0]                                                                ; |Relogio|s0[0]                                                                ; padio            ;
+; |Relogio|s1[6]                                                                ; |Relogio|s1[6]                                                                ; padio            ;
+; |Relogio|s1[5]                                                                ; |Relogio|s1[5]                                                                ; padio            ;
+; |Relogio|s1[4]                                                                ; |Relogio|s1[4]                                                                ; padio            ;
+; |Relogio|s1[3]                                                                ; |Relogio|s1[3]                                                                ; padio            ;
+; |Relogio|s1[2]                                                                ; |Relogio|s1[2]                                                                ; padio            ;
+; |Relogio|s1[1]                                                                ; |Relogio|s1[1]                                                                ; padio            ;
+; |Relogio|s1[0]                                                                ; |Relogio|s1[0]                                                                ; padio            ;
+; |Relogio|s2[6]                                                                ; |Relogio|s2[6]                                                                ; padio            ;
+; |Relogio|s2[5]                                                                ; |Relogio|s2[5]                                                                ; padio            ;
+; |Relogio|s2[4]                                                                ; |Relogio|s2[4]                                                                ; padio            ;
+; |Relogio|s2[3]                                                                ; |Relogio|s2[3]                                                                ; padio            ;
+; |Relogio|s2[2]                                                                ; |Relogio|s2[2]                                                                ; padio            ;
+; |Relogio|s2[1]                                                                ; |Relogio|s2[1]                                                                ; padio            ;
+; |Relogio|s2[0]                                                                ; |Relogio|s2[0]                                                                ; padio            ;
+; |Relogio|s3[6]                                                                ; |Relogio|s3[6]                                                                ; padio            ;
+; |Relogio|s3[5]                                                                ; |Relogio|s3[5]                                                                ; padio            ;
+; |Relogio|s3[4]                                                                ; |Relogio|s3[4]                                                                ; padio            ;
+; |Relogio|s3[3]                                                                ; |Relogio|s3[3]                                                                ; padio            ;
+; |Relogio|s3[2]                                                                ; |Relogio|s3[2]                                                                ; padio            ;
+; |Relogio|s3[1]                                                                ; |Relogio|s3[1]                                                                ; padio            ;
+; |Relogio|s3[0]                                                                ; |Relogio|s3[0]                                                                ; padio            ;
+; |Relogio|s4[6]                                                                ; |Relogio|s4[6]                                                                ; padio            ;
+; |Relogio|s4[5]                                                                ; |Relogio|s4[5]                                                                ; padio            ;
+; |Relogio|s4[4]                                                                ; |Relogio|s4[4]                                                                ; padio            ;
+; |Relogio|s4[3]                                                                ; |Relogio|s4[3]                                                                ; padio            ;
+; |Relogio|s4[2]                                                                ; |Relogio|s4[2]                                                                ; padio            ;
+; |Relogio|s4[1]                                                                ; |Relogio|s4[1]                                                                ; padio            ;
+; |Relogio|s4[0]                                                                ; |Relogio|s4[0]                                                                ; padio            ;
+; |Relogio|s5[6]                                                                ; |Relogio|s5[6]                                                                ; padio            ;
+; |Relogio|s5[5]                                                                ; |Relogio|s5[5]                                                                ; padio            ;
+; |Relogio|s5[4]                                                                ; |Relogio|s5[4]                                                                ; padio            ;
+; |Relogio|s5[3]                                                                ; |Relogio|s5[3]                                                                ; padio            ;
+; |Relogio|s5[2]                                                                ; |Relogio|s5[2]                                                                ; padio            ;
+; |Relogio|s5[1]                                                                ; |Relogio|s5[1]                                                                ; padio            ;
+; |Relogio|s5[0]                                                                ; |Relogio|s5[0]                                                                ; padio            ;
+; |Relogio|s6[6]                                                                ; |Relogio|s6[6]                                                                ; padio            ;
+; |Relogio|s6[5]                                                                ; |Relogio|s6[5]                                                                ; padio            ;
+; |Relogio|s6[4]                                                                ; |Relogio|s6[4]                                                                ; padio            ;
+; |Relogio|s6[3]                                                                ; |Relogio|s6[3]                                                                ; padio            ;
+; |Relogio|s6[2]                                                                ; |Relogio|s6[2]                                                                ; padio            ;
+; |Relogio|s6[1]                                                                ; |Relogio|s6[1]                                                                ; padio            ;
+; |Relogio|s6[0]                                                                ; |Relogio|s6[0]                                                                ; padio            ;
+; |Relogio|s7[6]                                                                ; |Relogio|s7[6]                                                                ; padio            ;
+; |Relogio|s7[5]                                                                ; |Relogio|s7[5]                                                                ; padio            ;
+; |Relogio|s7[4]                                                                ; |Relogio|s7[4]                                                                ; padio            ;
+; |Relogio|s7[3]                                                                ; |Relogio|s7[3]                                                                ; padio            ;
+; |Relogio|s7[2]                                                                ; |Relogio|s7[2]                                                                ; padio            ;
+; |Relogio|s7[1]                                                                ; |Relogio|s7[1]                                                                ; padio            ;
+; |Relogio|s7[0]                                                                ; |Relogio|s7[0]                                                                ; padio            ;
+; |Relogio|sel[1]                                                               ; |Relogio|sel[1]~corein                                                        ; combout          ;
+; |Relogio|sel[0]                                                               ; |Relogio|sel[0]~corein                                                        ; combout          ;
+; |Relogio|button[0]                                                            ; |Relogio|button[0]~corein                                                     ; combout          ;
+; |Relogio|button[1]                                                            ; |Relogio|button[1]~corein                                                     ; combout          ;
+; |Relogio|clr                                                                  ; |Relogio|clr~corein                                                           ; combout          ;
+; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[3]~0clkctrl ; |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos0[3]~0clkctrl ; outclk           ;
++-------------------------------------------------------------------------------+-------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Jun 09 20:46:16 2011
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Relogio -c Relogio
+Info: Using vector source file "E:/UFPEL/Circuitos Digitais 2/Projetos/CD2_Relogio - Cópia/Relogio.vwf"
+Info: Inverted registers were found during simulation
+    Info: Register: |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:anos3[2]
+    Info: Register: |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:dias0[3]
+    Info: Register: |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:mese0[3]
+    Info: Register: |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_dias[4]
+    Info: Register: |Relogio|tempo_data:tempo_data0|contador:Selecao|\process_1:aux_meses[4]
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       8.38 %
+Info: Number of transitions in simulation is 2060
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 154 megabytes
+    Info: Processing ended: Thu Jun 09 20:46:16 2011
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

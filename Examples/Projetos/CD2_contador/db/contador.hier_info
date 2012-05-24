@@ -1,0 +1,12 @@
+|contador
+clk => count[2].CLK
+clk => count[1].CLK
+clk => count[0].CLK
+clr => count[2].ENA
+clr => count[1].ENA
+clr => count[0].ENA
+q[2] <= count[2].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= count[1].DB_MAX_OUTPUT_PORT_TYPE
+q[0] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
+
+

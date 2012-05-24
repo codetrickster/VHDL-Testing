@@ -1,0 +1,15 @@
+LIBRARY IEEE;
+USE IEEE.STD_logic_1164.all;
+
+ENTITY teste is
+port(
+  a: in std_logic;
+  s: out std_logic
+);
+end teste;
+
+architecture arq_teste of teste is
+begin
+  s <= a;
+  s <= '1';
+end arq_teste;

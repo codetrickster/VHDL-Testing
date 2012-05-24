@@ -1,0 +1,100 @@
+|Contador_display
+clk => divider:div_clk.clk
+clr => contador:contador1.clr
+s[0] <= seg7:conversor.s[0]
+s[1] <= seg7:conversor.s[1]
+s[2] <= seg7:conversor.s[2]
+s[3] <= seg7:conversor.s[3]
+s[4] <= seg7:conversor.s[4]
+s[5] <= seg7:conversor.s[5]
+s[6] <= seg7:conversor.s[6]
+
+
+|Contador_display|Divider:div_clk
+clk => D.CLK
+clk => count3[0].CLK
+clk => count3[1].CLK
+clk => count3[2].CLK
+clk => count3[3].CLK
+clk => count3[4].CLK
+clk => count3[5].CLK
+clk => count3[6].CLK
+clk => count3[7].CLK
+clk => count3[8].CLK
+clk => count3[9].CLK
+clk => count2[0].CLK
+clk => count2[1].CLK
+clk => count2[2].CLK
+clk => count2[3].CLK
+clk => count2[4].CLK
+clk => count2[5].CLK
+clk => count2[6].CLK
+clk => count2[7].CLK
+clk => count2[8].CLK
+clk => count2[9].CLK
+clk => count1[0].CLK
+clk => count1[1].CLK
+clk => count1[2].CLK
+clk => count1[3].CLK
+clk => count1[4].CLK
+clk => count1[5].CLK
+clk => count1[6].CLK
+clk => count1[7].CLK
+clk => count1[8].CLK
+clk => count1[9].CLK
+clk => count0[0].CLK
+clk => count0[1].CLK
+clk => count0[2].CLK
+clk => count0[3].CLK
+clk => count0[4].CLK
+clk => count0[5].CLK
+clk => count0[6].CLK
+clk => count0[7].CLK
+clk => count0[8].CLK
+clk => count0[9].CLK
+cout <= D.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Contador_display|contador:contador1
+clk => count[2].CLK
+clk => count[1].CLK
+clk => count[0].CLK
+clr => count[2].ACLR
+clr => count[1].ACLR
+clr => count[0].ACLR
+q[0] <= count[2].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= count[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Contador_display|seg7:conversor
+ent[0] => Mux0.IN10
+ent[0] => Mux1.IN10
+ent[0] => Mux2.IN10
+ent[0] => Mux3.IN10
+ent[0] => Mux4.IN10
+ent[0] => Mux5.IN10
+ent[0] => Mux6.IN10
+ent[1] => Mux0.IN9
+ent[1] => Mux1.IN9
+ent[1] => Mux2.IN9
+ent[1] => Mux3.IN9
+ent[1] => Mux4.IN9
+ent[1] => Mux5.IN9
+ent[1] => Mux6.IN9
+ent[2] => Mux0.IN8
+ent[2] => Mux1.IN8
+ent[2] => Mux2.IN8
+ent[2] => Mux3.IN8
+ent[2] => Mux4.IN8
+ent[2] => Mux5.IN8
+ent[2] => Mux6.IN8
+s[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+s[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+s[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+s[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

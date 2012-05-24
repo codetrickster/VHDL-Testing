@@ -1,0 +1,8 @@
+|reg1bit
+clear => q_temp.ACLR
+clk => q_temp.CLK
+carga => q_temp.ENA
+d => q_temp.DATAIN
+q <= q_temp.DB_MAX_OUTPUT_PORT_TYPE
+
+

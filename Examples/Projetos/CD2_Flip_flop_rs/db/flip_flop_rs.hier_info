@@ -1,0 +1,11 @@
+|flip_flop_rs
+clk => qb~reg0.CLK
+clk => q~reg0.CLK
+r => process_0.IN0
+r => process_0.IN0
+s => process_0.IN1
+s => process_0.IN1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qb <= qb~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

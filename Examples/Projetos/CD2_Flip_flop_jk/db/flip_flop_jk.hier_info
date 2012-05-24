@@ -1,0 +1,17 @@
+|flip_flop_jk
+clk => qb_temp.CLK
+clk => q_temp.CLK
+set => qb_temp.ACLR
+set => q_temp.PRESET
+set => q_temp.IN0
+reset => q_temp.IN1
+j => process_0.IN0
+j => process_0.IN0
+j => process_0.IN0
+k => process_0.IN1
+k => process_0.IN1
+k => process_0.IN1
+q <= q_temp.DB_MAX_OUTPUT_PORT_TYPE
+qb <= qb_temp.DB_MAX_OUTPUT_PORT_TYPE
+
+

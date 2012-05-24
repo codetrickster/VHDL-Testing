@@ -1,0 +1,43 @@
+# Copyright (C) 1991-2010 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+# Quartus II Version 10.0 Build 218 06/27/2010 SJ Full Version
+# File: C:/Users/Daniel/Desktop/Daniel/de2_clock/DE2_Clock.csv
+# Generated on: Tue Jun 07 13:32:12 2011
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus II software.
+
+To,Direction,Location,I/O Standard,Reserved
+clk_50Mhz,Input,PIN_N2,,
+DATA_BUS[7],Bidir,PIN_H3,,
+DATA_BUS[6],Bidir,PIN_H4,,
+DATA_BUS[5],Bidir,PIN_J3,,
+DATA_BUS[4],Bidir,PIN_J4,,
+DATA_BUS[3],Bidir,PIN_H2,,
+DATA_BUS[2],Bidir,PIN_H1,,
+DATA_BUS[1],Bidir,PIN_J2,,
+DATA_BUS[0],Bidir,PIN_J1,,
+LCD_E,Output,PIN_K3,,
+LCD_ON,Output,PIN_L4,,
+LCD_RS,Output,PIN_K1,,
+LCD_RW,Output,PIN_K4,,
+reset,Input,PIN_P23,,
+sel[5],Input,PIN_AD13,,
+sel[4],Input,PIN_AF14,,
+sel[3],Input,PIN_AE14,,
+sel[2],Input,PIN_P25,,
+sel[1],Input,PIN_N26,,
+sel[0],Input,PIN_N25,,
+RESET_LED,Unknown,PIN_U17,,
+SEC_LED,Unknown,PIN_AD12,,

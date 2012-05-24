@@ -1,0 +1,5 @@
+|exemplo1
+a => s.DATAIN
+s <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+

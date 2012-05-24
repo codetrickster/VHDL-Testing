@@ -1,0 +1,126 @@
+|exemplo14_display7
+a[0] => somador4bits:somador.a[0]
+a[1] => somador4bits:somador.a[1]
+a[2] => somador4bits:somador.a[2]
+a[3] => somador4bits:somador.a[3]
+b[0] => somador4bits:somador.b[0]
+b[1] => somador4bits:somador.b[1]
+b[2] => somador4bits:somador.b[2]
+b[3] => somador4bits:somador.b[3]
+s[0] <= seg7:segmento7.s[0]
+s[1] <= seg7:segmento7.s[1]
+s[2] <= seg7:segmento7.s[2]
+s[3] <= seg7:segmento7.s[3]
+s[4] <= seg7:segmento7.s[4]
+s[5] <= seg7:segmento7.s[5]
+s[6] <= seg7:segmento7.s[6]
+c4 <= somador4bits:somador.c4
+
+
+|exemplo14_display7|somador4bits:somador
+a[0] => meio_somador:soma1.a
+a[1] => somador_completo:soma2.a
+a[2] => somador_completo:soma3.a
+a[3] => somador_completo:soma4.a
+b[0] => meio_somador:soma1.b
+b[1] => somador_completo:soma2.b
+b[2] => somador_completo:soma3.b
+b[3] => somador_completo:soma4.b
+s[0] <= meio_somador:soma1.s
+s[1] <= somador_completo:soma2.s
+s[2] <= somador_completo:soma3.s
+s[3] <= somador_completo:soma4.s
+c4 <= somador_completo:soma4.c_out
+
+
+|exemplo14_display7|somador4bits:somador|meio_somador:soma1
+a => s.IN0
+a => c_out.IN0
+a => s.IN0
+b => s.IN1
+b => c_out.IN1
+b => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exemplo14_display7|somador4bits:somador|somador_completo:soma2
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exemplo14_display7|somador4bits:somador|somador_completo:soma3
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exemplo14_display7|somador4bits:somador|somador_completo:soma4
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exemplo14_display7|seg7:segmento7
+entrada[0] => Mux0.IN19
+entrada[0] => Mux1.IN19
+entrada[0] => Mux2.IN19
+entrada[0] => Mux3.IN19
+entrada[0] => Mux4.IN19
+entrada[0] => Mux5.IN19
+entrada[0] => Mux6.IN19
+entrada[1] => Mux0.IN18
+entrada[1] => Mux1.IN18
+entrada[1] => Mux2.IN18
+entrada[1] => Mux3.IN18
+entrada[1] => Mux4.IN18
+entrada[1] => Mux5.IN18
+entrada[1] => Mux6.IN18
+entrada[2] => Mux0.IN17
+entrada[2] => Mux1.IN17
+entrada[2] => Mux2.IN17
+entrada[2] => Mux3.IN17
+entrada[2] => Mux4.IN17
+entrada[2] => Mux5.IN17
+entrada[2] => Mux6.IN17
+entrada[3] => Mux0.IN16
+entrada[3] => Mux1.IN16
+entrada[3] => Mux2.IN16
+entrada[3] => Mux3.IN16
+entrada[3] => Mux4.IN16
+entrada[3] => Mux5.IN16
+entrada[3] => Mux6.IN16
+s[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+s[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+s[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+s[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

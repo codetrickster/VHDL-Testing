@@ -1,0 +1,417 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+11
+1000
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+full_adder
+# storage
+db|ula.(2).cnf
+db|ula.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+full_adder.vhd
+9deba677f2dc41701363783f23e72f41
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+soma_sub:Soma|full_adder:Full1
+soma_sub:Soma|full_adder:Full2
+soma_sub:Soma|full_adder:Full3
+soma_sub:Soma|full_adder:Full4
+soma_sub:Sub|full_adder:Full1
+soma_sub:Sub|full_adder:Full2
+soma_sub:Sub|full_adder:Full3
+soma_sub:Sub|full_adder:Full4
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+mult81
+# storage
+db|ula.(6).cnf
+db|ula.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+mult81.vhd
+c86ea6eee8f378ffaee1edda317efc0
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(op1)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(op2)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(op3)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(op4)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(op5)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(op6)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(op7)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(op8)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(sel)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(i)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+mult81:Multiplexador
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+verifica
+# storage
+db|ula.(7).cnf
+db|ula.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+verifica.vhd
+a3aa1e87f4c8fb65c2aed4b24112b5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(a)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+verifica:Verificazero
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+soma_sub
+# storage
+db|ula.(1).cnf
+db|ula.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+soma_sub.vhd
+c573ea99d01ac8417a58503846bb4cc7
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(a)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(b)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(s)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+soma_sub:Soma
+soma_sub:Sub
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+shifter_left
+# storage
+db|ula.(3).cnf
+db|ula.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+shifter_left.vhd
+ef6fae8715a642bca8e623a37de4997c
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+shifter_left:SLeft
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+mult21
+# storage
+db|ula.(4).cnf
+db|ula.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+mult21.vhd
+5704927ac8aad4a53b1e6a79652e51
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+shifter_left:SLeft|mult21:Multiplexador1
+shifter_left:SLeft|mult21:Multiplexador2
+shifter_left:SLeft|mult21:Multiplexador3
+shifter_left:SLeft|mult21:Multiplexador4
+shifter_right:SRight|mult21:Multiplexador1
+shifter_right:SRight|mult21:Multiplexador2
+shifter_right:SRight|mult21:Multiplexador3
+shifter_right:SRight|mult21:Multiplexador4
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+shifter_right
+# storage
+db|ula.(5).cnf
+db|ula.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+shifter_right.vhd
+5bdaa84424dae47bf89c9a70af0f232
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(b)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(s)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+shifter_right:SRight
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+seg7
+# storage
+db|ula.(8).cnf
+db|ula.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+seg7.vhd
+de5cb83297668585a108f7277cbeabb
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(a)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(s)
+13 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+seg7:Display
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+ula
+# storage
+db|ula.(0).cnf
+db|ula.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ula.vhd
+406e4f5431b38b3847c75f152c4ff3f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+
